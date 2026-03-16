@@ -10,8 +10,8 @@
 }
 
 @font-face {
-    font-family: "CMU Serif";
-    src: url(../fonts/cmunrm.ttf);
+  font-family: 'CMU Serif';
+  src: url(/fonts/cmunrm.ttf);
 }
 
 * {
@@ -20,11 +20,10 @@
 }
 
 html {
-  font-family: "CMU Serif";
+  font-family: 'CMU Serif';
 }
 
 @import 'tailwindcss';
-@import 'tailwind-scrollbar-hide/v4';
 @import 'tailwindcss/theme.css' layer(theme);
 @import 'tailwindcss/preflight.css' layer(base);
 @import 'tailwindcss/utilities.css' layer(utilities);
