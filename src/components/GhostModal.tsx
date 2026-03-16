@@ -2,6 +2,7 @@ import type { Ghost } from '../datas';
 import { useTranslation } from 'react-i18next';
 import EvidenceIcon from './EvidenceIcon';
 import AudioSound from './AudioSound';
+import { useFootsteps } from '../hooks/useFootsteps';
 
 interface GhostModalProps {
   ghost: Ghost;
@@ -10,6 +11,7 @@ interface GhostModalProps {
 
 export default function GhostModal({ ghost, onClose }: GhostModalProps) {
   const { t } = useTranslation();
+  const { play, stop, isLoaded } = useFootsteps();
 
   return (
     <div
@@ -33,8 +35,8 @@ export default function GhostModal({ ghost, onClose }: GhostModalProps) {
               {t(`ghosts.${ghost.name}.name`)}
             </h2>
             <div className="flex ml-6 mb-6 gap-2">
-              {ghost.evidences.map((e) => (
-                <EvidenceIcon key={e} evidence={e} />
+              {ghost.evidences.map((e, i) => (
+                <EvidenceIcon key={i} evidence={e} />
               ))}
             </div>
           </div>
@@ -47,9 +49,9 @@ export default function GhostModal({ ghost, onClose }: GhostModalProps) {
 
           {ghost.uniqueSounds && (
             <div className="space-y-4">
-              {ghost.uniqueSounds.map((sound) => (
+              {ghost.uniqueSounds.map((sound, i) => (
                 <div
-                  key={sound.label}
+                  key={i}
                   className="flex flex-col gap-2 bg-black/5 p-3 rounded"
                 >
                   <span>{t(`uniqueSound.${sound.label}`)}</span>
@@ -61,17 +63,35 @@ export default function GhostModal({ ghost, onClose }: GhostModalProps) {
             </div>
           )}
 
-          <div className="flex justify-between items-center bg-gray-100 p-2">
-            <span className="uppercase font-bold">Base Speed:</span>
-            <span>1.7 m/s</span>
-          </div>
+          <div className="flex flex-col">
+            {ghost.huntSpeeds.map((hs, index) => (
+              <div key={index} className="flex items-stretch">
+                <div className="flex-1 flex justify-between items-center bg-gray-100 p-3">
+                  <span className="text-xs font-bold uppercase">
+                    {t(`hunts.${hs.label}`)}
+                  </span>
+                  <span className="font-mono">{hs.speed} m/s</span>
+                </div>
 
-          <button
-            className="w-full py-3 bg-black text-white hover:bg-gray-800 transition-colors uppercase tracking-widest text-sm"
-            onClick={() => console.log(`Play sound for ${ghost.name}`)}
-          >
-            Listen to Footsteps
-          </button>
+                <button
+                  disabled={!isLoaded}
+                  onMouseDown={() => play(hs.speed)}
+                  onMouseUp={stop}
+                  onMouseLeave={stop}
+                  className={`p-3 transition-all ${
+                    isLoaded
+                      ? 'bg-black text-white hover:bg-gray-800 active:bg-green-800'
+                      : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                  }`}
+                >
+                  {isLoaded ? '🔊' : '...'}
+                </button>
+              </div>
+            ))}
+          </div>
+          <p className="text-[10px] text-gray-500 italic text-center">
+            {t('hunts.helper')}
+          </p>
         </div>
       </div>
     </div>

@@ -47,10 +47,11 @@
     "age_8_speed": "Âge 8 :",
     "age_9_speed": "Âge 9 :",
     "age_10_speed": "Âge 10 et supérieur :",
-    "slow_twin": "Jumeau lent :",
-    "fast_twin": "Jumeau rapide :",
-    "slow_twin_los_top_speed": "Jumeau lent vitesse maximale (Ligne De Vue):",
-    "fast_twin_los_top_speed": "Jumeau rapide vitesse maximale (Ligne De Vue):"
+    "slow_twin": "Jumeaux lent :",
+    "fast_twin": "Jumeaux rapide :",
+    "slow_twin_los_top_speed": "Jumeaux lent vitesse maximale (Ligne De Vue):",
+    "fast_twin_los_top_speed": "Jumeaux rapide vitesse maximale (Ligne De Vue):",
+    "helper": "* Maintenez le bouton pour entendre l'intervale des bruits de pas."
   },
   "evidences": {
     "dots": "Projecteur D.O.T.S.",

@@ -49,8 +49,9 @@
     "age_10_speed": "Age 10 and higher:",
     "slow_twin": "Slow twin:",
     "fast_twin": "Fast twin:",
-    "slow_twin_los_top_speed": "Slow twin top speed (Line Of Sight):",
-    "fast_twin_los_top_speed": "Fast twin top speed (Line Of Sight):"
+    "slow_twin_los_top_speed": "Slow twins top speed (Line Of Sight):",
+    "fast_twin_los_top_speed": "Fast twins top speed (Line Of Sight):",
+    "helper": "* Hold the button to hear the footstep interval."
   },
   "evidences": {
     "dots": "D.O.T.S Projector",
