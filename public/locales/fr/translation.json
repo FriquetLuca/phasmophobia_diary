@@ -1,3 +1,174 @@
 {
-    "hello": "Bonjour monde"
+  "uniqueSound": {
+    "banshee_scream": "Lorsqu'un Microphone parabolique ou un Enregistreur de Son est utilisé, la Banshee a 33% de chances d'émettre l'un de ses 20 cris uniques au lieu d'un son paranormal normal."
+  },
+  "hunts": {
+    "base_speed": "Vitesse de base :",
+    "los_top_speed": "Vitesse maximale (Ligne De Vue) :",
+    "dayan_los_top_speed": "Vitesse maximale (Ligne De Vue; loin du/des joueur(s)):",
+    "close_still_player": "Joueur le plus proche immobile :",
+    "close_moving_player": "Joueur le plus proche marche :",
+    "top_speed": "Vitesse maximale :",
+    "slowest_speed": "Vitesse minimale :",
+    "normal_speed": "Vitesse en état normal :",
+    "enraged_speed": "Vitesse en état enragé :",
+    "weakened_speed": "Vitesse en état affaibli :",
+    "above_15c": "> 15°C (59°F):",
+    "between_12_15c": "12–15°C (53.6–59°F):",
+    "between_9_12c": "9–12°C (48.2–53.6°F):",
+    "between_6_9c": "6–9°C (42.8–48.2°F):",
+    "between_3_6c": "3–6°C (37.4–42.8°F):",
+    "between_0_3c": "0–3°C (32–37.4°F):",
+    "bellow_0c": "< 0°C (32°F):",
+    "fixed_ability_speed": "Abilité de vitesse fixe :",
+    "above_45_sanity": "≥ 45% de santé mentale :",
+    "between_40_45_sanity": "40% - 45% de santé mentale :",
+    "between_35_40_sanity": "35% - 40% de santé mentale :",
+    "between_30_35_sanity": "30% - 35% de santé mentale :",
+    "between_25_30_sanity": "25% - 30% de santé mentale :",
+    "between_20_25_sanity": "20% - 25% de santé mentale :",
+    "between_15_20_sanity": "15% - 20% de santé mentale :",
+    "between_10_15_sanity": "10% - 15% de santé mentale :",
+    "between_5_10_sanity": "5% - 10% de santé mentale :",
+    "between_0_5_sanity": "0% - 5% de santé mentale :",
+    "calm_state": "État calme :",
+    "aggressive_state": "État aggressif :",
+    "calm_los_top_speed": "État calme (Ligne De Vue):",
+    "aggressive_los_top_speed": "État aggressif (Ligne De Vue):",
+    "chasing_speed": "Vitesse de chasse :",
+    "age_0_speed": "Âge 0 (Initiale) :",
+    "age_1_speed": "Âge 1 :",
+    "age_2_speed": "Âge 2 :",
+    "age_3_speed": "Âge 3 :",
+    "age_4_speed": "Âge 4 :",
+    "age_5_speed": "Âge 5 :",
+    "age_6_speed": "Âge 6 :",
+    "age_7_speed": "Âge 7 :",
+    "age_8_speed": "Âge 8 :",
+    "age_9_speed": "Âge 9 :",
+    "age_10_speed": "Âge 10 et supérieur :",
+    "slow_twin": "Jumeau lent :",
+    "fast_twin": "Jumeau rapide :",
+    "slow_twin_los_top_speed": "Jumeau lent vitesse maximale (Ligne De Vue):",
+    "fast_twin_los_top_speed": "Jumeau rapide vitesse maximale (Ligne De Vue):"
+  },
+  "evidences": {
+    "dots": "Projecteur D.O.T.S.",
+    "orb": "Orbe fantomatique",
+    "spirit": "Spirit Box",
+    "book": "Écriture fantomatique",
+    "emf": "EMF niveau 5",
+    "freezing": "Températures glaciales",
+    "uv": "Ultraviolet"
+  },
+  "ghosts": {
+    "banshee": {
+      "name": "Banshee",
+      "description": "Les sirènes qui chantent, qui attirent leurs victimes avec leurs chansons. On sait qu'elles identifient précisément leur proie avant de porter le coup fatal."
+    },
+    "dayan": {
+      "name": "Dayan",
+      "description": "La Dayan naît de l'âme de quelqu'un qui a subi une immense cruauté de son vivant. Maintenant, dans la mort, elle reste hypervigilante envers quiconque \"danse\" trop près."
+    },
+    "demon": {
+      "name": "Démon",
+      "description": "Les démons sont les entités les plus agressives que nous ayons rencontré. Ils semblent attaquer sans aucune raison et semblent adorer chasser."
+    },
+    "deogen": {
+      "name": "Deogen",
+      "description": "Parfois entourés d'un brouillard sans fin, les Deogen ont échappé aux chasseurs de fantômes pendant des années.\nLes rapports indiquent que ces entités arrivent à trouver les proies les plus insaisissables avant des les traquer jusqu'à l'épuisement."
+    },
+    "gallu": {
+      "name": "Gallu",
+      "description": "Autre forme de démon, le Gallu rappelle que la mort nous attend tous. Utiliser de l'équipement de protection provoque le fantôme jusqu'à ce qu'il ne soit plus efficace."
+    },
+    "goryo": {
+      "name": "Goryo",
+      "description": "Seul regarder à travers une caméra permet de voir les Goryo passer dans le champ d'un projecteur D.O.T.S."
+    },
+    "hantu": {
+      "name": "Hantu",
+      "description": "Les Hantu sont des entités rares qui profitent des climats les plus froids. Le froid semble les rendre agressifs et puissants."
+    },
+    "jinn": {
+      "name": "Djinn",
+      "description": "Les Djinns sont des entités territoriales qui attaquent lorsqu'elles sont menacées. Ils sont également connus pour pouvoir se déplacer à une vitesse significative."
+    },
+    "mare": {
+      "name": "Cauchemar",
+      "description": "Les Cauchemars sont la source de tous les mauvais rêves, ce qui les rend plus puissant dans l'obscurité."
+    },
+    "moroi": {
+      "name": "Moroï",
+      "description": "Les Moroï ont émergé du monde des morts afin de siphonner l'énergie des vivants. Ils maudissent leurs victimes et celles-ci ne peuvent guérir qu'avec des antidotes ou en déménageant très loin."
+    },
+    "myling": {
+      "name": "Myling",
+      "description": "Les Myling sont des entités très actives et bruyantes. La rumeur prétend, cependant, qu'ils deviennent silencieux quand ils chassent leur proie."
+    },
+    "obake": {
+      "name": "Obake",
+      "description": "Les Obake sont de terrifiants métamorphes, capables de prendre de nombreuses formes. On les a vus prendre des formes humanoïdes pour attirer leurs proies."
+    },
+    "obambo": {
+      "name": "Obambo",
+      "description": "L'Obambo est le fantôme de quelqu'un qui n'a jamais été correctement mis au repos. Changeant et sur la défensive, il oscille entre des états de calme et d'agressivité."
+    },
+    "oni": {
+      "name": "Oni",
+      "description": "Les Onis adorent effrayer le plus possible leur victime avant d'attaquer. Ils sont souvent observés sous leur forme physique en train de garder le lieu de leur décès."
+    },
+    "onryo": {
+      "name": "Onryo",
+      "description": "Les Onryo sont souvent décrits comme des \"esprits furieux\". En quête de vengeance, il vole les âmes des corps de victimes mourantes. Ces entités sont connues pour avoir peur de quelconque forme de feu et feront tout pour s'en tenir éloignées."
+    },
+    "phantom": {
+      "name": "Fantôme",
+      "description": "Les Fantômes sont des entités capables de posséder les vivants et leur induire de la peur. Ils sont le plus souvent invoqués via une planche Ouija."
+    },
+    "poltergeist": {
+      "name": "Poltergeist",
+      "description": "L'une des entités les plus célèbres, le Poltergeist. Ils sont connus pour manipuler les objets autour de leurs victimes afin de les effrayer."
+    },
+    "raiju": {
+      "name": "Raiju",
+      "description": "Les Raiju sont des démons qui profitent des courants électriques. Bien que généralement calme, ils peuvent devenir agités quand ils sont submergés de puissance."
+    },
+    "revenant": {
+      "name": "Revenant",
+      "description": "Les Revenants sont des entités violentes qui attaqueront sans distinction. Leur vitesse de déplacement peut être trompeuse puisqu'ils sont lents au repos mais incroyablement rapides lorsqu'ils chassent."
+    },
+    "shade": {
+      "name": "Ombre",
+      "description": "Les Ombres sont des entités timides. Il semble que les Ombres cesseront toute activité si plusieurs personnes sont à proximité."
+    },
+    "spirit": {
+      "name": "Esprit",
+      "description": "Les Esprits sont des entités très banales. Ils sont puissants mais passifs et attaquent seulement lorsqu'ils y sont obligés. Ils défendent le lieu de leur décès coûte que coûte, tuant quiconque abuserait de leur hospitalité."
+    },
+    "thaye": {
+      "name": "Thayé",
+      "description": "Les Thayé sont connus pour vieillir rapidement, même dans l'au-delà. D'après ce que nous avons appris, ils semblent se déteriorer plus rapidement en présence des vivants."
+    },
+    "mimic": {
+      "name": "Le Mimic",
+      "description": "Les Mimic sont des entités insaisissables et mystérieuses qui imitent les traits et comportements des autres, y compris d'autres entités."
+    },
+    "twins": {
+      "name": "Les Jumeaux",
+      "description": "Ces entités ont été observées en train d'imiter les actions l'une de l'autre. Elles alternent leurs attaques pour déstabiliser leur proie."
+    },
+    "wraith": {
+      "name": "Spectre",
+      "description": "Les Spectres font partie des entités les plus dangereuses que vous pouvez rencontrer. C'est également la seule connue à pouvoir voler et parfois passer à travers les murs."
+    },
+    "yokai": {
+      "name": "Yokai",
+      "description": "Les Yokai sont des entités banales attirées par les voix humaines. Ils hantent très souvent des maisons familiales."
+    },
+    "yurei": {
+      "name": "Yurei",
+      "description": "Les Yurei sont des entités qui sont revenues dans le monde physique dans une optique de vengeance ou par pure haine."
+    }
+  }
 }

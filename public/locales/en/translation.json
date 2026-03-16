@@ -1,3 +1,174 @@
 {
-    "hello": "Hello world"
+  "uniqueSound": {
+    "banshee_scream": "When a Parabolic Microphone or a Sound Recorder is used, the Banshee has a 33% chance of making 1 of its 20 unique screams instead of a regular paranormal sound."
+  },
+  "hunts": {
+    "base_speed": "Base speed:",
+    "los_top_speed": "Top speed (Line Of Sight):",
+    "dayan_los_top_speed": "Top speed (Line Of Sight; far from player(s)):",
+    "close_still_player": "Closest player stay still:",
+    "close_moving_player": "Closest player is walking:",
+    "top_speed": "Top speed:",
+    "slowest_speed": "Slowest speed:",
+    "normal_speed": "Normal state speed:",
+    "enraged_speed": "Enraged state speed:",
+    "weakened_speed": "Weakened state speed:",
+    "above_15c": "> 15°C (59°F):",
+    "between_12_15c": "12–15°C (53.6–59°F):",
+    "between_9_12c": "9–12°C (48.2–53.6°F):",
+    "between_6_9c": "6–9°C (42.8–48.2°F):",
+    "between_3_6c": "3–6°C (37.4–42.8°F):",
+    "between_0_3c": "0–3°C (32–37.4°F):",
+    "bellow_0c": "< 0°C (32°F):",
+    "fixed_ability_speed": "Fixed speed ability:",
+    "above_45_sanity": "≥ 45% sanity:",
+    "between_40_45_sanity": "40% - 45% sanity:",
+    "between_35_40_sanity": "35% - 40% sanity:",
+    "between_30_35_sanity": "30% - 35% sanity:",
+    "between_25_30_sanity": "25% - 30% sanity:",
+    "between_20_25_sanity": "20% - 25% sanity:",
+    "between_15_20_sanity": "15% - 20% sanity:",
+    "between_10_15_sanity": "10% - 15% sanity:",
+    "between_5_10_sanity": "5% - 10% sanity:",
+    "between_0_5_sanity": "0% - 5% sanity:",
+    "calm_state": "Calm state:",
+    "aggressive_state": "Aggressive state:",
+    "calm_los_top_speed": "Calm state (Line Of Sight):",
+    "aggressive_los_top_speed": "Aggressive state (Line Of Sight):",
+    "chasing_speed": "Chasing speed:",
+    "age_0_speed": "Age 0 (Initial):",
+    "age_1_speed": "Age 1:",
+    "age_2_speed": "Age 2:",
+    "age_3_speed": "Age 3:",
+    "age_4_speed": "Age 4:",
+    "age_5_speed": "Age 5:",
+    "age_6_speed": "Age 6:",
+    "age_7_speed": "Age 7:",
+    "age_8_speed": "Age 8:",
+    "age_9_speed": "Age 9:",
+    "age_10_speed": "Age 10 and higher:",
+    "slow_twin": "Slow twin:",
+    "fast_twin": "Fast twin:",
+    "slow_twin_los_top_speed": "Slow twin top speed (Line Of Sight):",
+    "fast_twin_los_top_speed": "Fast twin top speed (Line Of Sight):"
+  },
+  "evidences": {
+    "dots": "D.O.T.S Projector",
+    "orb": "Ghost Orb",
+    "spirit": "Spirit Box",
+    "book": "Ghost Writing",
+    "emf": "EMF Level 5",
+    "freezing": "Freezing Temperatures",
+    "uv": "Ultraviolet"
+  },
+  "ghosts": {
+    "banshee": {
+      "name": "Banshee",
+      "description": "The singing siren, known for attracting its victims through song. It has been known to single out its prey before making a killing blow."
+    },
+    "dayan": {
+      "name": "Dayan",
+      "description": "The Dayan is born from the soul of someone who suffered immense cruelty in life. Now, in death, she is hyper-vigilant of anyone who 'dances' too close."
+    },
+    "demon": {
+      "name": "Demon",
+      "description": "A Demon is one of the worst ghosts you can encounter. It has been known to attack without reason."
+    },
+    "deogen": {
+      "name": "Deogen",
+      "description": "Sometimes surrounded by an endless fog, Deogen have been eluding ghost hunters for years.\nThese ghosts have been reported to find even the most hidden prey, before stalking them into exhaustion."
+    },
+    "gallu": {
+      "name": "Gallu",
+      "description": "Another form of demon, the Gallu is a reminder that death comes for us all. Using protective equipment provokes the ghost until it's no longer effective."
+    },
+    "goryo": {
+      "name": "Goryo",
+      "description": "When a Goryo passes through a DOTS projector, using a video camera is the only way to see it."
+    },
+    "hantu": {
+      "name": "Hantu",
+      "description": "A Hantu is a rare ghost that thrives in the coldest climates. The cold seems to make them more aggressive and empowered."
+    },
+    "jinn": {
+      "name": "Jinn",
+      "description": "A Jinn is a territorial ghost that will attack when threatened. It has also been known to be able to travel at significant speed."
+    },
+    "mare": {
+      "name": "Mare",
+      "description": "Les Cauchemars sont la source de tous les mauvais rêves, ce qui les rend plus puissant dans l'obscurité."
+    },
+    "moroi": {
+      "name": "Moroi",
+      "description": "Moroi have risen from the grave to drain energy from the living. They have been known to place curses on their victims, curable only by antidotes or moving very far away."
+    },
+    "myling": {
+      "name": "Myling",
+      "description": "A Myling is a very vocal and active ghost. They are rumoured to be quiet when hunting their prey."
+    },
+    "obake": {
+      "name": "Obake",
+      "description": "Obake are terrifying shape-shifters, capable of taking on many forms. They have been seen taking on humanoid shapes to attract their prey."
+    },
+    "obambo": {
+      "name": "Obambo",
+      "description": "The Obambo is the ghost of someone never properly laid to rest. Fickle and defensive, it flickers between states of calm and aggression."
+    },
+    "oni": {
+      "name": "Oni",
+      "description": "Onis love to scare their victims as much as possible before attacking. They are often seen in their physical form, guarding their place of death."
+    },
+    "onryo": {
+      "name": "Onryo",
+      "description": "The Onryo is often referred to as \"The Wrathful Spirit\". It steals souls from dying victims' bodies to seek revenge. This ghost has been known to fear any form of fire, and will do anything to be far from it."
+    },
+    "phantom": {
+      "name": "Phantom",
+      "description": "A Phantom is a ghost that can possess the living, inducing fear into those around it. They are most commonly summoned from Ouija Boards."
+    },
+    "poltergeist": {
+      "name": "Poltergeist",
+      "description": "One of the most famous ghosts, the Poltergeist. Known to manipulate objects around it to spread fear into its victims."
+    },
+    "raiju": {
+      "name": "Raiju",
+      "description": "A Raiju is a demon that thrives on electrical current. While generally calm, they can become agitated when overwhelmed with power."
+    },
+    "revenant": {
+      "name": "Revenant",
+      "description": "A Revenant is a violent ghost that will attack indiscriminately. Their speed can be deceiving, as they are slow while dormant; however, as soon as they hunt they can move incredibly fast."
+    },
+    "shade": {
+      "name": "Shade",
+      "description": "A Shade is known to be very shy. There is evidence to suggest that a Shade will stop all paranormal activity if there are people nearby."
+    },
+    "spirit": {
+      "name": "Spirit",
+      "description": "Spirits are very common ghosts. They are very powerful, but passive, only attacking when they need to. They defend their place of death to the utmost degree, killing anyone that is caught overstaying their welcome."
+    },
+    "thaye": {
+      "name": "Thaye",
+      "description": "Thaye have been known to rapidly age over time, even in the afterlife. From what we've learned, they seem to deteriorate faster while within the presence of the living."
+    },
+    "mimic": {
+      "name": "The Mimic",
+      "description": "The Mimic is an elusive, mysterious, copycat ghost that mirrors traits and behaviours from others, including other ghost types."
+    },
+    "twins": {
+      "name": "The Twins",
+      "description": "These ghosts have been reported to mimic each other's actions. They alternate their attacks to confuse their prey."
+    },
+    "wraith": {
+      "name": "Wraith",
+      "description": "Wraiths are one of the most dangerous ghosts you will find. It is also the only known ghost that has the ability of flight and has sometimes been known to travel through walls."
+    },
+    "yokai": {
+      "name": "Yokai",
+      "description": "Yokai are common ghosts that are attracted to human voices. They can usually be found haunting family homes."
+    },
+    "yurei": {
+      "name": "Yurei",
+      "description": "A Yurei is a ghost that has returned to the physical world, usually for the purpose of revenge or hatred."
+    }
+  }
 }
