@@ -10,6 +10,10 @@
 }
 
 @font-face {
+  font-family: 'October Crow';
+  src: url(/fonts/october_crow.ttf);
+}
+@font-face {
   font-family: 'CMU Serif';
   src: url(/fonts/cmunrm.ttf);
 }
@@ -19,8 +23,11 @@
   box-sizing: border-box;
 }
 
-html {
+.cmu_serif {
   font-family: 'CMU Serif';
+}
+.october_crow {
+  font-family: 'October Crow';
 }
 
 @import 'tailwindcss';

@@ -31,7 +31,7 @@ export default function EvidenceButton({
   return (
     <button
       onClick={onClick}
-      className={`flex items-center justify-center px-4 gap-2 border-2 transition-all h-12 rounded-md ${getStyles()}`}
+      className={`flex items-center justify-center px-4 gap-2 border-2 transition-all py-1 rounded-md ${getStyles()}`}
     >
       <div className="relative">
         <EvidenceIcon evidence={evidence} />

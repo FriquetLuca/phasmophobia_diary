@@ -32,7 +32,7 @@ export default function App() {
   return (
     <main className="min-h-screen bg-[#e8e4d9] py-10 px-4">
       <div className="max-w-4xl mx-auto border-2 border-[#5a5a5a] bg-[#fdfbf7] p-8 shadow-xl min-h-[85vh] flex flex-col">
-        <h1 className="text-4xl font-serif text-center mb-8 uppercase tracking-widest border-b-2 border-black pb-4">
+        <h1 className="text-4xl october_crow text-center mb-8 uppercase tracking-widest border-b-2 border-black pb-4">
           {t('title')}
         </h1>
         <FilterTabs
