@@ -1,25 +1,37 @@
 import { useState } from 'react';
 import GhostCard from './components/GhostCard';
-import { evidences, ghosts, type Ghost } from './datas';
+import {
+  evidences,
+  getHuntDuration,
+  ghosts,
+  mapSizeData,
+  type Ghost,
+  type HuntDurationSetting,
+} from './datas';
 import GhostModal from './components/GhostModal';
 import type { TabType } from './components/FilterTabs';
 import FilterTabs from './components/FilterTabs';
 import { useTranslation } from 'react-i18next';
 import type { EvidenceState } from './components/EvidenceButton';
 import EvidenceButton from './components/EvidenceButton';
+import DropdownSelect from './components/Dropdown';
 type GenderFilter = 'any' | 'male' | 'female';
 
 export default function App() {
   const { t } = useTranslation();
+
+  const [selectedGhost, setSelectedGhost] = useState<Ghost | null>(null);
+
   const [evidenceFilters, setEvidenceFilters] = useState<
     Record<string, EvidenceState>
   >(Object.fromEntries(evidences.map((e) => [e, 'neutral'])));
   const [evidenceCount, setEvidenceCount] = useState<number>(3); // 0 to 3
   const [globalSpeedMult, setGlobalSpeedMult] = useState<number>(100); // Percentage: 50% to 150%
-  const [selectedGhost, setSelectedGhost] = useState<Ghost | null>(null);
   const [activeTab, setActiveTab] = useState<TabType>('evidence');
   const [genderFilter, setGenderFilter] = useState<GenderFilter>('any');
-  const [currentSanity, setCurrentSanity] = useState<number>(100);
+  const [currentSanity, setCurrentSanity] = useState<number>(0);
+  const [selectedMap, setSelectedMap] = useState<string>('6 Tanglewood Drive');
+  const [huntSetting, setHuntSetting] = useState<HuntDurationSetting>('medium');
 
   const toggleEvidence = (evidence: string) => {
     setEvidenceFilters((prev) => {
@@ -126,7 +138,7 @@ export default function App() {
                 return (
                   <div className="grid grid-cols-2 gap-12 font-mono">
                     {/* Sanity Slider */}
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-1">
                       <div className="flex justify-between items-end border-b border-black/10 pb-2">
                         <label className="text-xs font-bold uppercase">
                           {t('hunt.avg_sanity')}
@@ -148,81 +160,119 @@ export default function App() {
                       />
                     </div>
                     {/* Gender Dropdown */}
-                    <div className="flex justify-center items-center gap-2 min-w-37.5">
-                      <label className="font-mono text-xs mt-1 font-bold uppercase text-gray-500">
-                        {t('hunt.ghost_gender')}
-                      </label>
-                      <div className="relative">
-                        <select
-                          value={genderFilter}
-                          onChange={(e) =>
-                            setGenderFilter(e.target.value as GenderFilter)
-                          }
-                          className="w-full bg-transparent border-b-2 border-black font-serif text-lg focus:outline-none appearance-none cursor-pointer py-1 pr-8"
-                        >
-                          <option value="any">{t('gender.any')}</option>
-                          <option value="male">{t('gender.male')}</option>
-                          <option value="female">{t('gender.female')}</option>
-                        </select>
-                        {/* Custom Arrow Icon */}
-                        <div className="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none text-xs">
-                          ▼
-                        </div>
-                      </div>
-                    </div>
+                    <DropdownSelect
+                      label={t('hunt.ghost_gender')}
+                      value={genderFilter}
+                      onChange={(value) =>
+                        setGenderFilter(value as GenderFilter)
+                      }
+                      options={[
+                        {
+                          label: t('gender.any'),
+                          value: 'any',
+                        },
+                        {
+                          label: t('gender.male'),
+                          value: 'male',
+                        },
+                        {
+                          label: t('gender.female'),
+                          value: 'female',
+                        },
+                      ]}
+                    />
                   </div>
                 );
               default:
                 return (
-                  <div className="grid grid-cols-2 gap-12 font-mono uppercase text-sm">
+                  <div className="grid grid-cols-2 gap-4 font-mono uppercase text-sm">
                     {/* Evidence Count Setting */}
-                    <div className="flex flex-col gap-2">
-                      <label className="text-center font-bold border-b border-black/10 pb-2">
-                        {t('settings.evidence_count')}
-                      </label>
-                      <div className="flex justify-between items-center gap-2">
-                        {[0, 1, 2, 3].map((num) => (
-                          <button
-                            key={num}
-                            onClick={() => setEvidenceCount(num)}
-                            className={`flex-1 py-1 border-2 transition-all ${
-                              evidenceCount === num
-                                ? 'bg-black text-white border-black'
-                                : 'bg-white text-black border-gray-200 hover:border-black'
-                            }`}
-                          >
-                            {num}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
+                    <DropdownSelect
+                      label={t('settings.evidence_count')}
+                      value={evidenceCount}
+                      onChange={(value) => setEvidenceCount(Number(value))}
+                      options={[
+                        {
+                          label: '0',
+                          value: 0,
+                        },
+                        {
+                          label: '1',
+                          value: 1,
+                        },
+                        {
+                          label: '2',
+                          value: 2,
+                        },
+                        {
+                          label: '3',
+                          value: 3,
+                        },
+                      ]}
+                    />
 
                     {/* Global Speed Setting */}
-                    <div className="flex flex-col gap-2">
-                      <label className="text-center font-bold border-b border-black/10 pb-2">
-                        {t('settings.ghost_speed')} (
-                        {globalSpeedMult >= 100 ? '' : ' '}
-                        {globalSpeedMult}%)
-                      </label>
-                      <input
-                        type="range"
-                        min="50"
-                        max="150"
-                        step="25"
-                        value={globalSpeedMult}
-                        onChange={(e) =>
-                          setGlobalSpeedMult(Number(e.target.value))
-                        }
-                        className="w-full accent-black cursor-pointer"
-                      />
-                      <div className="flex justify-between text-xs text-gray-400">
-                        <span>50%</span>
-                        <span>75%</span>
-                        <span>100%</span>
-                        <span>125%</span>
-                        <span>150%</span>
-                      </div>
-                    </div>
+                    <DropdownSelect
+                      label={t('settings.ghost_speed')}
+                      value={globalSpeedMult}
+                      onChange={(value) => setGlobalSpeedMult(Number(value))}
+                      options={[
+                        {
+                          label: '50%',
+                          value: 50,
+                        },
+                        {
+                          label: '75%',
+                          value: 75,
+                        },
+                        {
+                          label: '100%',
+                          value: 100,
+                        },
+                        {
+                          label: '125%',
+                          value: 125,
+                        },
+                        {
+                          label: '150%',
+                          value: 150,
+                        },
+                      ]}
+                    />
+
+                    {/* Map Selection */}
+                    <DropdownSelect
+                      label={t('settings.map')}
+                      value={selectedMap}
+                      onChange={(value) => setSelectedMap(value)}
+                      options={Object.keys(mapSizeData).map((m) => ({
+                        label: m,
+                        value: m,
+                      }))}
+                    />
+
+                    {/* Hunt Duration Setting */}
+                    <DropdownSelect
+                      label={t('settings.hunt_duration')}
+                      value={huntSetting}
+                      onChange={(value) =>
+                        setHuntSetting(value as HuntDurationSetting)
+                      }
+                      options={[
+                        {
+                          label: t('settings.hunt_duration_low'),
+                          value: 'low',
+                        },
+                        {
+                          label: t('settings.hunt_duration_medium'),
+                          value: 'medium',
+                        },
+                        {
+                          label: t('settings.hunt_duration_high'),
+                          value: 'high',
+                        },
+                      ]}
+                    />
                   </div>
                 );
             }
@@ -256,6 +306,7 @@ export default function App() {
             })),
           }}
           onClose={() => setSelectedGhost(null)}
+          huntDuration={getHuntDuration(huntSetting, selectedMap)}
         />
       )}
     </main>

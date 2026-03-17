@@ -1,5 +1,10 @@
 {
   "title": "Phasmophobia Diary",
+  "categories": {
+    "hunt_duration": "Hunt Duration",
+    "hunt_speed": "Hunting Speed",
+    "unique_sounds": "Unique Sounds"
+  },
   "tabs": {
     "evidence": "Evidences",
     "hunt": "Hunt & Traits",
@@ -16,14 +21,20 @@
   },
   "settings": {
     "evidence_count": "Number of evidences",
-    "ghost_speed": "Speed of the ghost"
+    "ghost_speed": "Speed of the ghost",
+    "map": "Map",
+    "hunt_duration": "Hunt duration",
+    "hunt_duration_low": "Faible",
+    "hunt_duration_medium": "Moyenne",
+    "hunt_duration_high": "Élevée"
   },
-  "uniqueSound": {
+  "unique_sounds": {
     "banshee_scream": "When a Parabolic Microphone or a Sound Recorder is used, the Banshee has a 33% chance of making 1 of its 20 unique screams instead of a regular paranormal sound.",
     "deogen_breath": "If the player asks any question through the Spirit Box while standing within 1 metre of the Deogen, it has a 33% chance with each question to produce a unique response of constant heavy bull-like breathing, instead of a regular response.",
     "air_breath": "The Oni cannot perform the mist form event, which involves a physical ball of fog moving towards the player, usually disappearing with a hiss sound upon collision."
   },
   "hunts": {
+    "hunt_duration": "The hunt duration will be 20% shorter if the Obambo starts the hunt in the aggressive state. This will apply even if the ghost switches to the calm state mid-hunt. You should expect your hunt to last {{seconds}} seconds.",
     "base_speed": "Base speed:",
     "los_top_speed": "Top speed (Line Of Sight):",
     "dayan_los_top_speed": "Top speed (Line Of Sight; far from player(s)):",

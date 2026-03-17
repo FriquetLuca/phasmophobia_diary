@@ -16,6 +16,41 @@ export const evidences: Evidence[] = [
   'spirit',
 ];
 
+export type MapSize = 'small' | 'medium' | 'large';
+
+export const mapSizeData: Record<string, MapSize> = {
+  '6 Tanglewood Drive': 'small',
+  '42 Edgefield Road': 'small',
+  '10 Ridgeview Court': 'small',
+  "Nell's Diner": 'small',
+  'Grafton Farmhouse': 'small',
+  '13 Willow Street': 'small',
+  'Camp Woodwind': 'small',
+  'Point Hope': 'medium',
+  'Bleasdale Farmhouse': 'medium',
+  'Sunny Meadows Restricted': 'medium',
+  Prison: 'medium',
+  'Maple Lodge Campsite': 'medium',
+  'Brownstone High School': 'large',
+  'Sunny Meadows': 'large',
+};
+
+export type HuntDurationSetting = 'low' | 'medium' | 'high';
+
+const HUNT_TIMES: Record<HuntDurationSetting, Record<MapSize, number>> = {
+  low: { small: 15, medium: 30, large: 40 },
+  medium: { small: 20, medium: 40, large: 50 },
+  high: { small: 30, medium: 50, large: 60 },
+};
+
+export const getHuntDuration = (
+  setting: HuntDurationSetting,
+  mapName: string
+) => {
+  const size = mapSizeData[mapName] || 'small';
+  return HUNT_TIMES[setting][size];
+};
+
 export type Gender = 'female' | 'male';
 export interface SoundInterface {
   type: 'audio/mpeg' | 'audio/ogg';
@@ -30,6 +65,11 @@ export interface HuntSpeed {
   speed: number;
 }
 
+interface HuntDuration {
+  label: string;
+  percent: number;
+}
+
 export interface Ghost {
   name: string;
   gender?: Gender;
@@ -38,6 +78,7 @@ export interface Ghost {
   uniqueSounds?: UniqueSounds[];
   huntSpeeds: HuntSpeed[];
   huntSanity: number;
+  huntDuration?: HuntDuration[];
 }
 
 export const ghosts: Ghost[] = [
@@ -420,6 +461,12 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 65,
+    huntDuration: [
+      {
+        label: 'hunt_ability.obambo',
+        percent: 0.8,
+      },
+    ],
   },
   {
     name: 'oni',

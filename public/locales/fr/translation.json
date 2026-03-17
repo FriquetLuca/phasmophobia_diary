@@ -1,5 +1,10 @@
 {
   "title": "Journal Phasmophobia",
+  "categories": {
+    "hunt_duration": "Durée de chasse",
+    "hunt_speed": "Vitesse de chasse",
+    "unique_sounds": "Sons Unique"
+  },
   "tabs": {
     "evidence": "Preuves",
     "hunt": "Chasse & Traits",
@@ -16,12 +21,20 @@
   },
   "settings": {
     "evidence_count": "Nombre de preuves",
-    "ghost_speed": "Vitesse de l'entité"
+    "ghost_speed": "Vitesse de l'entité",
+    "map": "Map",
+    "hunt_duration": "Durée de chasse",
+    "hunt_duration_low": "Faible",
+    "hunt_duration_medium": "Moyenne",
+    "hunt_duration_high": "Élevée"
   },
-  "uniqueSound": {
+  "unique_sounds": {
     "banshee_scream": "Lorsqu'un Microphone parabolique ou un Enregistreur de Son est utilisé, la Banshee a 33% de chances d'émettre l'un de ses 20 cris uniques au lieu d'un son paranormal normal.",
     "deogen_breath": "Si le joueur pose une question à travers la Spirit Box alors qu'il se tient à moins d'1 mètre du Deogen, il a 33% de chances à chaque question de produire une réponse unique de respiration lourde et constante, au lieu d'une réponse normale.",
     "air_breath": "L'Oni ne peut pas effectuer l'événement de forme de brume, qui implique une boule physique de brouillard se déplaçant vers le joueur, disparaissant habituellement avec un souffle lors de la collision."
+  },
+  "hunt_ability": {
+    "obambo": "La durée de la chasse sera 20% plus courte si l'Obambo démarre la chasse dans l'état agressif. Cela s'appliquera même si l'entité passe à l'état calme en pleine chasse. Vous devriez vous attendre à une durée de chasse de {{seconds}} secondes."
   },
   "hunts": {
     "base_speed": "Vitesse de base :",

@@ -4,12 +4,37 @@ import EvidenceIcon from './EvidenceIcon';
 import AudioSound from './AudioSound';
 import { useFootsteps } from '../hooks/useFootsteps';
 
+interface DisplayCategoryProps {
+  isDisplayed: boolean;
+  label: string;
+  children: React.ReactNode;
+}
+
+function DisplayCategory({
+  isDisplayed,
+  label,
+  children,
+}: DisplayCategoryProps) {
+  const displayClass = `flex flex-col ${isDisplayed ? '' : 'hidden'}`;
+  return (
+    <div className={displayClass}>
+      <h3>{label}</h3>
+      {children}
+    </div>
+  );
+}
+
 interface GhostModalProps {
   ghost: Ghost;
+  huntDuration: number;
   onClose: () => void;
 }
 
-export default function GhostModal({ ghost, onClose }: GhostModalProps) {
+export default function GhostModal({
+  ghost,
+  huntDuration,
+  onClose,
+}: GhostModalProps) {
   const { t } = useTranslation();
   const { play, stop, isLoaded } = useFootsteps();
 
@@ -47,23 +72,44 @@ export default function GhostModal({ ghost, onClose }: GhostModalProps) {
             {t(`ghosts.${ghost.name}.description`)}
           </p>
 
-          {ghost.uniqueSounds && (
-            <div className="space-y-4">
-              {ghost.uniqueSounds.map((sound, i) => (
+          <DisplayCategory
+            isDisplayed={(ghost.uniqueSounds?.length ?? 0) > 0}
+            label={t('categories.unique_sounds')}
+          >
+            {ghost.uniqueSounds &&
+              ghost.uniqueSounds.map((sound, i) => (
                 <div
                   key={i}
                   className="flex flex-col gap-2 bg-black/5 p-3 rounded"
                 >
-                  <span>{t(`uniqueSound.${sound.label}`)}</span>
+                  <span>{t(`unique_sounds.${sound.label}`)}</span>
                   {sound.sounds.map((s, i) => (
                     <AudioSound key={i} {...s} />
                   ))}
                 </div>
               ))}
-            </div>
-          )}
+          </DisplayCategory>
 
-          <div className="flex flex-col">
+          <DisplayCategory
+            isDisplayed={(ghost.huntDuration?.length ?? 0) > 0}
+            label={t('categories.hunt_duration')}
+          >
+            {ghost.huntDuration &&
+              ghost.huntDuration.map((hd, index) => (
+                <div key={index} className="flex flex-col items-stretch">
+                  <div className="flex-1 flex justify-between items-center bg-gray-100 p-3">
+                    <span className="text-xs font-bold uppercase">
+                      {t(hd.label, { seconds: huntDuration * hd.percent })}
+                    </span>
+                  </div>
+                </div>
+              ))}
+          </DisplayCategory>
+
+          <DisplayCategory
+            isDisplayed={true}
+            label={t('categories.hunt_speed')}
+          >
             {ghost.huntSpeeds.map((hs, index) => (
               <div key={index} className="flex items-stretch">
                 <div className="flex-1 flex justify-between items-center bg-gray-100 p-3">
@@ -88,7 +134,8 @@ export default function GhostModal({ ghost, onClose }: GhostModalProps) {
                 </button>
               </div>
             ))}
-          </div>
+          </DisplayCategory>
+
           {ghost.huntSpeeds.length > 0 && (
             <p className="text-[10px] text-gray-500 italic text-center">
               {t('hunts.helper')}
