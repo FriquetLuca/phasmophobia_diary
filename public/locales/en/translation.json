@@ -16,8 +16,8 @@
     "female": "Female"
   },
   "hunt": {
-    "ghost_gender": "Gender:",
-    "avg_sanity": "Sanity (First hunt):"
+    "ghost_gender": "Gender",
+    "avg_sanity": "Sanity (First hunt)"
   },
   "settings": {
     "evidence_count": "Number of evidences",

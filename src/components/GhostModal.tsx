@@ -3,26 +3,7 @@ import { useTranslation } from 'react-i18next';
 import EvidenceIcon from './EvidenceIcon';
 import AudioSound from './AudioSound';
 import { useFootsteps } from '../hooks/useFootsteps';
-
-interface DisplayCategoryProps {
-  isDisplayed: boolean;
-  label: string;
-  children: React.ReactNode;
-}
-
-function DisplayCategory({
-  isDisplayed,
-  label,
-  children,
-}: DisplayCategoryProps) {
-  const displayClass = `flex flex-col ${isDisplayed ? '' : 'hidden'}`;
-  return (
-    <div className={displayClass}>
-      <h3>{label}</h3>
-      {children}
-    </div>
-  );
-}
+import DisplayCategory from './DisplayCategory';
 
 interface GhostModalProps {
   ghost: Ghost;
@@ -91,19 +72,18 @@ export default function GhostModal({
           </DisplayCategory>
 
           <DisplayCategory
-            isDisplayed={(ghost.huntDuration?.length ?? 0) > 0}
+            isDisplayed={ghost.huntDuration !== undefined}
             label={t('categories.hunt_duration')}
           >
-            {ghost.huntDuration &&
-              ghost.huntDuration.map((hd, index) => (
-                <div key={index} className="flex flex-col items-stretch">
-                  <div className="flex-1 flex justify-between items-center bg-gray-100 p-3">
-                    <span className="text-xs font-bold uppercase">
-                      {t(hd.label, { seconds: huntDuration * hd.percent })}
-                    </span>
-                  </div>
-                </div>
-              ))}
+            {ghost.huntDuration && (
+              <div className="flex flex-col items-stretch bg-gray-100 p-3">
+                <span className="text-xs font-bold uppercase">
+                  {t(`ghosts.${ghost.name}.hunt_duration_ability`, {
+                    seconds: huntDuration * (ghost.huntDuration ?? 1.0),
+                  })}
+                </span>
+              </div>
+            )}
           </DisplayCategory>
 
           <DisplayCategory

@@ -140,7 +140,7 @@ export default function App() {
                     {/* Sanity Slider */}
                     <div className="flex flex-col gap-1">
                       <div className="flex justify-between items-end border-b border-black/10 pb-2">
-                        <label className="text-xs font-bold uppercase">
+                        <label className="text-xs font-bold uppercase mr-1">
                           {t('hunt.avg_sanity')}
                         </label>
                         <span className="text-sm font-bold font-serif">

@@ -65,11 +65,6 @@ export interface HuntSpeed {
   speed: number;
 }
 
-interface HuntDuration {
-  label: string;
-  percent: number;
-}
-
 export interface Ghost {
   name: string;
   gender?: Gender;
@@ -78,7 +73,7 @@ export interface Ghost {
   uniqueSounds?: UniqueSounds[];
   huntSpeeds: HuntSpeed[];
   huntSanity: number;
-  huntDuration?: HuntDuration[];
+  huntDuration?: number;
 }
 
 export const ghosts: Ghost[] = [
@@ -461,12 +456,7 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 65,
-    huntDuration: [
-      {
-        label: 'hunt_ability.obambo',
-        percent: 0.8,
-      },
-    ],
+    huntDuration: 0.8,
   },
   {
     name: 'oni',
