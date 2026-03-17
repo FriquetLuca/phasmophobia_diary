@@ -37,6 +37,7 @@ export interface Ghost {
   strongEvidence?: Evidence;
   uniqueSounds?: UniqueSounds[];
   huntSpeeds: HuntSpeed[];
+  huntSanity: number;
 }
 
 export const ghosts: Ghost[] = [
@@ -141,6 +142,7 @@ export const ghosts: Ghost[] = [
         speed: 2.805,
       },
     ],
+    huntSanity: 50,
   },
   {
     name: 'dayan',
@@ -164,6 +166,7 @@ export const ghosts: Ghost[] = [
         speed: 2.25,
       },
     ],
+    huntSanity: 65,
   },
   {
     name: 'demon',
@@ -178,6 +181,7 @@ export const ghosts: Ghost[] = [
         speed: 2.805,
       },
     ],
+    huntSanity: 100,
   },
   {
     name: 'deogen',
@@ -204,6 +208,7 @@ export const ghosts: Ghost[] = [
         ],
       },
     ],
+    huntSanity: 40,
   },
   {
     name: 'gallu',
@@ -222,6 +227,7 @@ export const ghosts: Ghost[] = [
         speed: 1.955,
       },
     ],
+    huntSanity: 60,
   },
   {
     name: 'goryo',
@@ -237,6 +243,7 @@ export const ghosts: Ghost[] = [
         speed: 2.805,
       },
     ],
+    huntSanity: 50,
   },
   {
     name: 'hantu',
@@ -272,6 +279,7 @@ export const ghosts: Ghost[] = [
         speed: 2.7,
       },
     ],
+    huntSanity: 50,
   },
   {
     name: 'jinn',
@@ -290,6 +298,7 @@ export const ghosts: Ghost[] = [
         speed: 2.805,
       },
     ],
+    huntSanity: 50,
   },
   {
     name: 'mare',
@@ -304,6 +313,7 @@ export const ghosts: Ghost[] = [
         speed: 2.805,
       },
     ],
+    huntSanity: 50,
   },
   {
     name: 'moroi',
@@ -355,6 +365,7 @@ export const ghosts: Ghost[] = [
         speed: 3.7125,
       },
     ],
+    huntSanity: 50,
   },
   {
     name: 'myling',
@@ -369,6 +380,7 @@ export const ghosts: Ghost[] = [
         speed: 2.805,
       },
     ],
+    huntSanity: 50,
   },
   {
     name: 'obake',
@@ -384,6 +396,7 @@ export const ghosts: Ghost[] = [
         speed: 2.805,
       },
     ],
+    huntSanity: 50,
   },
   {
     name: 'obambo',
@@ -406,6 +419,7 @@ export const ghosts: Ghost[] = [
         speed: 3.22575,
       },
     ],
+    huntSanity: 65,
   },
   {
     name: 'oni',
@@ -431,6 +445,7 @@ export const ghosts: Ghost[] = [
         ],
       },
     ],
+    huntSanity: 50,
   },
   {
     name: 'onryo',
@@ -445,6 +460,7 @@ export const ghosts: Ghost[] = [
         speed: 2.805,
       },
     ],
+    huntSanity: 60,
   },
   {
     name: 'phantom',
@@ -459,6 +475,7 @@ export const ghosts: Ghost[] = [
         speed: 2.805,
       },
     ],
+    huntSanity: 50,
   },
   {
     name: 'poltergeist',
@@ -473,6 +490,7 @@ export const ghosts: Ghost[] = [
         speed: 2.805,
       },
     ],
+    huntSanity: 50,
   },
   {
     name: 'raiju',
@@ -491,6 +509,7 @@ export const ghosts: Ghost[] = [
         speed: 2.805,
       },
     ],
+    huntSanity: 65,
   },
   {
     name: 'revenant',
@@ -505,6 +524,7 @@ export const ghosts: Ghost[] = [
         speed: 3,
       },
     ],
+    huntSanity: 50,
   },
   {
     name: 'shade',
@@ -519,6 +539,7 @@ export const ghosts: Ghost[] = [
         speed: 2.805,
       },
     ],
+    huntSanity: 50,
   },
   {
     name: 'spirit',
@@ -533,6 +554,7 @@ export const ghosts: Ghost[] = [
         speed: 2.805,
       },
     ],
+    huntSanity: 50,
   },
   {
     name: 'thaye',
@@ -583,12 +605,14 @@ export const ghosts: Ghost[] = [
         speed: 1,
       },
     ],
+    huntSanity: 75,
   },
   {
     name: 'mimic',
     strongEvidence: 'orb',
     evidences: ['spirit', 'uv', 'freezing', 'orb'],
     huntSpeeds: [],
+    huntSanity: 100,
   },
   {
     name: 'twins',
@@ -611,6 +635,7 @@ export const ghosts: Ghost[] = [
         speed: 3.135,
       },
     ],
+    huntSanity: 50,
   },
   {
     name: 'wraith',
@@ -625,6 +650,7 @@ export const ghosts: Ghost[] = [
         speed: 2.805,
       },
     ],
+    huntSanity: 50,
   },
   {
     name: 'yokai',
@@ -639,6 +665,7 @@ export const ghosts: Ghost[] = [
         speed: 2.805,
       },
     ],
+    huntSanity: 80,
   },
   {
     name: 'yurei',
@@ -653,5 +680,6 @@ export const ghosts: Ghost[] = [
         speed: 2.805,
       },
     ],
+    huntSanity: 50,
   },
 ];

@@ -89,9 +89,11 @@ export default function GhostModal({ ghost, onClose }: GhostModalProps) {
               </div>
             ))}
           </div>
-          <p className="text-[10px] text-gray-500 italic text-center">
-            {t('hunts.helper')}
-          </p>
+          {ghost.huntSpeeds.length > 0 && (
+            <p className="text-[10px] text-gray-500 italic text-center">
+              {t('hunts.helper')}
+            </p>
+          )}
         </div>
       </div>
     </div>

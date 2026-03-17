@@ -2,8 +2,17 @@
   "title": "Phasmophobia Diary",
   "tabs": {
     "evidence": "Evidences",
-    "hunt": "Hunt",
+    "hunt": "Hunt & Traits",
     "settings": "Settings"
+  },
+  "gender": {
+    "any": "Unknown",
+    "male": "Male",
+    "female": "Female"
+  },
+  "hunt": {
+    "ghost_gender": "Gender:",
+    "avg_sanity": "Sanity (First hunt):"
   },
   "settings": {
     "evidence_count": "Number of evidences",

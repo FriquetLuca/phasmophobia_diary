@@ -7,6 +7,7 @@ import FilterTabs from './components/FilterTabs';
 import { useTranslation } from 'react-i18next';
 import type { EvidenceState } from './components/EvidenceButton';
 import EvidenceButton from './components/EvidenceButton';
+type GenderFilter = 'any' | 'male' | 'female';
 
 export default function App() {
   const { t } = useTranslation();
@@ -17,6 +18,8 @@ export default function App() {
   const [globalSpeedMult, setGlobalSpeedMult] = useState<number>(100); // Percentage: 50% to 150%
   const [selectedGhost, setSelectedGhost] = useState<Ghost | null>(null);
   const [activeTab, setActiveTab] = useState<TabType>('evidence');
+  const [genderFilter, setGenderFilter] = useState<GenderFilter>('any');
+  const [currentSanity, setCurrentSanity] = useState<number>(100);
 
   const toggleEvidence = (evidence: string) => {
     setEvidenceFilters((prev) => {
@@ -30,8 +33,7 @@ export default function App() {
       return { ...prev, [evidence]: nextState };
     });
   };
-
-  const ghostIsActive = (ghost: Ghost) => {
+  const filterGhostEvidences = (ghost: Ghost) => {
     const found = evidences.filter((e) => evidenceFilters[e] === 'found');
     const hidden = evidences.filter((e) => evidenceFilters[e] === 'hidden');
 
@@ -82,6 +84,20 @@ export default function App() {
     return true;
   };
 
+  const ghostIsActive = (ghost: Ghost) => {
+    if (
+      genderFilter !== 'any' &&
+      ghost.gender !== undefined &&
+      ghost.gender !== genderFilter
+    ) {
+      return false;
+    }
+    if (ghost.huntSanity < currentSanity) {
+      return false;
+    }
+    return filterGhostEvidences(ghost);
+  };
+
   return (
     <main className="min-h-screen bg-[#e8e4d9] py-10 px-4">
       <div className="max-w-4xl mx-auto border-2 border-[#5a5a5a] bg-[#fdfbf7] p-8 shadow-xl min-h-[85vh] flex flex-col">
@@ -108,9 +124,53 @@ export default function App() {
                 );
               case 'hunt':
                 return (
-                  <p className="text-xs font-mono uppercase text-gray-400 italic">
-                    Hunting & Speed Comparison Tools
-                  </p>
+                  <div className="grid grid-cols-2 gap-12 font-mono">
+                    {/* Sanity Slider */}
+                    <div className="flex flex-col gap-4">
+                      <div className="flex justify-between items-end border-b border-black/10 pb-2">
+                        <label className="text-xs font-bold uppercase">
+                          {t('hunt.avg_sanity')}
+                        </label>
+                        <span className="text-sm font-bold font-serif">
+                          {currentSanity}%
+                        </span>
+                      </div>
+                      <input
+                        type="range"
+                        min="0"
+                        max="100"
+                        step="1"
+                        value={currentSanity}
+                        onChange={(e) =>
+                          setCurrentSanity(Number(e.target.value))
+                        }
+                        className="w-full accent-red-700 cursor-pointer"
+                      />
+                    </div>
+                    {/* Gender Dropdown */}
+                    <div className="flex justify-center items-center gap-2 min-w-37.5">
+                      <label className="font-mono text-xs mt-1 font-bold uppercase text-gray-500">
+                        {t('hunt.ghost_gender')}
+                      </label>
+                      <div className="relative">
+                        <select
+                          value={genderFilter}
+                          onChange={(e) =>
+                            setGenderFilter(e.target.value as GenderFilter)
+                          }
+                          className="w-full bg-transparent border-b-2 border-black font-serif text-lg focus:outline-none appearance-none cursor-pointer py-1 pr-8"
+                        >
+                          <option value="any">{t('gender.any')}</option>
+                          <option value="male">{t('gender.male')}</option>
+                          <option value="female">{t('gender.female')}</option>
+                        </select>
+                        {/* Custom Arrow Icon */}
+                        <div className="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none text-xs">
+                          ▼
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 );
               default:
                 return (
@@ -187,7 +247,14 @@ export default function App() {
       </div>
       {selectedGhost && (
         <GhostModal
-          ghost={selectedGhost}
+          ghost={{
+            ...selectedGhost,
+            huntSpeeds: selectedGhost.huntSpeeds.map((s) => ({
+              label: s.label,
+              speed:
+                Math.floor(s.speed * (globalSpeedMult / 100) * 10000) / 10000,
+            })),
+          }}
           onClose={() => setSelectedGhost(null)}
         />
       )}

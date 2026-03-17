@@ -2,8 +2,17 @@
   "title": "Journal Phasmophobia",
   "tabs": {
     "evidence": "Preuves",
-    "hunt": "Chasse",
+    "hunt": "Chasse & Traits",
     "settings": "Options"
+  },
+  "gender": {
+    "any": "Inconnu",
+    "male": "Homme",
+    "female": "Femme"
+  },
+  "hunt": {
+    "ghost_gender": "Sexe :",
+    "avg_sanity": "Santé mentale (1ʳᵉ chasse) :"
   },
   "settings": {
     "evidence_count": "Nombre de preuves",
