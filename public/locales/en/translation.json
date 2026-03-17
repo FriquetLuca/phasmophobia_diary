@@ -1,4 +1,10 @@
 {
+  "title": "Phasmophobia Diary",
+  "tabs": {
+    "evidence": "Evidences",
+    "hunt": "Hunt",
+    "settings": "Settings"
+  },
   "uniqueSound": {
     "banshee_scream": "When a Parabolic Microphone or a Sound Recorder is used, the Banshee has a 33% chance of making 1 of its 20 unique screams instead of a regular paranormal sound."
   },

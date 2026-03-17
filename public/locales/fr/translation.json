@@ -1,4 +1,10 @@
 {
+  "title": "Journal Phasmophobia",
+  "tabs": {
+    "evidence": "Preuves",
+    "hunt": "Chasse",
+    "settings": "Options"
+  },
   "uniqueSound": {
     "banshee_scream": "Lorsqu'un Microphone parabolique ou un Enregistreur de Son est utilisé, la Banshee a 33% de chances d'émettre l'un de ses 20 cris uniques au lieu d'un son paranormal normal."
   },

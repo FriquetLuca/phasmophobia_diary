@@ -6,6 +6,16 @@ export type Evidence =
   | 'emf'
   | 'freezing'
   | 'uv';
+export const evidences: Evidence[] = [
+  'emf',
+  'dots',
+  'uv',
+  'freezing',
+  'orb',
+  'book',
+  'spirit',
+];
+
 export type Gender = 'female' | 'male';
 export interface SoundInterface {
   type: 'audio/mpeg' | 'audio/ogg';
