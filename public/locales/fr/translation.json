@@ -5,6 +5,10 @@
     "hunt": "Chasse",
     "settings": "Options"
   },
+  "settings": {
+    "evidence_count": "Nombre de preuves",
+    "ghost_speed": "Vitesse de l'entité"
+  },
   "uniqueSound": {
     "banshee_scream": "Lorsqu'un Microphone parabolique ou un Enregistreur de Son est utilisé, la Banshee a 33% de chances d'émettre l'un de ses 20 cris uniques au lieu d'un son paranormal normal."
   },

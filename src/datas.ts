@@ -182,7 +182,7 @@ export const ghosts: Ghost[] = [
   {
     name: 'deogen',
     strongEvidence: 'spirit',
-    evidences: ['emf', 'book', 'dots'],
+    evidences: ['spirit', 'book', 'dots'],
     huntSpeeds: [
       {
         label: 'slowest_speed',
@@ -282,7 +282,7 @@ export const ghosts: Ghost[] = [
   },
   {
     name: 'mare',
-    evidences: ['emf', 'orb', 'book'],
+    evidences: ['spirit', 'orb', 'book'],
     huntSpeeds: [
       {
         label: 'base_speed',
@@ -297,7 +297,7 @@ export const ghosts: Ghost[] = [
   {
     name: 'moroi',
     strongEvidence: 'spirit',
-    evidences: ['emf', 'book', 'freezing'],
+    evidences: ['spirit', 'book', 'freezing'],
     huntSpeeds: [
       {
         label: 'above_45_sanity',
@@ -426,7 +426,7 @@ export const ghosts: Ghost[] = [
   },
   {
     name: 'phantom',
-    evidences: ['emf', 'uv', 'dots'],
+    evidences: ['spirit', 'uv', 'dots'],
     huntSpeeds: [
       {
         label: 'base_speed',
@@ -606,7 +606,7 @@ export const ghosts: Ghost[] = [
   },
   {
     name: 'yokai',
-    evidences: ['emf', 'orb', 'dots'],
+    evidences: ['spirit', 'orb', 'dots'],
     huntSpeeds: [
       {
         label: 'base_speed',
@@ -620,7 +620,7 @@ export const ghosts: Ghost[] = [
   },
   {
     name: 'yurei',
-    evidences: ['orb', 'emf', 'dots'],
+    evidences: ['orb', 'freezing', 'dots'],
     huntSpeeds: [
       {
         label: 'base_speed',
