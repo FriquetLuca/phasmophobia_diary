@@ -10,7 +10,9 @@
     "ghost_speed": "Vitesse de l'entité"
   },
   "uniqueSound": {
-    "banshee_scream": "Lorsqu'un Microphone parabolique ou un Enregistreur de Son est utilisé, la Banshee a 33% de chances d'émettre l'un de ses 20 cris uniques au lieu d'un son paranormal normal."
+    "banshee_scream": "Lorsqu'un Microphone parabolique ou un Enregistreur de Son est utilisé, la Banshee a 33% de chances d'émettre l'un de ses 20 cris uniques au lieu d'un son paranormal normal.",
+    "deogen_breath": "Si le joueur pose une question à travers la Spirit Box alors qu'il se tient à moins d'1 mètre du Deogen, il a 33% de chances à chaque question de produire une réponse unique de respiration lourde et constante, au lieu d'une réponse normale.",
+    "air_breath": "L'Oni ne peut pas effectuer l'événement de forme de brume, qui implique une boule physique de brouillard se déplaçant vers le joueur, disparaissant habituellement avec un souffle lors de la collision."
   },
   "hunts": {
     "base_speed": "Vitesse de base :",

@@ -193,6 +193,17 @@ export const ghosts: Ghost[] = [
         speed: 3,
       },
     ],
+    uniqueSounds: [
+      {
+        label: 'deogen_breath',
+        sounds: [
+          {
+            type: 'audio/mpeg',
+            src: 'deogen_breath.mp3',
+          },
+        ],
+      },
+    ],
   },
   {
     name: 'gallu',
@@ -407,6 +418,17 @@ export const ghosts: Ghost[] = [
       {
         label: 'los_top_speed',
         speed: 2.805,
+      },
+    ],
+    uniqueSounds: [
+      {
+        label: 'air_breath',
+        sounds: [
+          {
+            type: 'audio/mpeg',
+            src: 'air_breath.mp3',
+          },
+        ],
       },
     ],
   },

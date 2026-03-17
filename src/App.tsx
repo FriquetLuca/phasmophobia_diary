@@ -32,108 +32,54 @@ export default function App() {
   };
 
   const ghostIsActive = (ghost: Ghost) => {
-    const evidencesFound = evidences.filter(
-      (e) => evidenceFilters[e] === 'found'
-    );
-    const evidencesHidden = evidences.filter(
-      (e) => evidenceFilters[e] === 'hidden'
-    );
-    if (evidenceCount === 0) {
-      // Only the mimic could have an evidence
-      if (evidencesFound.length === 1) {
-        return evidencesFound.includes('orb') ? ghost.name === 'mimic' : false;
-      } else if (evidencesFound.length > 1) {
-        return false;
-      }
-      return true;
-    } else if (evidenceCount === 1) {
-      if (evidencesFound.length === 2) {
-        return (
-          ghost.name === 'mimic' &&
-          evidencesFound.filter((e) => ghost.evidences.includes(e)).length ===
-            2 &&
-          evidencesFound.includes('orb')
-        );
-      }
-      // We found the only evidence here
-      else if (evidencesFound.length === 1) {
-        if (ghost.strongEvidence !== undefined) {
-          // If it has a strong evidence, it should be included in the evidences.
-          return evidencesFound.includes(ghost.strongEvidence);
-        } else {
-          return ghost.evidences.includes(evidencesFound[0]);
-        }
-      }
-      // More than one evidence (except the mimic) should never happen
-      else if (evidencesFound.length > 2) {
-        return false;
-      }
-      // If the ghost as a strong evidence and it's hidden, this can't be that ghost then
-      if (ghost.strongEvidence !== undefined) {
-        return !evidencesHidden.includes(ghost.strongEvidence);
-      }
-      return true;
-    } else if (evidenceCount === 2) {
-      const isHidden =
-        ghost.evidences.filter((e) => evidencesHidden.includes(e)).length >= 2;
-      // Only the mimic could have 3 evidences in a 2 evidences run
-      if (evidencesFound.length === 3) {
-        return (
-          ghost.name === 'mimic' &&
-          evidencesFound.filter((e) => ghost.evidences.includes(e)).length ===
-            3 &&
-          evidencesFound.includes('orb')
-        );
-      }
-      // If we found both evidences, we just need to check for a possible strong evidence
-      else if (evidencesFound.length === 2) {
-        const hasEvidences =
-          evidencesFound.filter((e) => ghost.evidences.includes(e)).length ===
-          2;
-        if (ghost.strongEvidence !== undefined) {
-          return hasEvidences && evidencesFound.includes(ghost.strongEvidence);
-        }
-        return hasEvidences;
-      }
-      // One evidence to check
-      else if (evidencesFound.length === 1) {
-        if (ghost.strongEvidence !== undefined) {
-          return (
-            ghost.evidences.includes(evidencesFound[0]) &&
-            !evidencesHidden.includes(ghost.strongEvidence) &&
-            !isHidden
-          );
-        }
-        return ghost.evidences.includes(evidencesFound[0]) && !isHidden;
-      }
-      // No ghost can have more than 3 evidences obviously
-      else if (evidencesFound.length > 3) {
-        return false;
-      }
-      if (ghost.strongEvidence !== undefined) {
-        return !evidencesHidden.includes(ghost.strongEvidence) && !isHidden;
-      }
-      return !isHidden;
-    } else {
-      if (evidencesFound.length === 4) {
-        return (
-          ghost.name === 'mimic' &&
-          evidencesFound.filter((e) => ghost.evidences.includes(e)).length === 4
-        );
-      } else if (evidencesFound.length === 3) {
-        return (
-          ghost.evidences.filter((e) => evidencesFound.includes(e)).length >= 3
-        );
-      } else if (evidencesFound.length > 4) {
-        return false;
-      }
-      return (
-        ghost.evidences.filter((e) => !evidencesHidden.includes(e)).length ===
-          ghost.evidences.length &&
-        ghost.evidences.filter((e) => evidencesFound.includes(e)).length ===
-          evidencesFound.length
-      );
+    const found = evidences.filter((e) => evidenceFilters[e] === 'found');
+    const hidden = evidences.filter((e) => evidenceFilters[e] === 'hidden');
+
+    // 1. Global Rule: If we found more evidence than allowed (plus Mimic's Orbs)
+    const maxAllowed =
+      ghost.name === 'mimic' ? evidenceCount + 1 : evidenceCount;
+    if (found.length > maxAllowed) return false;
+
+    // 2. Global Rule: If we found Orbs but the ghost doesn't have Orbs AND isn't a Mimic
+    if (
+      found.includes('orb') &&
+      !ghost.evidences.includes('orb') &&
+      ghost.name !== 'mimic'
+    )
+      return false;
+
+    // 3. Rule Out: If any evidence marked 'hidden' is a REQUIRED evidence for this ghost
+    if (ghost.strongEvidence && hidden.includes(ghost.strongEvidence))
+      return false;
+
+    // 4. Rule Out: If the number of 'hidden' evidences matches or exceeds
+    // what the ghost has left over after the game's limit.
+    // Example: In 1-evidence, a ghost has 3 evidences. 2 must be hidden.
+    // If we hide 3 of their possible evidences, they are impossible.
+    const ghostEvidencesHidden = ghost.evidences.filter((e) =>
+      hidden.includes(e)
+    ).length;
+    const mustBeHiddenCount = 3 - evidenceCount;
+    if (ghostEvidencesHidden > mustBeHiddenCount) return false;
+
+    // 5. Found: If we found evidence this ghost doesn't have (and it's not the Mimic/Orb combo)
+    const hasIncompatibleFound = found.some((e) => {
+      if (e === 'orb' && ghost.name === 'mimic') return false; // Mimic orb exception
+      return !ghost.evidences.includes(e);
+    });
+    if (hasIncompatibleFound) return false;
+
+    // 6. Strong Evidence: If we have found evidence, but it's not the ghost's Strong Evidence
+    // (Only applies if we have reached the evidence limit for that ghost)
+    if (
+      evidenceCount > 0 &&
+      ghost.strongEvidence &&
+      found.length === evidenceCount
+    ) {
+      if (!found.includes(ghost.strongEvidence)) return false;
     }
+
+    return true;
   };
 
   return (
@@ -194,7 +140,9 @@ export default function App() {
                     {/* Global Speed Setting */}
                     <div className="flex flex-col gap-2">
                       <label className="text-center font-bold border-b border-black/10 pb-2">
-                        {t('settings.ghost_speed')} ({globalSpeedMult}%)
+                        {t('settings.ghost_speed')} (
+                        {globalSpeedMult >= 100 ? '' : ' '}
+                        {globalSpeedMult}%)
                       </label>
                       <input
                         type="range"
@@ -221,14 +169,20 @@ export default function App() {
           }}
         />
         <div className="grid grid-cols-3 gap-y-4 gap-x-8">
-          {ghosts.map((ghost) => (
-            <GhostCard
-              key={ghost.name}
-              active={ghostIsActive(ghost)}
-              ghost={ghost}
-              onSelect={() => setSelectedGhost(ghost)}
-            />
-          ))}
+          {ghosts
+            .sort((left, right) => {
+              const leftName = t(`ghosts.${left.name}.name`);
+              const rightName = t(`ghosts.${right.name}.name`);
+              return leftName.localeCompare(rightName);
+            })
+            .map((ghost) => (
+              <GhostCard
+                key={ghost.name}
+                active={ghostIsActive(ghost)}
+                ghost={ghost}
+                onSelect={() => setSelectedGhost(ghost)}
+              />
+            ))}
         </div>
       </div>
       {selectedGhost && (
