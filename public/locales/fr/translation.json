@@ -2,8 +2,9 @@
   "title": "Journal Phasmophobia",
   "categories": {
     "hunt_duration": "Durée de chasse",
+    "hunt_ability": "Capacité en chasse",
     "hunt_speed": "Vitesse de chasse",
-    "unique_sounds": "Sons Unique"
+    "unique_sounds": "Sons unique"
   },
   "tabs": {
     "evidence": "Preuves",
@@ -165,7 +166,8 @@
     },
     "raiju": {
       "name": "Raiju",
-      "description": "Les Raiju sont des démons qui profitent des courants électriques. Bien que généralement calme, ils peuvent devenir agités quand ils sont submergés de puissance."
+      "description": "Les Raiju sont des démons qui profitent des courants électriques. Bien que généralement calme, ils peuvent devenir agités quand ils sont submergés de puissance.",
+      "hunt_ability": "Lorsque le Raiju se trouve à {{distance}} mètres d'au moins un appareil électronique actif au même étage (qui peut aussi être situé en dehors du lieu d'enquête), son seuil de santé mentale de chasse est augmenté à 65%, et il se déplacera à une vitesse fixe pendant les chasses.\n\nSinon, il aura le seuil standard de 50% et suivra les vitesses d'entité standards avec une particularité : si le Raiju a une ligne de mire avec un joueur pendant qu'il est à proximité d'un appareil électronique actif, l'augmentation de vitesse à partir d'une ligne de mire continue s'ajoute en arrière-plan, et ne sera appliquée qu'une fois qu'il ne sera plus à proximité d'appareils électroniques.\nTous les effets énumérés ci-dessus s'appliquent à la plupart des appareils électroniques, qu'ils soient placés, tenus en main, ou jetés au sol.\nLes éléments suivants ne comptent pas pour l'augmentation de vitesse ou le seuil de santé mentale de chasse : Chat global, Caméras vidéo et Appareils photo qui sont jetés au sol, Détecteurs de mouvement, Capteurs sonores, et Projecteurs D.O.T.S. qui sont jetés au sol ou tenus (excluant le D.O.T.S. R1, qui doit aussi être éteint), Objets dans l'inventaire (à l'exception des Lampes de poche qui sont allumées), Tout autre équipement électrique non apporté du camion (lumières du bâtiment, disjoncteur, caméras de surveillance, ventilateurs, etc.)."
     },
     "revenant": {
       "name": "Revenant",

@@ -72,6 +72,21 @@ export default function GhostModal({
           </DisplayCategory>
 
           <DisplayCategory
+            isDisplayed={ghost.hasHuntAbility ?? false}
+            label={t('categories.hunt_ability')}
+          >
+            {ghost.hasHuntAbility && (
+              <div className="flex flex-col gap-2 bg-black/5 p-3 rounded">
+                <span className="text-xs font-bold uppercase">
+                  {t(`ghosts.${ghost.name}.hunt_ability`, {
+                    seconds: huntDuration * (ghost.huntDuration ?? 1.0),
+                  })}
+                </span>
+              </div>
+            )}
+          </DisplayCategory>
+
+          <DisplayCategory
             isDisplayed={ghost.huntDuration !== undefined}
             label={t('categories.hunt_duration')}
           >

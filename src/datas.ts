@@ -74,6 +74,8 @@ export interface Ghost {
   huntSpeeds: HuntSpeed[];
   huntSanity: number;
   huntDuration?: number;
+  hasHuntAbility?: boolean;
+  huntAbilityDistance?: (mapSize: MapSize) => number;
 }
 
 export const ghosts: Ghost[] = [
@@ -547,6 +549,17 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 65,
+    hasHuntAbility: true,
+    huntAbilityDistance: (dist) => {
+      switch (dist) {
+        case 'large':
+          return 10;
+        case 'medium':
+          return 8;
+        default:
+          return 6;
+      }
+    },
   },
   {
     name: 'revenant',

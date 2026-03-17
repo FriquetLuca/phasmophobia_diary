@@ -1,9 +1,10 @@
 {
   "title": "Phasmophobia Diary",
   "categories": {
-    "hunt_duration": "Hunt Duration",
-    "hunt_speed": "Hunting Speed",
-    "unique_sounds": "Unique Sounds"
+    "hunt_duration": "Hunt duration",
+    "hunt_speed": "Hunting speed",
+    "unique_sounds": "Unique sounds",
+    "hunt_ability": "Hunt ability"
   },
   "tabs": {
     "evidence": "Evidences",
@@ -165,7 +166,8 @@
     },
     "raiju": {
       "name": "Raiju",
-      "description": "A Raiju is a demon that thrives on electrical current. While generally calm, they can become agitated when overwhelmed with power."
+      "description": "A Raiju is a demon that thrives on electrical current. While generally calm, they can become agitated when overwhelmed with power.",
+      "hunt_ability": "When the Raiju is within {{distance}} meters of at least one piece of active electronic equipment on the same floor (that can also be located outside the investigation area), its hunt sanity threshold is increased to 65%, and it will move at a fixed speed during hunts.\nOtherwise, it will have the standard threshold of 50% and will follow standard ghost speeds with one particularity: if the Raiju has line-of-sight with a player while near active electronic equipment, the speed increase from continuous line-of-sight adds in the background, and will only be applied once it is no longer near any electronics.\n\nAll effects listed above apply to most electronic equipment, whether they are placed, held in the hand, or dropped on the floor.\nThe following do not count towards the speed boost or the hunt sanity threshold: Global chat, Video cameras and Photo Cameras that are thrown on the ground, Motion sensors, sound sensors, and D.O.T.S. Projectors that are thrown on the ground or held (excluding T1 D.O.T.S., which also needs to be turned off), Objects in the inventory (except flashlights that are turned on), Any other electrical equipment not brought in from the truck (building lights, fuse box, CCTV, fans, etc.)."
     },
     "revenant": {
       "name": "Revenant",
