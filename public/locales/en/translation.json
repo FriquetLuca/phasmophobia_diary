@@ -1,10 +1,12 @@
 {
   "title": "Phasmophobia Diary",
   "categories": {
-    "hunt_duration": "Hunt duration",
     "hunt_speed": "Hunting speed",
     "unique_sounds": "Unique sounds",
-    "hunt_ability": "Hunt ability"
+    "hunt": "Hunt",
+    "activity": "Activity",
+    "ability": "Abilities",
+    "misc": "Miscellaneous"
   },
   "tabs": {
     "evidence": "Evidences",
@@ -30,12 +32,11 @@
     "hunt_duration_high": "Élevée"
   },
   "unique_sounds": {
-    "banshee_scream": "When a Parabolic Microphone or a Sound Recorder is used, the Banshee has a 33% chance of making 1 of its 20 unique screams instead of a regular paranormal sound.",
-    "deogen_breath": "If the player asks any question through the Spirit Box while standing within 1 metre of the Deogen, it has a 33% chance with each question to produce a unique response of constant heavy bull-like breathing, instead of a regular response.",
-    "air_breath": "The Oni cannot perform the mist form event, which involves a physical ball of fog moving towards the player, usually disappearing with a hiss sound upon collision."
+    "banshee_scream": "When a Parabolic Microphone or a Sound Recorder is used, the Banshee has a 33% chance of making 1 of its 20 unique screams instead of a regular paranormal sound.\n\n",
+    "deogen_breath": "If the player asks any question through the Spirit Box while standing within 1 metre of the Deogen, it has a 33% chance with each question to produce a unique response of constant heavy bull-like breathing, instead of a regular response.\n\n",
+    "air_breath": "The Oni cannot perform the mist form event, which involves a physical ball of fog moving towards the player, usually disappearing with a hiss sound upon collision.\n\n"
   },
   "hunts": {
-    "hunt_duration": "The hunt duration will be 20% shorter if the Obambo starts the hunt in the aggressive state. This will apply even if the ghost switches to the calm state mid-hunt. You should expect your hunt to last {{seconds}} seconds.",
     "base_speed": "Base speed:",
     "los_top_speed": "Top speed (Line Of Sight):",
     "dayan_los_top_speed": "Top speed (Line Of Sight; far from player(s)):",
@@ -98,15 +99,23 @@
   "ghosts": {
     "banshee": {
       "name": "Banshee",
-      "description": "The singing siren, known for attracting its victims through song. It has been known to single out its prey before making a killing blow."
+      "description": "The singing siren, known for attracting its victims through song. It has been known to single out its prey before making a killing blow.",
+      "activity": "The Banshee has a higher chance of performing singing ghost events over other types.\n\nIf the hunt target is the target of a singing event and causes the Banshee to disappear prematurely (by going near it), then their sanity will decrease by 15%, instead of the usual 10%.\n\nLike other ghosts, who the Banshee targets for a ghost event is random and based on distance; being the hunt target by itself does not increase their chance of being the ghost event target.\n\nWhen in a D.O.T.S. state, the Banshee will try to move towards its hunt target instead of the nearest player.\n\nContrary to most other ghosts, the Banshee is able to perform long roams while its current room is not the favourite room.",
+      "ability": "When the Banshee performs a roam outside of hunts, if the hunt target is inside the investigation area, it has a 2/3 (67%) chance of triggering its ability which makes it travel to the target. Unlike the Wraith's and the Phantom's abilities, this will not create any EMF reading. The ability fails if the ghost and the hunt target are on different floors except if:\n- The map is Point Hope\n- The Banshee was in a single-room basement or a single-room attic for all other maps.",
+      "hunt": "At the start of the game a player is randomly selected as the hunt target. If the hunt target leaves the game or dies, a new hunt target will be selected. The new target is not random: the Banshee will select the first alive player in the list (established by the order the players joined the lobby) that is not the previous target, unless there is only one player remaining.\n\nThe Banshee's hunt threshold is 50%, but it only checks the target's sanity when trying to hunt, rather than the average sanity like other ghost types, meaning that only the target needs to be at or below 50% sanity for it to attempt to hunt. As a result, the Banshee can appear to start hunting from as high as 87% average sanity, or as low as 12% average sanity, on the Sanity Monitor, depending on the target's current sanity and number of other players.\n\nWhen a Banshee hunts, it will mostly follow standard hunt rules, but it is unable to detect, and will ignore all players other than its hunt target. It will not attempt to chase other players and is unable to kill them, even if it comes into direct contact with a non-target player, instead passing through them. The Banshee will react to Incense lit by other players within range, but this will not allow for completion of the \"Repel a ghost while it is chasing someone\" optional objective unless the Banshee is also chasing its target when this occurs.\n\nIf the hunt target is outside the building, the Banshee will still use its target's sanity to decide whether to hunt. However, if it does hunt, it will hunt like any other ghost, chasing any opportune player.",
+      "misc": "The Banshee can only be a female ghost and will use a female ghost model."
     },
     "dayan": {
       "name": "Dayan",
-      "description": "The Dayan is born from the soul of someone who suffered immense cruelty in life. Now, in death, she is hyper-vigilant of anyone who 'dances' too close."
+      "description": "The Dayan is born from the soul of someone who suffered immense cruelty in life. Now, in death, she is hyper-vigilant of anyone who 'dances' too close.",
+      "hunt": "When a player is within 10 metres of the Dayan, whether on the same floor or not, the ghost will have a modified hunt sanity threshold and hunt speed.\n- If the closest player stay still, the threshold is decreased to 45% sanity.\n- If the closest player is walking, the threshold is increased to 65% sanity.\n\nIf there is no player within 10 metres of the Dayan, it will have the standard threshold of 50% and follow standard ghost speeds with one particularity: if the Dayan has line-of-sight with a player within 10 metres, the speed increase from continuous line-of-sight adds in the background, and will only be applied once it is no longer near any player.",
+      "misc": "The Dayan can only be a female ghost and will use a female ghost model."
     },
     "demon": {
       "name": "Demon",
-      "description": "A Demon is one of the worst ghosts you can encounter. It has been known to attack without reason."
+      "description": "A Demon is one of the worst ghosts you can encounter. It has been known to attack without reason.",
+      "ability": "The Demon has an ability that allows it to automatically start a hunt, regardless of current average sanity. There is no particular behaviour or condition (such as requiring line-of-sight with a player) that affects if it activates or not; if it decides to use its ability, it will hunt. This hunt can be blocked by normal prevention methods.\n\nBecause the Demon's ability hunt is governed by the \"ability phase\", these hunts occur much less frequently than hunts derived from being below its sanity threshold. Additionally, as this is not a \"proper\" hunt attempt, the Demon can attempt to use its ability when it is unable to hunt (during the setup phase on Amateur and Intermediate difficulties, when it is affected by Incense, or when a hunt has just ended and it is on cooldown). However, it will fail and there will be no hunt.",
+      "hunt": "The Demon has a normal hunt sanity threshold of 70%, instead of the standard 50%. This does not affect and is independent from its hunt ability, although the hunt does not differ in any way.\n\nDemons have a minimum cooldown of 20 seconds between hunts, instead of the usual 25 seconds.\n\nSmudging a Demon will prevent hunts for only 60 seconds, as opposed to the standard 90 seconds.\n\nAs a weakness, the effective range of a crucifix is 50% larger than the standard range:\n- 4.5 metres instead of 3 for Tier I\n- 6 metres instead of 4 for Tier II\n- 7.5 metres instead of 5 for Tier III"
     },
     "deogen": {
       "name": "Deogen",
@@ -146,7 +155,8 @@
     },
     "obambo": {
       "name": "Obambo",
-      "description": "The Obambo is the ghost of someone never properly laid to rest. Fickle and defensive, it flickers between states of calm and aggression."
+      "description": "The Obambo is the ghost of someone never properly laid to rest. Fickle and defensive, it flickers between states of calm and aggression.",
+      "hunt": "The hunt duration will be 20% shorter if the Obambo starts the hunt in the aggressive state. This will apply even if the ghost switches to the calm state mid-hunt. You should expect your hunt to last {{huntDuration}} seconds."
     },
     "oni": {
       "name": "Oni",
@@ -167,7 +177,7 @@
     "raiju": {
       "name": "Raiju",
       "description": "A Raiju is a demon that thrives on electrical current. While generally calm, they can become agitated when overwhelmed with power.",
-      "hunt_ability": "When the Raiju is within {{distance}} meters of at least one piece of active electronic equipment on the same floor (that can also be located outside the investigation area), its hunt sanity threshold is increased to 65%, and it will move at a fixed speed during hunts.\nOtherwise, it will have the standard threshold of 50% and will follow standard ghost speeds with one particularity: if the Raiju has line-of-sight with a player while near active electronic equipment, the speed increase from continuous line-of-sight adds in the background, and will only be applied once it is no longer near any electronics.\n\nAll effects listed above apply to most electronic equipment, whether they are placed, held in the hand, or dropped on the floor.\nThe following do not count towards the speed boost or the hunt sanity threshold: Global chat, Video cameras and Photo Cameras that are thrown on the ground, Motion sensors, sound sensors, and D.O.T.S. Projectors that are thrown on the ground or held (excluding T1 D.O.T.S., which also needs to be turned off), Objects in the inventory (except flashlights that are turned on), Any other electrical equipment not brought in from the truck (building lights, fuse box, CCTV, fans, etc.)."
+      "hunt": "When the Raiju is within {{distance}} meters of at least one piece of active electronic equipment on the same floor (that can also be located outside the investigation area), its hunt sanity threshold is increased to 65%, and it will move at a fixed speed during hunts.\n\nOtherwise, it will have the standard threshold of 50% and will follow standard ghost speeds with one particularity: if the Raiju has line-of-sight with a player while near active electronic equipment, the speed increase from continuous line-of-sight adds in the background, and will only be applied once it is no longer near any electronics.\n\nAll effects listed above apply to most electronic equipment, whether they are placed, held in the hand, or dropped on the floor.\n\nThe following do not count towards the speed boost or the hunt sanity threshold:\n\n- Global chat\n- Video cameras and Photo Cameras that are thrown on the ground\n- Motion sensors, sound sensors, and D.O.T.S. Projectors that are thrown on the ground or held (excluding T1 D.O.T.S., which also needs to be turned off)\n- Objects in the inventory (except flashlights that are turned on)\n- Any other electrical equipment not brought in from the truck (building lights, fuse box, CCTV, fans, etc.)."
     },
     "revenant": {
       "name": "Revenant",

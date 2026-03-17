@@ -305,6 +305,7 @@ export default function App() {
                 Math.floor(s.speed * (globalSpeedMult / 100) * 10000) / 10000,
             })),
           }}
+          map={selectedMap}
           onClose={() => setSelectedGhost(null)}
           huntDuration={getHuntDuration(huntSetting, selectedMap)}
         />

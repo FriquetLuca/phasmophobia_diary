@@ -1,4 +1,4 @@
-import type { Ghost } from '../datas';
+import type { Ghost, MapSize } from '../datas';
 import { useTranslation } from 'react-i18next';
 import EvidenceIcon from './EvidenceIcon';
 import AudioSound from './AudioSound';
@@ -8,12 +8,14 @@ import DisplayCategory from './DisplayCategory';
 interface GhostModalProps {
   ghost: Ghost;
   huntDuration: number;
+  map: string;
   onClose: () => void;
 }
 
 export default function GhostModal({
   ghost,
   huntDuration,
+  map,
   onClose,
 }: GhostModalProps) {
   const { t } = useTranslation();
@@ -54,6 +56,36 @@ export default function GhostModal({
           </p>
 
           <DisplayCategory
+            isDisplayed={ghost.hasActivitySpecific ?? false}
+            label={t('categories.activity')}
+          >
+            {ghost.hasActivitySpecific && (
+              <div className="flex flex-col gap-2 bg-black/5 p-3 rounded">
+                <pre className="text-xs">
+                  <code className="text-wrap">
+                    {t(`ghosts.${ghost.name}.activity`)}
+                  </code>
+                </pre>
+              </div>
+            )}
+          </DisplayCategory>
+
+          <DisplayCategory
+            isDisplayed={ghost.hasAbilitiesSpecific ?? false}
+            label={t('categories.ability')}
+          >
+            {ghost.hasAbilitiesSpecific && (
+              <div className="flex flex-col gap-2 bg-black/5 p-3 rounded">
+                <pre className="text-xs">
+                  <code className="text-wrap">
+                    {t(`ghosts.${ghost.name}.ability`)}
+                  </code>
+                </pre>
+              </div>
+            )}
+          </DisplayCategory>
+
+          <DisplayCategory
             isDisplayed={(ghost.uniqueSounds?.length ?? 0) > 0}
             label={t('categories.unique_sounds')}
           >
@@ -63,40 +95,49 @@ export default function GhostModal({
                   key={i}
                   className="flex flex-col gap-2 bg-black/5 p-3 rounded"
                 >
-                  <span>{t(`unique_sounds.${sound.label}`)}</span>
-                  {sound.sounds.map((s, i) => (
-                    <AudioSound key={i} {...s} />
-                  ))}
+                  <pre className="text-xs">
+                    <code className="text-wrap">
+                      <span>{t(`unique_sounds.${sound.label}`)}</span>
+                      {sound.sounds.map((s, i) => (
+                        <AudioSound key={i} {...s} />
+                      ))}
+                    </code>
+                  </pre>
                 </div>
               ))}
           </DisplayCategory>
 
           <DisplayCategory
             isDisplayed={ghost.hasHuntAbility ?? false}
-            label={t('categories.hunt_ability')}
+            label={t('categories.hunt')}
           >
             {ghost.hasHuntAbility && (
               <div className="flex flex-col gap-2 bg-black/5 p-3 rounded">
-                <span className="text-xs font-bold uppercase">
-                  {t(`ghosts.${ghost.name}.hunt_ability`, {
-                    seconds: huntDuration * (ghost.huntDuration ?? 1.0),
-                  })}
-                </span>
+                <pre className="text-xs">
+                  <code className="text-wrap">
+                    {t(`ghosts.${ghost.name}.hunt`, {
+                      distance: ghost.huntAbilityDistance
+                        ? ghost.huntAbilityDistance(map as MapSize)
+                        : 0,
+                      huntDuration: huntDuration * (ghost.huntDuration ?? 1.0),
+                    })}
+                  </code>
+                </pre>
               </div>
             )}
           </DisplayCategory>
 
           <DisplayCategory
-            isDisplayed={ghost.huntDuration !== undefined}
-            label={t('categories.hunt_duration')}
+            isDisplayed={ghost.hasMiscInfos ?? false}
+            label={t('categories.misc')}
           >
-            {ghost.huntDuration && (
-              <div className="flex flex-col items-stretch bg-gray-100 p-3">
-                <span className="text-xs font-bold uppercase">
-                  {t(`ghosts.${ghost.name}.hunt_duration_ability`, {
-                    seconds: huntDuration * (ghost.huntDuration ?? 1.0),
-                  })}
-                </span>
+            {ghost.hasMiscInfos && (
+              <div className="flex flex-col gap-2 bg-black/5 p-3 rounded">
+                <pre className="text-xs">
+                  <code className="text-wrap">
+                    {t(`ghosts.${ghost.name}.misc`)}
+                  </code>
+                </pre>
               </div>
             )}
           </DisplayCategory>

@@ -1,4 +1,4 @@
-import { type EmojiRecord, type MdToken, type RootToken } from 'mkimp';
+/*import { type EmojiRecord, type MdToken, type RootToken } from 'mkimp';
 
 type TokenType = MdToken['type'];
 type ExtractToken<T extends TokenType> = Extract<
@@ -589,3 +589,4 @@ export class Renderer {
     return result;
   }
 }
+*/

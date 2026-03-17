@@ -74,7 +74,10 @@ export interface Ghost {
   huntSpeeds: HuntSpeed[];
   huntSanity: number;
   huntDuration?: number;
+  hasActivitySpecific?: boolean;
+  hasAbilitiesSpecific?: boolean;
   hasHuntAbility?: boolean;
+  hasMiscInfos?: boolean;
   huntAbilityDistance?: (mapSize: MapSize) => number;
 }
 
@@ -181,6 +184,10 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 50,
+    hasActivitySpecific: true,
+    hasAbilitiesSpecific: true,
+    hasHuntAbility: true,
+    hasMiscInfos: true,
   },
   {
     name: 'dayan',
@@ -205,6 +212,8 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 65,
+    hasHuntAbility: true,
+    hasMiscInfos: true,
   },
   {
     name: 'demon',
@@ -220,6 +229,8 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 100,
+    hasAbilitiesSpecific: true,
+    hasHuntAbility: true,
   },
   {
     name: 'deogen',
@@ -458,6 +469,7 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 65,
+    hasHuntAbility: true,
     huntDuration: 0.8,
   },
   {

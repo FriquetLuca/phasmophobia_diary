@@ -1,10 +1,12 @@
 {
   "title": "Journal Phasmophobia",
   "categories": {
-    "hunt_duration": "Durée de chasse",
-    "hunt_ability": "Capacité en chasse",
+    "hunt": "Chasse",
     "hunt_speed": "Vitesse de chasse",
-    "unique_sounds": "Sons unique"
+    "unique_sounds": "Sons unique",
+    "activity": "Activité",
+    "ability": "Compétences",
+    "misc": "Divers"
   },
   "tabs": {
     "evidence": "Preuves",
@@ -30,9 +32,9 @@
     "hunt_duration_high": "Élevée"
   },
   "unique_sounds": {
-    "banshee_scream": "Lorsqu'un Microphone parabolique ou un Enregistreur de Son est utilisé, la Banshee a 33% de chances d'émettre l'un de ses 20 cris uniques au lieu d'un son paranormal normal.",
-    "deogen_breath": "Si le joueur pose une question à travers la Spirit Box alors qu'il se tient à moins d'1 mètre du Deogen, il a 33% de chances à chaque question de produire une réponse unique de respiration lourde et constante, au lieu d'une réponse normale.",
-    "air_breath": "L'Oni ne peut pas effectuer l'événement de forme de brume, qui implique une boule physique de brouillard se déplaçant vers le joueur, disparaissant habituellement avec un souffle lors de la collision."
+    "banshee_scream": "Lorsqu'un Microphone parabolique ou un Enregistreur de Son est utilisé, la Banshee a 33% de chances d'émettre l'un de ses 20 cris uniques au lieu d'un son paranormal normal.\n\n",
+    "deogen_breath": "Si le joueur pose une question à travers la Spirit Box alors qu'il se tient à moins d'1 mètre du Deogen, il a 33% de chances à chaque question de produire une réponse unique de respiration lourde et constante, au lieu d'une réponse normale.\n\n",
+    "air_breath": "L'Oni ne peut pas effectuer l'événement de forme de brume, qui implique une boule physique de brouillard se déplaçant vers le joueur, disparaissant habituellement avec un souffle lors de la collision.\n\n"
   },
   "hunts": {
     "base_speed": "Vitesse de base :",
@@ -97,15 +99,23 @@
   "ghosts": {
     "banshee": {
       "name": "Banshee",
-      "description": "Les sirènes qui chantent, qui attirent leurs victimes avec leurs chansons. On sait qu'elles identifient précisément leur proie avant de porter le coup fatal."
+      "description": "Les sirènes qui chantent, qui attirent leurs victimes avec leurs chansons. On sait qu'elles identifient précisément leur proie avant de porter le coup fatal.",
+      "activity": "La Banshee a plus de chances d'effectuer des événements paranormaux de chant que les autres types.\n\nSi la cible de chasse est la cible d'un événement de chant et provoque la disparition prématurée de la Banshee (en s'approchant d'elle), alors sa santé mentale diminuera de 15%, au lieu des 10% habituels.\n\nComme pour les autres entités, la cible de la Banshee pour un événement paranormal est aléatoire et basée sur la distance ; être la cible de chasse en soi n'augmente pas ses chances d'être la cible de l'événement paranormal.\n\nLorsqu'elle est dans un état D.O.T.S., la Banshee essaiera de se déplacer vers sa cible de chasse au lieu du joueur le plus proche.\n\nContrairement à la plupart des autres entités, la Banshee est capable d'effectuer des errances longues alors que sa pièce actuelle n'est pas la pièce favorite.",
+      "ability": "Lorsque la Banshee effectue une errance en dehors des chasses, si la cible de chasse se trouve à l'intérieur du lieu d'enquête, elle a 2 chances sur 3 (67%) de déclencher sa compétence qui lui fait se déplacer jusqu'à la cible. Contrairement aux compétences du Spectre et du Fantôme, cela ne créera aucune mesure EMF. La compétence échoue si l'entité et la cible de chasse se trouvent à des étages différents sauf si :\n- La carte est Point Hope\n- La Banshee était dans un sous-sol à une seule pièce ou un grenier à une seule pièce pour toutes les autres cartes.",
+      "hunt": "Au début de la partie, un joueur est sélectionné aléatoirement comme cible de chasse. Si la cible de chasse quitte la partie ou décède, une nouvelle cible de chasse sera sélectionnée. La nouvelle cible n'est pas aléatoire : la Banshee sélectionnera le premier joueur en vie dans la liste (établie par l'ordre dans lequel les joueurs ont rejoint le lobby) qui n'est pas la cible précédente, sauf s'il ne reste qu'un seul joueur.\n\nLe seuil de chasse de la Banshee est de 50%, mais elle ne vérifie que la santé mentale de la cible lorsqu'elle essaie de chasser, plutôt que la santé mentale moyenne comme les autres types d'entité, ce qui signifie que seule la cible doit être à 50% de santé mentale ou moins pour qu'elle tente de chasser. En conséquence, la Banshee peut sembler commencer à chasser à partir d'une santé mentale moyenne aussi haute que 87%, ou aussi basse que 12%, sur le Moniteur de Santé mentale, en fonction de la santé mentale actuelle de la cible et du nombre d'autres joueurs.\n\nLorsqu'une Banshee chasse, elle suivra principalement les règles de chasse standards, mais elle est incapable de détecter, et ignorera tous les joueurs autres que sa cible de chasse. Elle ne tentera pas de poursuivre d'autres joueurs et est incapable de les tuer, même si elle rentre en contact direct avec un joueur non cible, passant plutôt à travers eux. La Banshee réagira aux Encens allumés par les autres joueurs à portée, mais cela ne permettra pas de compléter l'objectif optionnel \"Repousser l'entité avec un Bâton d'encens pendant qu'elle chasse quelqu'un\" sauf si la Banshee poursuit aussi sa cible lorsque cela se produit.\n\nSi la cible de chasse est en dehors du lieu, la Banshee utilisera toujours la santé mentale de sa cible pour décider de chasser. Cependant, si elle chasse, elle chassera comme n'importe quelle autre entité, poursuivant tout joueur opportun.",
+      "misc": "La Banshee ne peut être qu'une entité féminine et utilisera un modèle d'entité féminin."
     },
     "dayan": {
       "name": "Dayan",
-      "description": "La Dayan naît de l'âme de quelqu'un qui a subi une immense cruauté de son vivant. Maintenant, dans la mort, elle reste hypervigilante envers quiconque \"danse\" trop près."
+      "description": "La Dayan naît de l'âme de quelqu'un qui a subi une immense cruauté de son vivant. Maintenant, dans la mort, elle reste hypervigilante envers quiconque \"danse\" trop près.",
+      "hunt": "Lorsqu'un joueur se trouve à moins de 10 mètres de la Dayan, qu'il soit au même étage ou non, l'entité aura un seuil de santé mentale de chasse et une vitesse de chasse modifiés en fonction d'autres facteurs :\n- Si le joueur le plus proche est immobile, le seuil est diminué à 45% de santé mentale.\n- Si le joueur le plus proche se déplace, le seuil est augmenté à 65% de santé mentale.\n\nS'il n'y a aucun joueur à moins de 10 mètres de la Dayan, elle aura le seuil standard de 50% et suivra les vitesses d'entité standards avec une particularité : si la Dayan a une ligne de mire avec un joueur à moins de 10 mètres, l'augmentation de vitesse à partir d'une ligne de mire continue s'ajoute en arrière-plan, et ne sera appliquée qu'une fois qu'elle ne sera plus à proximité d'aucun joueur.",
+      "misc": "La Dayan ne peut être qu'une entité féminine et utilisera un modèle d'entité féminin."
     },
     "demon": {
       "name": "Démon",
-      "description": "Les démons sont les entités les plus agressives que nous ayons rencontré. Ils semblent attaquer sans aucune raison et semblent adorer chasser."
+      "description": "Les démons sont les entités les plus agressives que nous ayons rencontré. Ils semblent attaquer sans aucune raison et semblent adorer chasser.",
+      "ability": "Le Démon a une compétence qui lui permet de démarrer automatiquement une chasse, quelle que soit la santé mentale moyenne actuelle. Il n'y a pas de comportement ou de condition particulière (comme exiger une ligne de mire avec un joueur) qui affecte si elle s'active ou non ; s'il décide d'utiliser sa compétence, il chassera. Cette chasse peut être bloquée par des méthodes de prévention normales.\n\nParce que la chasse sur compétence du Démon est régie par la \"phase de compétence\", ces chasses se produisent beaucoup moins fréquemment que les chasses dérivées du fait d'être en dessous de son seuil de santé mentale. De plus, comme il ne s'agit pas d'une \"véritable\" tentative de chasse, le Démon peut tenter d'utiliser sa compétence lorsqu'il est incapable de chasser (pendant la phase de préparation en difficulté Amateur et Intermédiaire, lorsqu'il est affecté par de l'Encens, ou lorsqu'une chasse vient de se terminer et est sur cooldown). Cependant, il échouera et il n'y aura pas de chasse.",
+      "hunt": "Le Démon a un seuil normal de santé mentale de chasse de 70%, au lieu des 50% standards. Cela n'affecte pas et est indépendant de sa compétence de chasse, bien que la chasse ne diffère en rien.\n\nLes Démons ont un cooldown minimum de 20 secondes entre les chasses, au lieu des 25 secondes habituelles.\n\nUtiliser un Encens sur un Démon n'empêchera les chasses que pendant 60 secondes, par opposition aux 90 secondes standards.\n\nEn tant que faiblesse, la portée efficace d'un Crucifix est 50% plus grande que la portée standard :\n- 4,5 mètres au lieu de 3 pour le Rang I\n- 6 mètres au lieu de 4 pour le Rang II\n- 7,5 mètres au lieu de 5 pour le Rang III"
     },
     "deogen": {
       "name": "Deogen",
@@ -146,7 +156,7 @@
     "obambo": {
       "name": "Obambo",
       "description": "L'Obambo est le fantôme de quelqu'un qui n'a jamais été correctement mis au repos. Changeant et sur la défensive, il oscille entre des états de calme et d'agressivité.",
-      "hunt_duration_ability": "La durée de la chasse sera 20% plus courte si l'Obambo démarre la chasse dans l'état agressif. Cela s'appliquera même si l'entité passe à l'état calme en pleine chasse. Vous devriez vous attendre à une durée de chasse de {{seconds}} secondes."
+      "hunt": "La durée de la chasse sera 20% plus courte si l'Obambo démarre la chasse dans l'état agressif. Cela s'appliquera même si l'entité passe à l'état calme en pleine chasse. Vous devriez vous attendre à une durée de chasse de {{huntDuration}} secondes."
     },
     "oni": {
       "name": "Oni",
@@ -167,7 +177,7 @@
     "raiju": {
       "name": "Raiju",
       "description": "Les Raiju sont des démons qui profitent des courants électriques. Bien que généralement calme, ils peuvent devenir agités quand ils sont submergés de puissance.",
-      "hunt_ability": "Lorsque le Raiju se trouve à {{distance}} mètres d'au moins un appareil électronique actif au même étage (qui peut aussi être situé en dehors du lieu d'enquête), son seuil de santé mentale de chasse est augmenté à 65%, et il se déplacera à une vitesse fixe pendant les chasses.\n\nSinon, il aura le seuil standard de 50% et suivra les vitesses d'entité standards avec une particularité : si le Raiju a une ligne de mire avec un joueur pendant qu'il est à proximité d'un appareil électronique actif, l'augmentation de vitesse à partir d'une ligne de mire continue s'ajoute en arrière-plan, et ne sera appliquée qu'une fois qu'il ne sera plus à proximité d'appareils électroniques.\nTous les effets énumérés ci-dessus s'appliquent à la plupart des appareils électroniques, qu'ils soient placés, tenus en main, ou jetés au sol.\nLes éléments suivants ne comptent pas pour l'augmentation de vitesse ou le seuil de santé mentale de chasse : Chat global, Caméras vidéo et Appareils photo qui sont jetés au sol, Détecteurs de mouvement, Capteurs sonores, et Projecteurs D.O.T.S. qui sont jetés au sol ou tenus (excluant le D.O.T.S. R1, qui doit aussi être éteint), Objets dans l'inventaire (à l'exception des Lampes de poche qui sont allumées), Tout autre équipement électrique non apporté du camion (lumières du bâtiment, disjoncteur, caméras de surveillance, ventilateurs, etc.)."
+      "hunt": "Lorsque le Raiju se trouve à {{distance}} mètres d'au moins un appareil électronique actif au même étage (qui peut aussi être situé en dehors du lieu d'enquête), son seuil de santé mentale de chasse est augmenté à 65%, et il se déplacera à une vitesse fixe pendant les chasses.\n\nSinon, il aura le seuil standard de 50% et suivra les vitesses d'entité standards avec une particularité : si le Raiju a une ligne de mire avec un joueur pendant qu'il est à proximité d'un appareil électronique actif, l'augmentation de vitesse à partir d'une ligne de mire continue s'ajoute en arrière-plan, et ne sera appliquée qu'une fois qu'il ne sera plus à proximité d'appareils électroniques.\n\nTous les effets énumérés ci-dessus s'appliquent à la plupart des appareils électroniques, qu'ils soient placés, tenus en main, ou jetés au sol.\n\nLes éléments suivants ne comptent pas pour l'augmentation de vitesse ou le seuil de santé mentale de chasse :\n\n- Chat global\n- Caméras vidéo et Appareils photo qui sont jetés au sol\n- Détecteurs de mouvement, Capteurs sonores, et Projecteurs D.O.T.S. qui sont jetés au sol ou tenus (excluant le D.O.T.S. R1, qui doit aussi être éteint)\n- Objets dans l'inventaire (à l'exception des Lampes de poche qui sont allumées)\n- Tout autre équipement électrique non apporté du camion (lumières du bâtiment, disjoncteur, caméras de surveillance, ventilateurs, etc.)."
     },
     "revenant": {
       "name": "Revenant",
