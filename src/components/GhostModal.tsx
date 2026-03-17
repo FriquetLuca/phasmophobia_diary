@@ -55,8 +55,8 @@ export default function GhostModal({ ghost, onClose }: GhostModalProps) {
                   className="flex flex-col gap-2 bg-black/5 p-3 rounded"
                 >
                   <span>{t(`uniqueSound.${sound.label}`)}</span>
-                  {sound.sounds.map((s) => (
-                    <AudioSound {...s} />
+                  {sound.sounds.map((s, i) => (
+                    <AudioSound key={i} {...s} />
                   ))}
                 </div>
               ))}
