@@ -13,17 +13,27 @@ export default function TabButton({
   setActiveTab,
 }: TabButtonProps) {
   const { t } = useTranslation();
+  const isActive = activeTab === tab;
+
   return (
     <button
-      key={tab}
       onClick={() => setActiveTab(tab)}
-      className={`pb-2 px-6 uppercase font-bold text-sm tracking-widest transition-all relative ${
-        activeTab === tab
-          ? "text-black after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-black"
-          : 'text-gray-400 hover:text-gray-600'
+      className={`pb-3 pt-1 px-8 uppercase font-bold text-xs tracking-[0.2em] transition-all duration-300 relative outline-none group ${
+        isActive ? 'text-zinc-100' : 'text-zinc-500 hover:text-zinc-300'
       }`}
     >
       {t(`tabs.${tab}`)}
+
+      <div
+        className={`absolute bottom-0 left-0 h-0.5 transition-all duration-500 bg-red-600 ${
+          isActive
+            ? 'w-full opacity-100 shadow-[0_0_8px_rgba(220,38,38,0.8)]'
+            : 'w-0 opacity-0'
+        }`}
+      />
+      {isActive && (
+        <div className="absolute inset-0 bg-linear-to-t from-red-900/10 to-transparent pointer-events-none" />
+      )}
     </button>
   );
 }

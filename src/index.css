@@ -30,13 +30,6 @@
   font-family: 'October Crow';
 }
 
-.quote-content::before {
-  content: open-quote;
-}
-.quote-content::after {
-  content: close-quote;
-}
-
 @import 'tailwindcss';
 @import 'tailwindcss/theme.css' layer(theme);
 @import 'tailwindcss/preflight.css' layer(base);

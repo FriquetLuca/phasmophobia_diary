@@ -636,7 +636,7 @@ export const ghosts: Ghost[] = [
         speed: 2.805,
       },
     ],
-    huntSanity: 50,
+    huntSanity: 35,
     hasActivitySpecific: true,
     hasAbilitiesSpecific: true,
     hasHuntAbility: true,

@@ -32,7 +32,7 @@ export default function FilterTabs({
 }: FilterTabsProps) {
   return (
     <div className="flex flex-col mb-4">
-      <div className="flex justify-center gap-8 border-b border-gray-200">
+      <div className="flex justify-center gap-8 border-b border-zinc-700 bg-zinc-950/30">
         {tabs.map((tab, i) => (
           <TabButton
             key={i}
@@ -43,10 +43,12 @@ export default function FilterTabs({
         ))}
       </div>
 
-      <div className="py-3 min-h-25 border-b border-gray-100 bg-gray-50/50 rounded-b-md px-4">
+      <div className="py-3 min-h-25 border-b border-zinc-700/50 bg-zinc-800/40 rounded-b-md px-4">
         {tabs.map((tab, i) => (
           <SelectedTab key={i} tab={tab} activeTab={activeTab}>
-            {tabList(tab)}
+            <div className="animate-in fade-in slide-in-from-top-1 duration-300">
+              {tabList(tab)}
+            </div>
           </SelectedTab>
         ))}
       </div>
