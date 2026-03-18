@@ -1,8 +1,18 @@
 {
   "name": "phasmophobia_diary",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "license": "MIT",
+  "author": "Friquet Luca",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FriquetLuca/phasmophobia_diary.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FriquetLuca/phasmophobia_diary/issues"
+  },
+  "homepage": "https://github.com/FriquetLuca/phasmophobia_diary#readme",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
