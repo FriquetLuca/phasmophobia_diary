@@ -489,6 +489,7 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 65,
+    hasActivitySpecific: true,
     hasHuntAbility: true,
     huntDuration: 0.8,
   },
@@ -517,6 +518,8 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 50,
+    hasActivitySpecific: true,
+    hasHuntAbility: true,
   },
   {
     name: 'onryo',
@@ -532,6 +535,9 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 60,
+    hasActivitySpecific: true,
+    hasAbilitiesSpecific: true,
+    hasHuntAbility: true,
   },
   {
     name: 'phantom',
@@ -547,6 +553,9 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 50,
+    hasActivitySpecific: true,
+    hasAbilitiesSpecific: true,
+    hasHuntAbility: true,
   },
   {
     name: 'poltergeist',
@@ -562,6 +571,9 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 50,
+    hasActivitySpecific: true,
+    hasAbilitiesSpecific: true,
+    hasHuntAbility: true,
   },
   {
     name: 'raiju',
@@ -581,7 +593,9 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 65,
+    hasActivitySpecific: true,
     hasHuntAbility: true,
+    hasMiscInfos: true,
     huntAbilityDistance: (dist) => {
       switch (dist) {
         case 'large':
