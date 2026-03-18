@@ -50,6 +50,12 @@ export const getHuntDuration = (
   const size = mapSizeData[mapName] || 'small';
   return HUNT_TIMES[setting][size];
 };
+export type ModelVisibility =
+  | 'normal'
+  | 'lessVisible'
+  | 'moreVisible'
+  | 'any'
+  | 'unknown';
 export type SpeedTrait = 'fast' | 'slow' | 'standard' | 'variable';
 export type Gender = 'female' | 'male';
 export interface SoundInterface {
@@ -80,6 +86,7 @@ export interface Ghost {
   hasMiscInfos?: boolean;
   huntAbilityDistance?: (mapSize: MapSize) => number;
   huntSpeedTraits: SpeedTrait[];
+  huntModelVisibility: ModelVisibility;
 }
 
 export const ghosts: Ghost[] = [
@@ -190,6 +197,7 @@ export const ghosts: Ghost[] = [
     hasHuntAbility: true,
     hasMiscInfos: true,
     huntSpeedTraits: ['standard'],
+    huntModelVisibility: 'normal',
   },
   {
     name: 'dayan',
@@ -217,6 +225,7 @@ export const ghosts: Ghost[] = [
     hasHuntAbility: true,
     hasMiscInfos: true,
     huntSpeedTraits: ['variable', 'standard', 'fast', 'slow'],
+    huntModelVisibility: 'normal',
   },
   {
     name: 'demon',
@@ -235,6 +244,7 @@ export const ghosts: Ghost[] = [
     hasAbilitiesSpecific: true,
     hasHuntAbility: true,
     huntSpeedTraits: ['standard'],
+    huntModelVisibility: 'normal',
   },
   {
     name: 'deogen',
@@ -264,6 +274,7 @@ export const ghosts: Ghost[] = [
     huntSanity: 40,
     hasHuntAbility: true,
     huntSpeedTraits: ['variable', 'standard', 'fast', 'slow'],
+    huntModelVisibility: 'moreVisible',
   },
   {
     name: 'gallu',
@@ -287,6 +298,7 @@ export const ghosts: Ghost[] = [
     hasAbilitiesSpecific: true,
     hasHuntAbility: true,
     huntSpeedTraits: ['variable', 'standard', 'fast', 'slow'],
+    huntModelVisibility: 'normal',
   },
   {
     name: 'goryo',
@@ -305,6 +317,7 @@ export const ghosts: Ghost[] = [
     huntSanity: 50,
     hasActivitySpecific: true,
     huntSpeedTraits: ['standard'],
+    huntModelVisibility: 'normal',
   },
   {
     name: 'hantu',
@@ -344,6 +357,7 @@ export const ghosts: Ghost[] = [
     hasActivitySpecific: true,
     hasHuntAbility: true,
     huntSpeedTraits: ['variable', 'standard', 'fast', 'slow'],
+    huntModelVisibility: 'normal',
   },
   {
     name: 'jinn',
@@ -367,6 +381,7 @@ export const ghosts: Ghost[] = [
     hasAbilitiesSpecific: true,
     hasHuntAbility: true,
     huntSpeedTraits: ['variable', 'standard', 'fast'],
+    huntModelVisibility: 'normal',
   },
   {
     name: 'mare',
@@ -386,6 +401,7 @@ export const ghosts: Ghost[] = [
     hasAbilitiesSpecific: true,
     hasHuntAbility: true,
     huntSpeedTraits: ['standard'],
+    huntModelVisibility: 'normal',
   },
   {
     name: 'moroi',
@@ -441,6 +457,7 @@ export const ghosts: Ghost[] = [
     hasAbilitiesSpecific: true,
     hasHuntAbility: true,
     huntSpeedTraits: ['variable', 'standard', 'fast', 'slow'],
+    huntModelVisibility: 'normal',
   },
   {
     name: 'myling',
@@ -459,6 +476,7 @@ export const ghosts: Ghost[] = [
     hasAbilitiesSpecific: true,
     hasHuntAbility: true,
     huntSpeedTraits: ['standard'],
+    huntModelVisibility: 'normal',
   },
   {
     name: 'obake',
@@ -479,6 +497,7 @@ export const ghosts: Ghost[] = [
     hasAbilitiesSpecific: true,
     hasHuntAbility: true,
     huntSpeedTraits: ['standard'],
+    huntModelVisibility: 'normal',
   },
   {
     name: 'obambo',
@@ -506,6 +525,7 @@ export const ghosts: Ghost[] = [
     hasHuntAbility: true,
     huntDuration: 0.8,
     huntSpeedTraits: ['variable', 'fast', 'slow'],
+    huntModelVisibility: 'normal',
   },
   {
     name: 'oni',
@@ -535,6 +555,7 @@ export const ghosts: Ghost[] = [
     hasActivitySpecific: true,
     hasHuntAbility: true,
     huntSpeedTraits: ['standard'],
+    huntModelVisibility: 'moreVisible',
   },
   {
     name: 'onryo',
@@ -554,6 +575,7 @@ export const ghosts: Ghost[] = [
     hasAbilitiesSpecific: true,
     hasHuntAbility: true,
     huntSpeedTraits: ['standard'],
+    huntModelVisibility: 'normal',
   },
   {
     name: 'phantom',
@@ -573,6 +595,7 @@ export const ghosts: Ghost[] = [
     hasAbilitiesSpecific: true,
     hasHuntAbility: true,
     huntSpeedTraits: ['standard'],
+    huntModelVisibility: 'lessVisible',
   },
   {
     name: 'poltergeist',
@@ -592,6 +615,7 @@ export const ghosts: Ghost[] = [
     hasAbilitiesSpecific: true,
     hasHuntAbility: true,
     huntSpeedTraits: ['standard'],
+    huntModelVisibility: 'normal',
   },
   {
     name: 'raiju',
@@ -625,6 +649,7 @@ export const ghosts: Ghost[] = [
       }
     },
     huntSpeedTraits: ['variable', 'standard', 'fast'],
+    huntModelVisibility: 'normal',
   },
   {
     name: 'revenant',
@@ -642,6 +667,7 @@ export const ghosts: Ghost[] = [
     huntSanity: 50,
     hasHuntAbility: true,
     huntSpeedTraits: ['variable', 'fast', 'slow'],
+    huntModelVisibility: 'normal',
   },
   {
     name: 'shade',
@@ -661,6 +687,7 @@ export const ghosts: Ghost[] = [
     hasAbilitiesSpecific: true,
     hasHuntAbility: true,
     huntSpeedTraits: ['standard'],
+    huntModelVisibility: 'normal',
   },
   {
     name: 'spirit',
@@ -678,6 +705,7 @@ export const ghosts: Ghost[] = [
     huntSanity: 50,
     hasActivitySpecific: true,
     huntSpeedTraits: ['standard'],
+    huntModelVisibility: 'normal',
   },
   {
     name: 'thaye',
@@ -732,6 +760,7 @@ export const ghosts: Ghost[] = [
     hasAbilitiesSpecific: true,
     hasHuntAbility: true,
     huntSpeedTraits: ['variable', 'standard', 'fast', 'slow'],
+    huntModelVisibility: 'normal',
   },
   {
     name: 'mimic',
@@ -741,6 +770,7 @@ export const ghosts: Ghost[] = [
     huntSanity: 100,
     hasAbilitiesSpecific: true,
     huntSpeedTraits: ['variable', 'standard', 'fast', 'slow'],
+    huntModelVisibility: 'any',
   },
   {
     name: 'twins',
@@ -776,6 +806,7 @@ export const ghosts: Ghost[] = [
       }
     },
     huntSpeedTraits: ['variable', 'fast', 'slow'],
+    huntModelVisibility: 'normal',
   },
   {
     name: 'wraith',
@@ -794,6 +825,7 @@ export const ghosts: Ghost[] = [
     hasActivitySpecific: true,
     hasAbilitiesSpecific: true,
     huntSpeedTraits: ['standard'],
+    huntModelVisibility: 'normal',
   },
   {
     name: 'yokai',
@@ -812,6 +844,7 @@ export const ghosts: Ghost[] = [
     hasActivitySpecific: true,
     hasHuntAbility: true,
     huntSpeedTraits: ['standard'],
+    huntModelVisibility: 'normal',
   },
   {
     name: 'yurei',
@@ -830,5 +863,6 @@ export const ghosts: Ghost[] = [
     hasActivitySpecific: true,
     hasAbilitiesSpecific: true,
     huntSpeedTraits: ['standard'],
+    huntModelVisibility: 'normal',
   },
 ];

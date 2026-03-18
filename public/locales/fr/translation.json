@@ -8,7 +8,27 @@
     "ability": "Compétences",
     "misc": "Divers"
   },
-  "filters": {
+  "tabs": {
+    "evidence": "Preuves",
+    "hunt": "Chasse & Traits",
+    "settings": "Paramètres"
+  },
+  "hunt": {
+    "ghost_gender": "Sexe",
+    "gender": {
+      "any": "Inconnu",
+      "male": "Homme",
+      "female": "Femme"
+    },
+    "avg_sanity": "Santé mentale (Première chasse)",
+    "ghost_visibility": "Visibilité de l'entité",
+    "visibility_opts": {
+      "unknown": "Inconnu",
+      "any": "Toutes",
+      "normal": "Normale",
+      "less_visible": "Moins visible",
+      "more_visible": "Plus visible"
+    },
     "speed": {
       "title": "Vitesse en chasse",
       "standard": "Normal",
@@ -16,20 +36,6 @@
       "fast": "Rapide",
       "variable": "Variable"
     }
-  },
-  "tabs": {
-    "evidence": "Preuves",
-    "hunt": "Chasse & Traits",
-    "settings": "Paramètres"
-  },
-  "gender": {
-    "any": "Inconnu",
-    "male": "Homme",
-    "female": "Femme"
-  },
-  "hunt": {
-    "ghost_gender": "Sexe",
-    "avg_sanity": "Santé mentale (Première chasse)"
   },
   "settings": {
     "evidence_count": "Nombre de preuves",

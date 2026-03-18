@@ -7,6 +7,7 @@ import {
   mapSizeData,
   type Ghost,
   type HuntDurationSetting,
+  type ModelVisibility,
   type SpeedTrait,
 } from './datas';
 import GhostModal from './components/GhostModal';
@@ -38,6 +39,8 @@ export default function App() {
   const [selectedMap, setSelectedMap] = useState<string>('6 Tanglewood Drive');
   const [huntSetting, setHuntSetting] = useState<HuntDurationSetting>('medium');
   const [ghostSpeedTraits, setGhostSpeedTraits] = useState<SpeedTrait[]>([]);
+  const [ghostModelVisibility, setGhostModelVisibility] =
+    useState<ModelVisibility>('unknown');
 
   const toggleEvidence = (evidence: string) => {
     setEvidenceFilters((prev) => {
@@ -69,6 +72,12 @@ export default function App() {
         (p, c) => p && ghost.huntSpeedTraits.includes(c),
         true
       )
+    ) {
+      return false;
+    }
+    if (
+      ghostModelVisibility !== 'unknown' &&
+      ghostModelVisibility !== ghost.huntModelVisibility
     ) {
       return false;
     }
@@ -111,7 +120,7 @@ export default function App() {
                 );
               case 'hunt':
                 return (
-                  <div className="grid grid-cols-2 gap-2 font-mono">
+                  <div className="grid grid-cols-2 gap-4 font-mono">
                     <DropdownSelect
                       label={t('hunt.ghost_gender')}
                       value={genderFilter}
@@ -120,16 +129,45 @@ export default function App() {
                       }
                       options={[
                         {
-                          label: t('gender.any'),
+                          label: t('hunt.gender.any'),
                           value: 'any',
                         },
                         {
-                          label: t('gender.male'),
+                          label: t('hunt.gender.male'),
                           value: 'male',
                         },
                         {
-                          label: t('gender.female'),
+                          label: t('hunt.gender.female'),
                           value: 'female',
+                        },
+                      ]}
+                    />
+                    <DropdownSelect
+                      label={t('hunt.ghost_visibility')}
+                      value={ghostModelVisibility}
+                      onChange={(value) =>
+                        setGhostModelVisibility(value as ModelVisibility)
+                      }
+                      options={[
+                        {
+                          label: t('hunt.visibility_opts.unknown'),
+                          value: 'unknown',
+                        },
+                        {
+                          label: t('hunt.visibility_opts.normal'),
+                          value: 'normal',
+                        },
+                        {
+                          label: t('hunt.visibility_opts.less_visible'),
+                          value: 'lessVisible',
+                        },
+                        {
+                          label: t('hunt.visibility_opts.more_visible'),
+                          value: 'moreVisible',
+                        },
+                        {
+                          label: t('hunt.visibility_opts.any'),
+                          value: 'any',
                         },
                       ]}
                     />

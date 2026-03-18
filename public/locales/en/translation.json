@@ -8,7 +8,27 @@
     "ability": "Abilities",
     "misc": "Miscellaneous"
   },
-  "filters": {
+  "tabs": {
+    "evidence": "Evidences",
+    "hunt": "Hunt & Traits",
+    "settings": "Settings"
+  },
+  "hunt": {
+    "ghost_gender": "Gender",
+    "gender": {
+      "any": "Unknown",
+      "male": "Male",
+      "female": "Female"
+    },
+    "avg_sanity": "Sanity (First hunt)",
+    "ghost_visibility": "Ghost visibility",
+    "visibility_opts": {
+      "unknown": "Unknown",
+      "any": "Any",
+      "normal": "Normal",
+      "less_visible": "Less visible",
+      "more_visible": "More visible"
+    },
     "speed": {
       "title": "Chasing speed",
       "standard": "Normal",
@@ -16,20 +36,6 @@
       "fast": "Fast",
       "variable": "Variable"
     }
-  },
-  "tabs": {
-    "evidence": "Evidences",
-    "hunt": "Hunt & Traits",
-    "settings": "Settings"
-  },
-  "gender": {
-    "any": "Unknown",
-    "male": "Male",
-    "female": "Female"
-  },
-  "hunt": {
-    "ghost_gender": "Gender",
-    "avg_sanity": "Sanity (First hunt)"
   },
   "settings": {
     "evidence_count": "Number of evidences",
