@@ -355,6 +355,9 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 50,
+    hasActivitySpecific: true,
+    hasAbilitiesSpecific: true,
+    hasHuntAbility: true,
   },
   {
     name: 'mare',
@@ -370,6 +373,9 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 50,
+    hasActivitySpecific: true,
+    hasAbilitiesSpecific: true,
+    hasHuntAbility: true,
   },
   {
     name: 'moroi',
@@ -422,6 +428,8 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 50,
+    hasAbilitiesSpecific: true,
+    hasHuntAbility: true,
   },
   {
     name: 'myling',
@@ -437,6 +445,8 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 50,
+    hasAbilitiesSpecific: true,
+    hasHuntAbility: true,
   },
   {
     name: 'obake',
@@ -453,6 +463,9 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 50,
+    hasActivitySpecific: true,
+    hasAbilitiesSpecific: true,
+    hasHuntAbility: true,
   },
   {
     name: 'obambo',
