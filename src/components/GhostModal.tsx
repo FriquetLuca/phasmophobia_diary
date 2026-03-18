@@ -51,7 +51,7 @@ export default function GhostModal({
         </div>
 
         <div className="overflow-y-auto p-6 pt-0 space-y-6 font-mono custom-scrollbar">
-          <p className="italic text-gray-700">
+          <p className="quote-content italic text-gray-700 text-xs">
             {t(`ghosts.${ghost.name}.description`)}
           </p>
 
