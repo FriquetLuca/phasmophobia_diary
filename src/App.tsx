@@ -1,14 +1,18 @@
 import { useState } from 'react';
 import GhostSelector from './components/GhostSelector';
 import {
+  onOffActions,
   evidences,
   getHuntDuration,
   ghosts,
   mapSizeData,
+  speedTraits,
+  type OnOffAction,
   type Ghost,
   type HuntDurationSetting,
   type ModelVisibility,
   type SpeedTrait,
+  onOffActionsToggle,
 } from './datas';
 import GhostModal from './components/GhostModal';
 import type { TabType } from './components/FilterTabs';
@@ -20,7 +24,8 @@ import DropdownSelect from './components/Dropdown';
 import filterGhostEvidences from './filters/filterGhostEvidences';
 import Slider from './components/Slider';
 import LanguageSwitcher from './components/LanguageSwitcher';
-import SpeedFilter from './components/SpeedFilter';
+import MultiOptionsSelector from './components/MultiOptionsSelector';
+import filterOnOffActions from './filters/filterOnOffActions';
 type GenderFilter = 'any' | 'male' | 'female';
 
 export default function App() {
@@ -41,6 +46,12 @@ export default function App() {
   const [ghostSpeedTraits, setGhostSpeedTraits] = useState<SpeedTrait[]>([]);
   const [ghostModelVisibility, setGhostModelVisibility] =
     useState<ModelVisibility>('unknown');
+  const [fuseBoxInteractions, setFuseBoxInteractions] = useState<OnOffAction[]>(
+    ['unknown']
+  );
+  const [disturbSaltInteractions, setDisturbSaltInteractions] = useState<
+    OnOffAction[]
+  >(['unknown']);
 
   const toggleEvidence = (evidence: string) => {
     setEvidenceFilters((prev) => {
@@ -81,6 +92,12 @@ export default function App() {
     ) {
       return false;
     }
+    if (!filterOnOffActions(fuseBoxInteractions, ghost.breakerInteract)) {
+      return false;
+    }
+    if (!filterOnOffActions(disturbSaltInteractions, ghost.saltInteract)) {
+      return false;
+    }
     return filterGhostEvidences(
       ghost,
       evidences,
@@ -116,6 +133,35 @@ export default function App() {
                         onClick={() => toggleEvidence(e)}
                       />
                     ))}
+                  </div>
+                );
+              case 'interaction':
+                return (
+                  <div className="grid grid-cols-2 gap-4 font-mono">
+                    <MultiOptionsSelector
+                      label={t('interaction.fuse_box.title')}
+                      columns={3}
+                      options={onOffActions}
+                      selectedOptions={fuseBoxInteractions}
+                      toggleOption={onOffActionsToggle(
+                        fuseBoxInteractions,
+                        setFuseBoxInteractions
+                      )}
+                      optionLabel={(trait) =>
+                        t(`interaction.fuse_box.${trait}`)
+                      }
+                    />
+                    <MultiOptionsSelector
+                      label={t('interaction.salt.title')}
+                      columns={3}
+                      options={onOffActions}
+                      selectedOptions={disturbSaltInteractions}
+                      toggleOption={onOffActionsToggle(
+                        disturbSaltInteractions,
+                        setDisturbSaltInteractions
+                      )}
+                      optionLabel={(trait) => t(`interaction.salt.${trait}`)}
+                    />
                   </div>
                 );
               case 'hunt':
@@ -180,9 +226,11 @@ export default function App() {
                       setValue={(v) => setCurrentSanity(v)}
                       displayValue={(v) => `${v}%`}
                     />
-                    <SpeedFilter
-                      activeTraits={ghostSpeedTraits}
-                      toggleTrait={(trait) => {
+                    <MultiOptionsSelector
+                      label={t('hunt.speed.title')}
+                      options={speedTraits}
+                      selectedOptions={ghostSpeedTraits}
+                      toggleOption={(trait) => {
                         if (ghostSpeedTraits.includes(trait)) {
                           setGhostSpeedTraits(
                             ghostSpeedTraits.filter((t) => t !== trait)
@@ -191,6 +239,7 @@ export default function App() {
                           setGhostSpeedTraits([...ghostSpeedTraits, trait]);
                         }
                       }}
+                      optionLabel={(trait) => t(`hunt.speed.${trait}`)}
                     />
                   </div>
                 );

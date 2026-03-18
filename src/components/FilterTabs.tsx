@@ -1,6 +1,6 @@
 import TabButton from './TabButton';
 
-export type TabType = 'evidence' | 'hunt' | 'settings';
+export type TabType = 'evidence' | 'interaction' | 'hunt' | 'settings';
 
 interface FilterTabsProps {
   activeTab: TabType;
@@ -8,7 +8,7 @@ interface FilterTabsProps {
   tabList: (tab: TabType) => React.ReactNode;
 }
 
-const tabs: TabType[] = ['evidence', 'hunt', 'settings'];
+const tabs: TabType[] = ['evidence', 'interaction', 'hunt', 'settings'];
 
 interface SelectedTabProps {
   tab: TabType;

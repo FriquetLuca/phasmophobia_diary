@@ -10,8 +10,23 @@
   },
   "tabs": {
     "evidence": "Preuves",
+    "interaction": "Interactions",
     "hunt": "Chasse & Traits",
     "settings": "Paramètres"
+  },
+  "interaction": {
+    "fuse_box": {
+      "title": "Manipule le disjoncteur",
+      "unknown": "Inconnu",
+      "on": "Allume",
+      "off": "Éteint"
+    },
+    "salt": {
+      "title": "Marche dans le sel",
+      "unknown": "Inconnu",
+      "on": "Oui",
+      "off": "Non"
+    }
   },
   "hunt": {
     "ghost_gender": "Sexe",

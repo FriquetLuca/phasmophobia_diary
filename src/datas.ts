@@ -58,6 +58,7 @@ export type ModelVisibility =
   | 'unknown';
 export type SpeedTrait = 'fast' | 'slow' | 'standard' | 'variable';
 export type Gender = 'female' | 'male';
+export type OnOffAction = 'unknown' | 'on' | 'off';
 export interface SoundInterface {
   type: 'audio/mpeg' | 'audio/ogg';
   src: string;
@@ -87,6 +88,33 @@ export interface Ghost {
   huntAbilityDistance?: (mapSize: MapSize) => number;
   huntSpeedTraits: SpeedTrait[];
   huntModelVisibility: ModelVisibility;
+  breakerInteract: OnOffAction[];
+  saltInteract: OnOffAction[];
+}
+
+export const speedTraits: SpeedTrait[] = [
+  'standard',
+  'variable',
+  'fast',
+  'slow',
+];
+export const onOffActions: OnOffAction[] = ['unknown', 'on', 'off'];
+export function onOffActionsToggle(
+  values: OnOffAction[],
+  setValues: (item: OnOffAction[]) => void
+) {
+  return (newVal: OnOffAction) => {
+    const updated = values.includes(newVal)
+      ? values.filter((f) => f !== newVal)
+      : [...values, newVal];
+    if (updated.length === 3) {
+      setValues(updated.filter((f) => f !== 'unknown'));
+    } else if (updated.length === 0) {
+      setValues(['unknown']);
+    } else {
+      setValues(updated);
+    }
+  };
 }
 
 export const ghosts: Ghost[] = [
@@ -198,6 +226,8 @@ export const ghosts: Ghost[] = [
     hasMiscInfos: true,
     huntSpeedTraits: ['standard'],
     huntModelVisibility: 'normal',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on'],
   },
   {
     name: 'dayan',
@@ -226,6 +256,8 @@ export const ghosts: Ghost[] = [
     hasMiscInfos: true,
     huntSpeedTraits: ['variable', 'standard', 'fast', 'slow'],
     huntModelVisibility: 'normal',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on'],
   },
   {
     name: 'demon',
@@ -245,6 +277,8 @@ export const ghosts: Ghost[] = [
     hasHuntAbility: true,
     huntSpeedTraits: ['standard'],
     huntModelVisibility: 'normal',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on'],
   },
   {
     name: 'deogen',
@@ -275,6 +309,8 @@ export const ghosts: Ghost[] = [
     hasHuntAbility: true,
     huntSpeedTraits: ['variable', 'standard', 'fast', 'slow'],
     huntModelVisibility: 'moreVisible',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on'],
   },
   {
     name: 'gallu',
@@ -299,6 +335,8 @@ export const ghosts: Ghost[] = [
     hasHuntAbility: true,
     huntSpeedTraits: ['variable', 'standard', 'fast', 'slow'],
     huntModelVisibility: 'normal',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on', 'off'],
   },
   {
     name: 'goryo',
@@ -318,6 +356,8 @@ export const ghosts: Ghost[] = [
     hasActivitySpecific: true,
     huntSpeedTraits: ['standard'],
     huntModelVisibility: 'normal',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on'],
   },
   {
     name: 'hantu',
@@ -358,6 +398,8 @@ export const ghosts: Ghost[] = [
     hasHuntAbility: true,
     huntSpeedTraits: ['variable', 'standard', 'fast', 'slow'],
     huntModelVisibility: 'normal',
+    breakerInteract: ['off'],
+    saltInteract: ['on'],
   },
   {
     name: 'jinn',
@@ -382,6 +424,8 @@ export const ghosts: Ghost[] = [
     hasHuntAbility: true,
     huntSpeedTraits: ['variable', 'standard', 'fast'],
     huntModelVisibility: 'normal',
+    breakerInteract: ['on'],
+    saltInteract: ['on'],
   },
   {
     name: 'mare',
@@ -402,6 +446,8 @@ export const ghosts: Ghost[] = [
     hasHuntAbility: true,
     huntSpeedTraits: ['standard'],
     huntModelVisibility: 'normal',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on'],
   },
   {
     name: 'moroi',
@@ -458,6 +504,8 @@ export const ghosts: Ghost[] = [
     hasHuntAbility: true,
     huntSpeedTraits: ['variable', 'standard', 'fast', 'slow'],
     huntModelVisibility: 'normal',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on'],
   },
   {
     name: 'myling',
@@ -477,6 +525,8 @@ export const ghosts: Ghost[] = [
     hasHuntAbility: true,
     huntSpeedTraits: ['standard'],
     huntModelVisibility: 'normal',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on'],
   },
   {
     name: 'obake',
@@ -498,6 +548,8 @@ export const ghosts: Ghost[] = [
     hasHuntAbility: true,
     huntSpeedTraits: ['standard'],
     huntModelVisibility: 'normal',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on'],
   },
   {
     name: 'obambo',
@@ -526,6 +578,8 @@ export const ghosts: Ghost[] = [
     huntDuration: 0.8,
     huntSpeedTraits: ['variable', 'fast', 'slow'],
     huntModelVisibility: 'normal',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on'],
   },
   {
     name: 'oni',
@@ -556,6 +610,8 @@ export const ghosts: Ghost[] = [
     hasHuntAbility: true,
     huntSpeedTraits: ['standard'],
     huntModelVisibility: 'moreVisible',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on'],
   },
   {
     name: 'onryo',
@@ -576,6 +632,8 @@ export const ghosts: Ghost[] = [
     hasHuntAbility: true,
     huntSpeedTraits: ['standard'],
     huntModelVisibility: 'normal',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on'],
   },
   {
     name: 'phantom',
@@ -596,6 +654,8 @@ export const ghosts: Ghost[] = [
     hasHuntAbility: true,
     huntSpeedTraits: ['standard'],
     huntModelVisibility: 'lessVisible',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on'],
   },
   {
     name: 'poltergeist',
@@ -616,6 +676,8 @@ export const ghosts: Ghost[] = [
     hasHuntAbility: true,
     huntSpeedTraits: ['standard'],
     huntModelVisibility: 'normal',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on'],
   },
   {
     name: 'raiju',
@@ -650,6 +712,8 @@ export const ghosts: Ghost[] = [
     },
     huntSpeedTraits: ['variable', 'standard', 'fast'],
     huntModelVisibility: 'normal',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on'],
   },
   {
     name: 'revenant',
@@ -668,6 +732,8 @@ export const ghosts: Ghost[] = [
     hasHuntAbility: true,
     huntSpeedTraits: ['variable', 'fast', 'slow'],
     huntModelVisibility: 'normal',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on'],
   },
   {
     name: 'shade',
@@ -688,6 +754,8 @@ export const ghosts: Ghost[] = [
     hasHuntAbility: true,
     huntSpeedTraits: ['standard'],
     huntModelVisibility: 'normal',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on'],
   },
   {
     name: 'spirit',
@@ -706,6 +774,8 @@ export const ghosts: Ghost[] = [
     hasActivitySpecific: true,
     huntSpeedTraits: ['standard'],
     huntModelVisibility: 'normal',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on'],
   },
   {
     name: 'thaye',
@@ -761,6 +831,8 @@ export const ghosts: Ghost[] = [
     hasHuntAbility: true,
     huntSpeedTraits: ['variable', 'standard', 'fast', 'slow'],
     huntModelVisibility: 'normal',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on'],
   },
   {
     name: 'mimic',
@@ -771,6 +843,8 @@ export const ghosts: Ghost[] = [
     hasAbilitiesSpecific: true,
     huntSpeedTraits: ['variable', 'standard', 'fast', 'slow'],
     huntModelVisibility: 'any',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on'],
   },
   {
     name: 'twins',
@@ -807,6 +881,8 @@ export const ghosts: Ghost[] = [
     },
     huntSpeedTraits: ['variable', 'fast', 'slow'],
     huntModelVisibility: 'normal',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on'],
   },
   {
     name: 'wraith',
@@ -826,6 +902,8 @@ export const ghosts: Ghost[] = [
     hasAbilitiesSpecific: true,
     huntSpeedTraits: ['standard'],
     huntModelVisibility: 'normal',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['off'],
   },
   {
     name: 'yokai',
@@ -845,6 +923,8 @@ export const ghosts: Ghost[] = [
     hasHuntAbility: true,
     huntSpeedTraits: ['standard'],
     huntModelVisibility: 'normal',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on'],
   },
   {
     name: 'yurei',
@@ -864,5 +944,7 @@ export const ghosts: Ghost[] = [
     hasAbilitiesSpecific: true,
     huntSpeedTraits: ['standard'],
     huntModelVisibility: 'normal',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on'],
   },
 ];

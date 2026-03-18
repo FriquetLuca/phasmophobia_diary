@@ -10,8 +10,23 @@
   },
   "tabs": {
     "evidence": "Evidences",
+    "interaction": "Interactions",
     "hunt": "Hunt & Traits",
     "settings": "Settings"
+  },
+  "interaction": {
+    "fuse_box": {
+      "title": "Turn the fuse box",
+      "unknown": "Unknown",
+      "on": "On",
+      "off": "Off"
+    },
+    "salt": {
+      "title": "Disturb salt",
+      "unknown": "Unknown",
+      "on": "Yes",
+      "off": "No"
+    }
   },
   "hunt": {
     "ghost_gender": "Gender",
