@@ -7,6 +7,7 @@ import {
   mapSizeData,
   type Ghost,
   type HuntDurationSetting,
+  type SpeedTrait,
 } from './datas';
 import GhostModal from './components/GhostModal';
 import type { TabType } from './components/FilterTabs';
@@ -18,7 +19,6 @@ import DropdownSelect from './components/Dropdown';
 import filterGhostEvidences from './filters/filterGhostEvidences';
 import Slider from './components/Slider';
 import LanguageSwitcher from './components/LanguageSwitcher';
-import type { SpeedTrait } from './components/SpeedFilter';
 import SpeedFilter from './components/SpeedFilter';
 type GenderFilter = 'any' | 'male' | 'female';
 
@@ -63,6 +63,15 @@ export default function App() {
     if (ghost.huntSanity < currentSanity) {
       return false;
     }
+    if (
+      ghostSpeedTraits.length > 0 &&
+      !ghostSpeedTraits.reduce(
+        (p, c) => p && ghost.huntSpeedTraits.includes(c),
+        true
+      )
+    ) {
+      return false;
+    }
     return filterGhostEvidences(
       ghost,
       evidences,
@@ -89,7 +98,7 @@ export default function App() {
             switch (tab) {
               case 'evidence':
                 return (
-                  <div className="grid grid-cols-4 gap-y-1 gap-x-8">
+                  <div className="grid grid-cols-4 gap-y-2 gap-x-2">
                     {evidences.map((e) => (
                       <EvidenceButton
                         key={e}
@@ -102,16 +111,7 @@ export default function App() {
                 );
               case 'hunt':
                 return (
-                  <div className="grid grid-cols-2 gap-12 font-mono">
-                    <Slider
-                      label={t('hunt.avg_sanity')}
-                      value={currentSanity}
-                      min="0"
-                      max="100"
-                      step="1"
-                      setValue={(v) => setCurrentSanity(v)}
-                      displayValue={(v) => `${v}%`}
-                    />
+                  <div className="grid grid-cols-2 gap-2 font-mono">
                     <DropdownSelect
                       label={t('hunt.ghost_gender')}
                       value={genderFilter}
@@ -132,6 +132,15 @@ export default function App() {
                           value: 'female',
                         },
                       ]}
+                    />
+                    <Slider
+                      label={t('hunt.avg_sanity')}
+                      value={currentSanity}
+                      min="0"
+                      max="100"
+                      step="1"
+                      setValue={(v) => setCurrentSanity(v)}
+                      displayValue={(v) => `${v}%`}
                     />
                     <SpeedFilter
                       activeTraits={ghostSpeedTraits}

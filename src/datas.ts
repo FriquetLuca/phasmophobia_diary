@@ -50,7 +50,7 @@ export const getHuntDuration = (
   const size = mapSizeData[mapName] || 'small';
   return HUNT_TIMES[setting][size];
 };
-
+export type SpeedTrait = 'fast' | 'slow' | 'standard' | 'variable';
 export type Gender = 'female' | 'male';
 export interface SoundInterface {
   type: 'audio/mpeg' | 'audio/ogg';
@@ -79,6 +79,7 @@ export interface Ghost {
   hasHuntAbility?: boolean;
   hasMiscInfos?: boolean;
   huntAbilityDistance?: (mapSize: MapSize) => number;
+  huntSpeedTraits: SpeedTrait[];
 }
 
 export const ghosts: Ghost[] = [
@@ -188,6 +189,7 @@ export const ghosts: Ghost[] = [
     hasAbilitiesSpecific: true,
     hasHuntAbility: true,
     hasMiscInfos: true,
+    huntSpeedTraits: ['standard'],
   },
   {
     name: 'dayan',
@@ -214,6 +216,7 @@ export const ghosts: Ghost[] = [
     huntSanity: 65,
     hasHuntAbility: true,
     hasMiscInfos: true,
+    huntSpeedTraits: ['variable', 'standard', 'fast', 'slow'],
   },
   {
     name: 'demon',
@@ -231,6 +234,7 @@ export const ghosts: Ghost[] = [
     huntSanity: 100,
     hasAbilitiesSpecific: true,
     hasHuntAbility: true,
+    huntSpeedTraits: ['standard'],
   },
   {
     name: 'deogen',
@@ -259,6 +263,7 @@ export const ghosts: Ghost[] = [
     ],
     huntSanity: 40,
     hasHuntAbility: true,
+    huntSpeedTraits: ['variable', 'standard', 'fast', 'slow'],
   },
   {
     name: 'gallu',
@@ -281,6 +286,7 @@ export const ghosts: Ghost[] = [
     hasActivitySpecific: true,
     hasAbilitiesSpecific: true,
     hasHuntAbility: true,
+    huntSpeedTraits: ['variable', 'standard', 'fast', 'slow'],
   },
   {
     name: 'goryo',
@@ -298,6 +304,7 @@ export const ghosts: Ghost[] = [
     ],
     huntSanity: 50,
     hasActivitySpecific: true,
+    huntSpeedTraits: ['standard'],
   },
   {
     name: 'hantu',
@@ -336,6 +343,7 @@ export const ghosts: Ghost[] = [
     huntSanity: 50,
     hasActivitySpecific: true,
     hasHuntAbility: true,
+    huntSpeedTraits: ['variable', 'standard', 'fast', 'slow'],
   },
   {
     name: 'jinn',
@@ -358,6 +366,7 @@ export const ghosts: Ghost[] = [
     hasActivitySpecific: true,
     hasAbilitiesSpecific: true,
     hasHuntAbility: true,
+    huntSpeedTraits: ['variable', 'standard', 'fast'],
   },
   {
     name: 'mare',
@@ -376,6 +385,7 @@ export const ghosts: Ghost[] = [
     hasActivitySpecific: true,
     hasAbilitiesSpecific: true,
     hasHuntAbility: true,
+    huntSpeedTraits: ['standard'],
   },
   {
     name: 'moroi',
@@ -430,6 +440,7 @@ export const ghosts: Ghost[] = [
     huntSanity: 50,
     hasAbilitiesSpecific: true,
     hasHuntAbility: true,
+    huntSpeedTraits: ['variable', 'standard', 'fast', 'slow'],
   },
   {
     name: 'myling',
@@ -447,6 +458,7 @@ export const ghosts: Ghost[] = [
     huntSanity: 50,
     hasAbilitiesSpecific: true,
     hasHuntAbility: true,
+    huntSpeedTraits: ['standard'],
   },
   {
     name: 'obake',
@@ -466,6 +478,7 @@ export const ghosts: Ghost[] = [
     hasActivitySpecific: true,
     hasAbilitiesSpecific: true,
     hasHuntAbility: true,
+    huntSpeedTraits: ['standard'],
   },
   {
     name: 'obambo',
@@ -492,6 +505,7 @@ export const ghosts: Ghost[] = [
     hasActivitySpecific: true,
     hasHuntAbility: true,
     huntDuration: 0.8,
+    huntSpeedTraits: ['variable', 'fast', 'slow'],
   },
   {
     name: 'oni',
@@ -520,6 +534,7 @@ export const ghosts: Ghost[] = [
     huntSanity: 50,
     hasActivitySpecific: true,
     hasHuntAbility: true,
+    huntSpeedTraits: ['standard'],
   },
   {
     name: 'onryo',
@@ -538,6 +553,7 @@ export const ghosts: Ghost[] = [
     hasActivitySpecific: true,
     hasAbilitiesSpecific: true,
     hasHuntAbility: true,
+    huntSpeedTraits: ['standard'],
   },
   {
     name: 'phantom',
@@ -556,6 +572,7 @@ export const ghosts: Ghost[] = [
     hasActivitySpecific: true,
     hasAbilitiesSpecific: true,
     hasHuntAbility: true,
+    huntSpeedTraits: ['standard'],
   },
   {
     name: 'poltergeist',
@@ -574,6 +591,7 @@ export const ghosts: Ghost[] = [
     hasActivitySpecific: true,
     hasAbilitiesSpecific: true,
     hasHuntAbility: true,
+    huntSpeedTraits: ['standard'],
   },
   {
     name: 'raiju',
@@ -606,6 +624,7 @@ export const ghosts: Ghost[] = [
           return 6;
       }
     },
+    huntSpeedTraits: ['variable', 'standard', 'fast'],
   },
   {
     name: 'revenant',
@@ -622,6 +641,7 @@ export const ghosts: Ghost[] = [
     ],
     huntSanity: 50,
     hasHuntAbility: true,
+    huntSpeedTraits: ['variable', 'fast', 'slow'],
   },
   {
     name: 'shade',
@@ -640,6 +660,7 @@ export const ghosts: Ghost[] = [
     hasActivitySpecific: true,
     hasAbilitiesSpecific: true,
     hasHuntAbility: true,
+    huntSpeedTraits: ['standard'],
   },
   {
     name: 'spirit',
@@ -656,6 +677,7 @@ export const ghosts: Ghost[] = [
     ],
     huntSanity: 50,
     hasActivitySpecific: true,
+    huntSpeedTraits: ['standard'],
   },
   {
     name: 'thaye',
@@ -709,6 +731,7 @@ export const ghosts: Ghost[] = [
     huntSanity: 75,
     hasAbilitiesSpecific: true,
     hasHuntAbility: true,
+    huntSpeedTraits: ['variable', 'standard', 'fast', 'slow'],
   },
   {
     name: 'mimic',
@@ -717,6 +740,7 @@ export const ghosts: Ghost[] = [
     huntSpeeds: [],
     huntSanity: 100,
     hasAbilitiesSpecific: true,
+    huntSpeedTraits: ['variable', 'standard', 'fast', 'slow'],
   },
   {
     name: 'twins',
@@ -751,6 +775,7 @@ export const ghosts: Ghost[] = [
           return 2.12;
       }
     },
+    huntSpeedTraits: ['variable', 'fast', 'slow'],
   },
   {
     name: 'wraith',
@@ -768,6 +793,7 @@ export const ghosts: Ghost[] = [
     huntSanity: 50,
     hasActivitySpecific: true,
     hasAbilitiesSpecific: true,
+    huntSpeedTraits: ['standard'],
   },
   {
     name: 'yokai',
@@ -785,6 +811,7 @@ export const ghosts: Ghost[] = [
     huntSanity: 80,
     hasActivitySpecific: true,
     hasHuntAbility: true,
+    huntSpeedTraits: ['standard'],
   },
   {
     name: 'yurei',
@@ -802,5 +829,6 @@ export const ghosts: Ghost[] = [
     huntSanity: 50,
     hasActivitySpecific: true,
     hasAbilitiesSpecific: true,
+    huntSpeedTraits: ['standard'],
   },
 ];

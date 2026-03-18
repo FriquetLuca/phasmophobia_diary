@@ -13,7 +13,8 @@
       "title": "Vitesse en chasse",
       "standard": "Normal",
       "slow": "Lent",
-      "fast": "Rapide"
+      "fast": "Rapide",
+      "variable": "Variable"
     }
   },
   "tabs": {

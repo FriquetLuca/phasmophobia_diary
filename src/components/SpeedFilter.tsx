@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
-
-export type SpeedTrait = 'fast' | 'slow' | 'standard';
+import type { SpeedTrait } from '../datas';
 
 export default function SpeedFilter({
   activeTraits,
@@ -11,7 +10,7 @@ export default function SpeedFilter({
 }) {
   const { t } = useTranslation();
 
-  const traits: SpeedTrait[] = ['standard', 'fast', 'slow'];
+  const traits: SpeedTrait[] = ['standard', 'variable', 'fast', 'slow'];
 
   return (
     <div className="flex flex-col gap-1">
@@ -22,7 +21,7 @@ export default function SpeedFilter({
         <div className="h-px flex-1 bg-zinc-800/50" />
       </div>
 
-      <div className="grid grid-cols-3 gap-1">
+      <div className="grid grid-cols-2 gap-1">
         {traits.map((trait) => {
           const isActive = activeTraits.includes(trait);
           return (

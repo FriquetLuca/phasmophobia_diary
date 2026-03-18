@@ -13,7 +13,8 @@
       "title": "Chasing speed",
       "standard": "Normal",
       "slow": "Slow",
-      "fast": "Fast"
+      "fast": "Fast",
+      "variable": "Variable"
     }
   },
   "tabs": {
