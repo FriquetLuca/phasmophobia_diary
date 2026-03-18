@@ -1,5 +1,6 @@
 import type { Evidence } from '../datas';
 import { useTranslation } from 'react-i18next';
+import Image from './Image';
 
 interface EvidenceIconProps {
   evidence: Evidence;
@@ -18,7 +19,7 @@ const evidenceToSrc: Record<Evidence, string> = {
 export default function EvidenceIcon({ evidence }: EvidenceIconProps) {
   const { t } = useTranslation();
   return (
-    <img
+    <Image
       className="w-6 h-6"
       src={`/icons/${evidenceToSrc[evidence]}`}
       alt={t(`evidences.${evidence}`)}
