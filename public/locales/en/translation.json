@@ -119,19 +119,26 @@
     },
     "deogen": {
       "name": "Deogen",
-      "description": "Sometimes surrounded by an endless fog, Deogen have been eluding ghost hunters for years.\nThese ghosts have been reported to find even the most hidden prey, before stalking them into exhaustion."
+      "description": "Sometimes surrounded by an endless fog, Deogen have been eluding ghost hunters for years.\nThese ghosts have been reported to find even the most hidden prey, before stalking them into exhaustion.",
+      "hunt": "The Deogen's hunt sanity threshold is 40%, instead of the usual 50%.\n\nDuring a hunt, the Deogen always has line-of-sight with all players on the map; in other words, it does not use the \"roaming\" mechanic. When the hunt begins, the Deogen will pick the nearest player (by straight-line distance) to move towards. It will focus that player for 10 seconds before being able to check and repick the nearest target every 5-10 seconds throughout the hunt. One can also use Incense to stun the Deogen temporarily and force it to change its target when the smudge effect runs out.\n\nWhen the Deogen is chasing a player, its speed is based on its pathfinding distance to the target player and has three thresholds: above 6 meters, between 6 and 2.5 meters and below 2.5 meters.\n- > 6m: 3 m/s\n- Between 2.5 - 6m: Assumed speed gradient between 0.4 - 3 m/s\n- < 2.5m: 0.4 m/s\n\nIf the Deogen is smudged or is otherwise not chasing any player, its speed will remain at its current speed, or 1.6 m/s if its current speed is greater than 3 m/s. Otherwise, the Deogen does not alter its speed based on line-of-sight while chasing a player.\n\nDuring a hunt, the Deogen flickers and is on average invisible for shorter and visible for longer compared to most other ghosts."
     },
     "gallu": {
       "name": "Gallu",
-      "description": "Another form of demon, the Gallu is a reminder that death comes for us all. Using protective equipment provokes the ghost until it's no longer effective."
+      "description": "Another form of demon, the Gallu is a reminder that death comes for us all. Using protective equipment provokes the ghost until it's no longer effective.",
+      "activity": "The Gallu cannot disturb salt piles while in its enraged state.",
+      "ability": "The Gallu has three states it can switch to: \"normal\", \"enraged\", and \"weakened\". By default, it starts in the normal state, where it behaves like a standard ghost. It will change from the normal state to the enraged state or from the weakened state to the normal state:\n- instantly after burning a crucifix\n- instantly after the end of the incense's blinding effect during a hunt\n- after a duration equal to the last blinding effect from an incense after being affected by incense outside of a hunt\n\t- instantly if no incense were used during any previous hunts\n\t- 4 seconds if the Gallu was last blinded while in an enraged state\n\t- 5 seconds if the Gallu was last blinded while in a normal state\n\t- 6 seconds if the Gallu was last blinded while in a weakened state\n- 2 seconds after stepping in salt if its current state is \"normal\"\n- 3 seconds after stepping in salt if its current state is \"weakened\"\n\nThe state changes cannot be queued. For example, a weakened Gallu stepping in a second salt pile 1 second after stepping into the first one will not make it change into the enraged state 1 second after changing into the normal state.",
+      "hunt": "If a hunt ends while the Gallu is in its enraged state, it will instantly switch to the weakened state.\n\nHere's the Gallu's behavior's lists depending on its current state:\n- Hunt sanity threshold: 50% (normal), 60% (enraged), 40% (weakened)\n- Crucifix range: Standard (normal), -2 meters (enraged), +1 meter (weakened)\n- Incense's blinding effect: 5 seconds (normal), 4 seconds (enraged), 6 seconds (weakened)"
     },
     "goryo": {
       "name": "Goryo",
-      "description": "When a Goryo passes through a DOTS projector, using a video camera is the only way to see it."
+      "description": "When a Goryo passes through a DOTS projector, using a video camera is the only way to see it.",
+      "activity": "When performing a roam, the Goryo can only perform short roams, rather than either short or long roams.\n\nThe Goryo will not roam away from its favorite room as often as other ghosts and cannot change its favorite room in any difficulty. This can only be overridden via the \"sanity wish\" when using the Monkey Paw.\n\nThe Goryo will only enter in a D.O.T.S state if no players are in the same room as the ghost. In addition, its D.O.T.S silhouette is only visible through a Video Camera, and cannot be seen with the naked eye. A Goryo will still manifest normally during ghost events and hunts.\n\nThe Goryo will enter the D.O.T.S state more frequently than other ghosts."
     },
     "hantu": {
       "name": "Hantu",
-      "description": "A Hantu is a rare ghost that thrives in the coldest climates. The cold seems to make them more aggressive and empowered."
+      "description": "A Hantu is a rare ghost that thrives in the coldest climates. The cold seems to make them more aggressive and empowered.",
+      "activity": "The Hantu cannot turn on the fuse box, and is twice as likely to turn it off.",
+      "hunt": "During a hunt, the Hantu's speed is affected by the temperature of the room that it goes through.\n\nUnlike most other ghosts, the Hantu does not have line-of-sight acceleration during hunts.\n\nDuring a hunt, the Hantu will emit freezing breath near its head in any room as long as the fuse box is off. Dead players cannot see this breath. As this is not actual \"evidence\", it can appear on any difficulty."
     },
     "jinn": {
       "name": "Jinn",
