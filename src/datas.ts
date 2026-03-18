@@ -621,6 +621,7 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 50,
+    hasHuntAbility: true,
   },
   {
     name: 'shade',
@@ -636,6 +637,9 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 50,
+    hasActivitySpecific: true,
+    hasAbilitiesSpecific: true,
+    hasHuntAbility: true,
   },
   {
     name: 'spirit',
@@ -651,6 +655,7 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 50,
+    hasActivitySpecific: true,
   },
   {
     name: 'thaye',
@@ -702,6 +707,8 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 75,
+    hasAbilitiesSpecific: true,
+    hasHuntAbility: true,
   },
   {
     name: 'mimic',
@@ -709,6 +716,7 @@ export const ghosts: Ghost[] = [
     evidences: ['spirit', 'uv', 'freezing', 'orb'],
     huntSpeeds: [],
     huntSanity: 100,
+    hasAbilitiesSpecific: true,
   },
   {
     name: 'twins',
@@ -732,6 +740,17 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 50,
+    hasAbilitiesSpecific: true,
+    hasHuntAbility: true,
+    huntAbilityDistance: (dist) => {
+      switch (dist) {
+        case 'large':
+          return 4.24;
+        case 'medium':
+        default:
+          return 2.12;
+      }
+    },
   },
   {
     name: 'wraith',
@@ -747,6 +766,8 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 50,
+    hasActivitySpecific: true,
+    hasAbilitiesSpecific: true,
   },
   {
     name: 'yokai',
@@ -762,6 +783,8 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 80,
+    hasActivitySpecific: true,
+    hasHuntAbility: true,
   },
   {
     name: 'yurei',
@@ -777,5 +800,7 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 50,
+    hasActivitySpecific: true,
+    hasAbilitiesSpecific: true,
   },
 ];

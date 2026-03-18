@@ -38,8 +38,8 @@
   },
   "hunts": {
     "base_speed": "Vitesse de base :",
-    "los_top_speed": "Vitesse maximale (Ligne De Vue) :",
-    "dayan_los_top_speed": "Vitesse maximale (Ligne De Vue; loin du/des joueur(s)):",
+    "los_top_speed": "Vitesse maximale (Ligne De Mire) :",
+    "dayan_los_top_speed": "Vitesse maximale (Ligne De Mire; loin du/des joueur(s)):",
     "close_still_player": "Joueur le plus proche immobile :",
     "close_moving_player": "Joueur le plus proche marche :",
     "top_speed": "Vitesse maximale :",
@@ -67,8 +67,8 @@
     "between_0_5_sanity": "0% - 5% de santé mentale :",
     "calm_state": "État calme :",
     "aggressive_state": "État aggressif :",
-    "calm_los_top_speed": "État calme (Ligne De Vue):",
-    "aggressive_los_top_speed": "État aggressif (Ligne De Vue):",
+    "calm_los_top_speed": "État calme (Ligne De Mire):",
+    "aggressive_los_top_speed": "État aggressif (Ligne De Mire):",
     "chasing_speed": "Vitesse de chasse :",
     "age_0_speed": "Âge 0 (Initiale) :",
     "age_1_speed": "Âge 1 :",
@@ -83,8 +83,8 @@
     "age_10_speed": "Âge 10 et supérieur :",
     "slow_twin": "Jumeaux lent :",
     "fast_twin": "Jumeaux rapide :",
-    "slow_twin_los_top_speed": "Jumeaux lent vitesse maximale (Ligne De Vue):",
-    "fast_twin_los_top_speed": "Jumeaux rapide vitesse maximale (Ligne De Vue):",
+    "slow_twin_los_top_speed": "Jumeaux lent vitesse maximale (Ligne De Mire):",
+    "fast_twin_los_top_speed": "Jumeaux rapide vitesse maximale (Ligne De Mire):",
     "helper": "* Maintenez le bouton pour entendre l'intervale des bruits de pas."
   },
   "evidences": {
@@ -215,39 +215,55 @@
     },
     "revenant": {
       "name": "Revenant",
-      "description": "Les Revenants sont des entités violentes qui attaqueront sans distinction. Leur vitesse de déplacement peut être trompeuse puisqu'ils sont lents au repos mais incroyablement rapides lorsqu'ils chassent."
+      "description": "Les Revenants sont des entités violentes qui attaqueront sans distinction. Leur vitesse de déplacement peut être trompeuse puisqu'ils sont lents au repos mais incroyablement rapides lorsqu'ils chassent.",
+      "hunt": "Les Revenants ont un changement de vitesse très notable entre les modes errance et poursuite. Lorsqu'un Revenant erre, il se déplacera très lentement. Cependant, dès qu'il détecte un joueur (que ce soit visuellement ou par la parole/les appareils électroniques), il commencera à se déplacer extrêmement vite (près de deux fois la vitesse de base de la plupart des autres entités) et maintiendra cette vitesse jusqu'à ce qu'il atteigne l'endroit où il a détecté pour la dernière fois un joueur. Si et lors du retour en mode errance, la vitesse du Revenant diminuera lentement sur ~2,7 secondes pour revenir à sa valeur initiale.\n\nContrairement à la plupart des autres entités, le Revenant n'accélérera pas avec une ligne de mire continue."
     },
     "shade": {
       "name": "Ombre",
-      "description": "Les Ombres sont des entités timides. Il semble que les Ombres cesseront toute activité si plusieurs personnes sont à proximité."
+      "description": "Les Ombres sont des entités timides. Il semble que les Ombres cesseront toute activité si plusieurs personnes sont à proximité.",
+      "activity": "En moyenne, l'Ombre est moins susceptible d'effectuer des interactions que d'autres entités.\n\nL'Ombre est moins susceptible d'effectuer des événements paranormaux à forte santé mentale. À 100% de santé mentale moyenne, elle a 0% de chances de réussir un événement. Le taux de réussite augmente de 2% par pourcentage de santé mentale moyenne perdu ; à une santé mentale moyenne de 50%, une tentative d'événement paranormal réussira toujours.\n\nLorsqu'elle effectue un événement paranormal, l'Ombre a plus de chances d'apparaître comme une ombre. Si l'entité est amenée à apparaître en utilisant un Cercle d'invocation, une Boîte à musique, ou une Patte de singe, elle a 50% de chances d'apparaître sous la forme d'une ombre noire plutôt que sous sa forme complète pendant la phase d'événement paranormal. Elle reviendra sous une forme entièrement visible lorsque la chasse démarrera.",
+      "ability": "Si au moins une personne se trouve dans la même pièce qu'une Ombre, elle sera incapable d'effectuer des interactions (incluant le disjoncteur et lorsque les joueurs essaient de forcer une interaction à travers la Poupée vaudou), des événements paranormaux, ou d'initier des chasses, quelle que soit la santé mentale moyenne. Elle peut toujours effectuer ces actions si elle arrive à errer dans une pièce sans joueurs. Étant donné que les interactions se produisent dans une portée, l'Ombre peut toujours \"atteindre\" la pièce du joueur depuis une autre pièce pour interagir avec des objets.",
+      "hunt": "L'Ombre ne peut chasser qu'en dessous d'une santé mentale moyenne de 35%, ce qui est plus faible que pour la plupart des autres entités."
     },
     "spirit": {
       "name": "Esprit",
-      "description": "Les Esprits sont des entités très banales. Ils sont puissants mais passifs et attaquent seulement lorsqu'ils y sont obligés. Ils défendent le lieu de leur décès coûte que coûte, tuant quiconque abuserait de leur hospitalité."
+      "description": "Les Esprits sont des entités très banales. Ils sont puissants mais passifs et attaquent seulement lorsqu'ils y sont obligés. Ils défendent le lieu de leur décès coûte que coûte, tuant quiconque abuserait de leur hospitalité.",
+      "activity": "Lorsqu'un Encens est utilisé près d'un Esprit, il ne sera pas capable d'initier une chasse pendant 180 secondes au lieu de 90 secondes avec la plupart des autres entités. Comme les autres entités, cela n'empêchera pas les chasses maudites. Ce délai s'appliquera aussi si on a utilisé un Encens sur l'Esprit pendant une chasse."
     },
     "thaye": {
       "name": "Thayé",
-      "description": "Les Thayé sont connus pour vieillir rapidement, même dans l'au-delà. D'après ce que nous avons appris, ils semblent se déteriorer plus rapidement en présence des vivants."
+      "description": "Les Thayé sont connus pour vieillir rapidement, même dans l'au-delà. D'après ce que nous avons appris, ils semblent se déteriorer plus rapidement en présence des vivants.",
+      "ability": "Le Thayé a un paramètre interne \"d'âge\" qui affecte son activité générale. Le Thayé tentera de vieillir 1 minute après qu'une porte de sortie est ouverte pour la première fois ; si au moins un joueur se trouve dans la même pièce que l'entité ou à moins de 3 mètres d'elle,[note 1] le Thayé ajoutera 1 à son âge et tentera à nouveau de vieillir après 1 à 2 minutes, sinon il tentera à nouveau de vieillir après 30 secondes. Si le Thayé utilise avec succès cette compétence pendant une chasse, l'augmentation d'âge ne sera effective qu'après la chasse.\n\nLe taux d'interactions/d'événements paranormaux à l'âge 0 est de 200% et diminuera de 15% par chaque âge ajouté. Enfin à l'âge 10 et supérieur, son taux sera de 50%.\n\nPour chaque âge ajouté, \"l'âge humain\" du Thayé tel que fourni par la Planche ouija augmente de 1 à 4. Contrairement à l'activité paranormale, il n'y a pas de limite (raisonnablement atteignable) sur \"l'âge humain\" du Thayé. \"L'âge humain\" de départ du Thayé peut toujours se situer entre 10 et 90, comme toutes les autres entités.\n\nUne fois que le Thayé a utilisé sa compétence 9 fois, il ne sera plus capable d'effectuer des événements paranormaux à moins d'y être forcé à travers l'utilisation d'Objets maudits.",
+      "hunt": "La vitesse en chasse du Thayé est déterminé par son âge.\n\nLe seuil de santé mentale pour commencer une chasse à l'âge 0 est de 75% et diminue de 6% par chaque âge ajouté. Une fois à l'âge 10 et supérieur, le seuil de senté mentale pour une chasse sera de 15%.\n\nContrairement à la plupart des autres entités, le Thayé n'accélère pas avec la ligne de mire d'un joueur."
     },
     "mimic": {
       "name": "Le Mimic",
-      "description": "Les Mimic sont des entités insaisissables et mystérieuses qui imitent les traits et comportements des autres, y compris d'autres entités."
+      "description": "Les Mimic sont des entités insaisissables et mystérieuses qui imitent les traits et comportements des autres, y compris d'autres entités.",
+      "ability": "Le Mimic est capable d'imiter n'importe quel type d'entité, et hériter de toutes ses caractéristiques et compétences :\n- Taux et préférences d'interaction et d'événements paranormaux\n- Seuils de chasse\n- Vitesses de déplacement en chasse\n- Diverses formes de compétences spéciales (e.g. jet multiple du Poltergeist, compétence de chasse du Démon)\n\nLorsqu'il imite un type d'entité, Le Mimic ne copiera pas ses types de Preuve, et ne fournira pas nécessairement son type de Preuve garanti sur des difficultés à Preuves réduites telles que Démence, mais peut copier des caractéristiques liées aux Preuves. Par exemple, il est capable de copier les Empreintes de main à six doigts de l'Obake ou la respiration du Deogen, car Le Mimic a Ultraviolet et Spirit Box comme Preuve, mais il ne peut pas copier le trait du Goryo d'apparaître uniquement sur une Caméra vidéo lors de l'interaction avec un Projecteur D.O.T.S., car Le Mimic n'a pas Projecteur D.O.T.S. comme l'un de ses types de Preuve.\n\nLe Mimic démarrera toujours dans l'état \"neutre\" (dans lequel il s'imite essentiellement) au début d'un contrat. Lorsque tel est le cas, il agira comme une entité \"par défaut\" et n'aura aucune compétence spéciale. Il tentera de changer 1 minute après qu'une porte de sortie a été ouverte pour la première fois, puis toutes les 30 secondes à 2 minutes, mais ne peut pas changer pendant les chasses et les événements paranormaux.\n\nLe Mimic ne peut pas imiter la Banshee ou la Dayan s'il est lui-même masculin (i.e. utilisant un modèle d'entité masculin, des vocalisations masculines, et un nom masculin).\n\nLe Mimic, lorsqu'il imite certains types d'entité spécifiques, aura certains comportements spécifiques, répertoriés ci-dessous :\n- Si Le Mimic imite une Banshee, initialement, il n'a pas de cible. Une fois la première chasse non maudite tentée, une cible est choisie aléatoirement.\n- Si Le Mimic imite un Moroï et maudit le joueur à travers la Spirit Box, le Microphone parabolique, ou l'Enregistreur de Son, la malédiction restera même si Le Mimic change de type d'entité.\n- Si Le Mimic imite un Obambo, un état aléatoire sera sélectionné.\n- Si Le Mimic imite un Thayé, un âge fixe entre 0 et 10 est sélectionné aléatoirement, et il imitera une autre entité en utilisant son propre minuteur au lieu du minuteur de vieillissement du Thayé.\n\nSi Le Mimic est affecté par de l'Encens, il ne pourra pas chasser pendant la durée associée à l'entité qu'il imitait à ce moment-là, même s'il imite une autre entité avant sa fin.\n\nLe Mimic fournit la \"Preuve\" des Orbes fantomatiques en plus de ses trois types de Preuves principaux, qui apparaissent aussi dans les difficultés à Preuves réduites, incluant zéro Preuve. Ces Orbes fantomatiques, ainsi que les autres types de Preuve s'ils ne sont pas cachés par la difficulté, existeront toujours quel que soit le type d'entité que Le Mimic choisit d'imiter, et se comporteront exactement de la même manière que ceux produits par d'autres types d'entité et ne léviteront que dans la pièce hantée."
     },
     "twins": {
       "name": "Les Jumeaux",
-      "description": "Ces entités ont été observées en train d'imiter les actions l'une de l'autre. Elles alternent leurs attaques pour déstabiliser leur proie."
+      "description": "Ces entités ont été observées en train d'imiter les actions l'une de l'autre. Elles alternent leurs attaques pour déstabiliser leur proie.",
+      "ability": "Les Jumeaux est simplement une seule entité. Cela signifie qu'il n'y a pas de \"jumeau leurre\" pour :\n- Déclencher les Détecteurs de mouvement ou marcher dans du Sel\n- Produire les Preuves de Températures glaciales (ou même affecter les températures pour commencer) ou de Spirit Box\n- Effectuer des événements paranormaux ou des chasses en même temps\n\nLorsque Les Jumeaux essaie d'interagir, l'une des situations suivantes se produit :\n- 50% de chances d'effectuer une interaction dans la portée normale (jusqu'à {{distance}} mètres).\n- 30% de chances d'effectuer une interaction dans une portée plus grande (jusqu'à 4 fois la portée normale).\n- 20% de chances d'effectuer sa compétence, qui produit deux interactions, une dans chaque portée, dans un laps de temps de 1 ou 2 secondes.\n\nToutes ces interactions suivent la probabilité standard de 1/3 (33%) de produire un EMF niveau 5 au lieu de 2 ou 3, quel que soit la portée utilisée pour effectuer l'interaction.",
+      "hunt": "Comme Les Jumeaux n'est qu'une seule entité, deux chasses ne peuvent pas avoir lieu simultanément, et il suivra le cooldown standard de 25 secondes entre les chasses.\n\nLorsque Les Jumeaux tente d'initier une chasse, il effectuera d'abord une vérification de Crucifix à son emplacement actuel avant de choisir d'avoir une vitesse de base lente ou rapide, chacune ayant 50% de chances. S'il choisit d'être lent, la chasse commencera à son emplacement actuel ; s'il choisit d'être rapide, il se téléportera près de la zone où il a interagi pour la dernière fois avec la grande portée et chassera depuis cet endroit. Quel que soit l'endroit d'où Les Jumeaux chasse, il suivra les règles de chasse standards.\n\nSi une chasse maudite est déclenchée, Les Jumeaux chassera toujours depuis l'emplacement actuel, mais il a toujours 50% de chances de sélectionner l'une ou l'autre vitesse de base."
     },
     "wraith": {
       "name": "Spectre",
-      "description": "Les Spectres font partie des entités les plus dangereuses que vous pouvez rencontrer. C'est également la seule connue à pouvoir voler et parfois passer à travers les murs."
+      "description": "Les Spectres font partie des entités les plus dangereuses que vous pouvez rencontrer. C'est également la seule connue à pouvoir voler et parfois passer à travers les murs.",
+      "activity": "Le Spectre ne marchera jamais dans un tas de Sel, et ne le perturbera donc jamais. Cela inclut le Sel Rang III pendant les chasses, le rendant inefficace contre lui.",
+      "ability": "Quand le Spectre ne chasse pas, il a une chance de se téléporter vers un joueur aléatoire, générant une mesure EMF niveau 2 à l'endroit où il s'est téléporté, au niveau des pieds du joueur ciblé, avec 33% de chances que cela soit une mesure EMF niveau 5 à la place. Le Spectre reprendra son comportement normal après la téléportation."
     },
     "yokai": {
       "name": "Yokai",
-      "description": "Les Yokai sont des entités banales attirées par les voix humaines. Ils hantent très souvent des maisons familiales."
+      "description": "Les Yokai sont des entités banales attirées par les voix humaines. Ils hantent très souvent des maisons familiales.",
+      "activity": "L'utilisation du chat vocal à proximité du Yokai à n'importe quelle santé mentale augmentera son taux d'activité.\n\nLorsqu'un événement de Boîte à musique est déclenché, la chasse maudite initiée par l'entité atteignant la Boîte se déclenche si la Boîte se trouve à moins de 0,5 mètre de la tête du Yokai au lieu de 1 mètre pour toutes les autres entités. Cela signifie que la chasse maudite ne se déclenchera pas instantanément si le Yokai atteint un joueur accroupi tenant la Boîte.",
+      "hunt": "Lorsqu'au moins un joueur utilise le chat vocal dans la même pièce que le Yokai, son seuil de santé mentale de chasse est temporairement augmenté à 80%. Sinon, il a le seuil standard de 50%.\n\nPendant les chasses, un Yokai ne peut entendre les joueurs ou détecter les appareils électroniques actifs en main qu'à moins de 2,5 mètres de lui. Sa ligne de mire n'est pas affectée."
     },
     "yurei": {
       "name": "Yurei",
-      "description": "Les Yurei sont des entités qui sont revenues dans le monde physique dans une optique de vengeance ou par pure haine."
+      "description": "Les Yurei sont des entités qui sont revenues dans le monde physique dans une optique de vengeance ou par pure haine.",
+      "activity": "Lorsqu'un Encens est utilisé sur le Yurei, en plus d'empêcher les chasses et d'augmenter temporairement l'activité, il retournera dans sa pièce favorite et y sera piégé pendant 90 secondes, l'empêchant de se déplacer dans le lieu. Il peut toujours quitter cette pièce en effectuant un événement paranormal, mais il y reviendra une fois l'événement terminé. Si le Yurei est affecté par un Encens pendant une chasse, il ne sera piégé dans sa pièce favorite qu'une fois la chasse terminée pour le temps restant de l'effet de nettoyage.\n\nEn dehors de sa compétence, le Yurei n'a pas de chance accrue d'interagir avec les portes.\n\nLorsqu'il interagit avec une porte, le Yurei ne peut pas la bouger légèrement et ne peut que soit la fermer complètement, soit l'ouvrir complètement. Cela ne s'applique pas aux chasses.",
+      "ability": "Lorsqu'il choisit d'utiliser sa compétence, le Yurei vérifiera d'abord si sa pièce actuelle a une porte ouverte. Les portes qui comptent pour cette compétence sont principalement les portes de pièce, ainsi que les portes de sortie, les portes de grande tente sur les campings, les portes d'armoire dans Dining Room et les portes de cheminée dans Living Room/Games Room sur Point Hope, et les portes de machine à laver et les portes de la Morgue sur Sunny Meadows. Les portes de cachette, cependant, ne comptent pas.\n\nSi la vérification est réussie, ce qui suit est provoqué :\n- Tous les joueurs à moins de 7,5 mètres de l'entité verront leur santé mentale diminuée de 15%. Les joueurs en dehors du lieu d'enquête ne seront pas affectés par la perte de santé mentale.\n- L'entité sélectionnera aléatoirement une porte ouverte dans la pièce et la fermera complètement en douceur (par opposition à un claquement violent) sans aucun son de grincement. Cela produit à son tour une interaction EMF 2 sur cette porte.\n\t- Les portes de tente ne se fermeront pas complètement."
     }
   }
 }

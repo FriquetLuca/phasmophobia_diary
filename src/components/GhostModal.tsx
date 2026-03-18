@@ -78,7 +78,11 @@ export default function GhostModal({
               <div className="flex flex-col gap-2 bg-black/5 p-3 rounded">
                 <pre className="text-xs">
                   <code className="text-wrap">
-                    {t(`ghosts.${ghost.name}.ability`)}
+                    {t(`ghosts.${ghost.name}.ability`, {
+                      distance: ghost.huntAbilityDistance
+                        ? ghost.huntAbilityDistance(map as MapSize)
+                        : 0,
+                    })}
                   </code>
                 </pre>
               </div>
