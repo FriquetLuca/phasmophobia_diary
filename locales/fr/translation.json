@@ -1,0 +1,299 @@
+{
+  "title": "Journal Phasmophobia",
+  "categories": {
+    "hunt": "Chasse",
+    "hunt_speed": "Vitesse de chasse",
+    "unique_sounds": "Sons unique",
+    "activity": "Activité",
+    "ability": "Compétences",
+    "misc": "Divers"
+  },
+  "tabs": {
+    "evidence": "Preuves",
+    "interaction": "Interactions",
+    "hunt": "Chasse & Traits",
+    "settings": "Paramètres"
+  },
+  "interaction": {
+    "fuse_box": {
+      "title": "Manipule le disjoncteur",
+      "unknown": "Inconnu",
+      "on": "Allume",
+      "off": "Éteint"
+    },
+    "salt": {
+      "title": "Marche dans le sel",
+      "unknown": "Inconnu",
+      "on": "Oui",
+      "off": "Non"
+    }
+  },
+  "hunt": {
+    "ghost_gender": "Sexe",
+    "gender": {
+      "any": "Inconnu",
+      "male": "Homme",
+      "female": "Femme"
+    },
+    "avg_sanity": "Santé mentale (Première chasse)",
+    "ghost_visibility": "Visibilité de l'entité",
+    "visibility_opts": {
+      "unknown": "Inconnu",
+      "any": "Toutes",
+      "normal": "Normale",
+      "less_visible": "Moins visible",
+      "more_visible": "Plus visible"
+    },
+    "speed": {
+      "title": "Vitesse en chasse",
+      "standard": "Normal",
+      "slow": "Lent",
+      "fast": "Rapide",
+      "variable": "Variable"
+    }
+  },
+  "settings": {
+    "evidence_count": "Nombre de preuves",
+    "ghost_speed": "Vitesse de l'entité",
+    "map": "Map",
+    "hunt_duration": "Durée de chasse",
+    "hunt_duration_low": "Faible",
+    "hunt_duration_medium": "Moyenne",
+    "hunt_duration_high": "Élevée"
+  },
+  "unique_sounds": {
+    "banshee_scream": "Lorsqu'un Microphone parabolique ou un Enregistreur de Son est utilisé, la Banshee a 33% de chances d'émettre l'un de ses 20 cris uniques au lieu d'un son paranormal normal.\n\n",
+    "deogen_breath": "Si le joueur pose une question à travers la Spirit Box alors qu'il se tient à moins d'1 mètre du Deogen, il a 33% de chances à chaque question de produire une réponse unique de respiration lourde et constante, au lieu d'une réponse normale.\n\n",
+    "air_breath": "L'Oni ne peut pas effectuer l'événement de forme de brume, qui implique une boule physique de brouillard se déplaçant vers le joueur, disparaissant habituellement avec un souffle lors de la collision.\n\n"
+  },
+  "hunts": {
+    "base_speed": "Vitesse de base :",
+    "los_top_speed": "Vitesse maximale (Ligne De Mire) :",
+    "dayan_los_top_speed": "Vitesse maximale (Ligne De Mire; loin du/des joueur(s)):",
+    "close_still_player": "Joueur le plus proche immobile :",
+    "close_moving_player": "Joueur le plus proche marche :",
+    "top_speed": "Vitesse maximale :",
+    "slowest_speed": "Vitesse minimale :",
+    "normal_speed": "Vitesse en état normal :",
+    "enraged_speed": "Vitesse en état enragé :",
+    "weakened_speed": "Vitesse en état affaibli :",
+    "above_15c": "> 15°C (59°F):",
+    "between_12_15c": "12–15°C (53.6–59°F):",
+    "between_9_12c": "9–12°C (48.2–53.6°F):",
+    "between_6_9c": "6–9°C (42.8–48.2°F):",
+    "between_3_6c": "3–6°C (37.4–42.8°F):",
+    "between_0_3c": "0–3°C (32–37.4°F):",
+    "bellow_0c": "< 0°C (32°F):",
+    "fixed_ability_speed": "Abilité de vitesse fixe :",
+    "above_45_sanity": "≥ 45% de santé mentale :",
+    "between_40_45_sanity": "40% - 45% de santé mentale :",
+    "between_35_40_sanity": "35% - 40% de santé mentale :",
+    "between_30_35_sanity": "30% - 35% de santé mentale :",
+    "between_25_30_sanity": "25% - 30% de santé mentale :",
+    "between_20_25_sanity": "20% - 25% de santé mentale :",
+    "between_15_20_sanity": "15% - 20% de santé mentale :",
+    "between_10_15_sanity": "10% - 15% de santé mentale :",
+    "between_5_10_sanity": "5% - 10% de santé mentale :",
+    "between_0_5_sanity": "0% - 5% de santé mentale :",
+    "calm_state": "État calme :",
+    "aggressive_state": "État aggressif :",
+    "calm_los_top_speed": "État calme (Ligne De Mire):",
+    "aggressive_los_top_speed": "État aggressif (Ligne De Mire):",
+    "chasing_speed": "Vitesse de chasse :",
+    "age_0_speed": "Âge 0 (Initiale) :",
+    "age_1_speed": "Âge 1 :",
+    "age_2_speed": "Âge 2 :",
+    "age_3_speed": "Âge 3 :",
+    "age_4_speed": "Âge 4 :",
+    "age_5_speed": "Âge 5 :",
+    "age_6_speed": "Âge 6 :",
+    "age_7_speed": "Âge 7 :",
+    "age_8_speed": "Âge 8 :",
+    "age_9_speed": "Âge 9 :",
+    "age_10_speed": "Âge 10 et supérieur :",
+    "slow_twin": "Jumeaux lent :",
+    "fast_twin": "Jumeaux rapide :",
+    "slow_twin_los_top_speed": "Jumeaux lent vitesse maximale (Ligne De Mire):",
+    "fast_twin_los_top_speed": "Jumeaux rapide vitesse maximale (Ligne De Mire):",
+    "helper": "* Maintenez le bouton pour entendre l'intervale des bruits de pas."
+  },
+  "evidences": {
+    "dots": "Projecteur D.O.T.S.",
+    "orb": "Orbe fantomatique",
+    "spirit": "Spirit Box",
+    "book": "Écriture fantomatique",
+    "emf": "EMF niveau 5",
+    "freezing": "Températures glaciales",
+    "uv": "Ultraviolet"
+  },
+  "ghosts": {
+    "banshee": {
+      "name": "Banshee",
+      "description": "Les sirènes qui chantent, qui attirent leurs victimes avec leurs chansons. On sait qu'elles identifient précisément leur proie avant de porter le coup fatal.",
+      "activity": "La Banshee a plus de chances d'effectuer des événements paranormaux de chant que les autres types.\n\nSi la cible de chasse est la cible d'un événement de chant et provoque la disparition prématurée de la Banshee (en s'approchant d'elle), alors sa santé mentale diminuera de 15%, au lieu des 10% habituels.\n\nComme pour les autres entités, la cible de la Banshee pour un événement paranormal est aléatoire et basée sur la distance ; être la cible de chasse en soi n'augmente pas ses chances d'être la cible de l'événement paranormal.\n\nLorsqu'elle est dans un état D.O.T.S., la Banshee essaiera de se déplacer vers sa cible de chasse au lieu du joueur le plus proche.\n\nContrairement à la plupart des autres entités, la Banshee est capable d'effectuer des errances longues alors que sa pièce actuelle n'est pas la pièce favorite.",
+      "ability": "Lorsque la Banshee effectue une errance en dehors des chasses, si la cible de chasse se trouve à l'intérieur du lieu d'enquête, elle a 2 chances sur 3 (67%) de déclencher sa compétence qui lui fait se déplacer jusqu'à la cible. Contrairement aux compétences du Spectre et du Fantôme, cela ne créera aucune mesure EMF. La compétence échoue si l'entité et la cible de chasse se trouvent à des étages différents sauf si :\n- La carte est Point Hope\n- La Banshee était dans un sous-sol à une seule pièce ou un grenier à une seule pièce pour toutes les autres cartes.",
+      "hunt": "Au début de la partie, un joueur est sélectionné aléatoirement comme cible de chasse. Si la cible de chasse quitte la partie ou décède, une nouvelle cible de chasse sera sélectionnée. La nouvelle cible n'est pas aléatoire : la Banshee sélectionnera le premier joueur en vie dans la liste (établie par l'ordre dans lequel les joueurs ont rejoint le lobby) qui n'est pas la cible précédente, sauf s'il ne reste qu'un seul joueur.\n\nLe seuil de chasse de la Banshee est de 50%, mais elle ne vérifie que la santé mentale de la cible lorsqu'elle essaie de chasser, plutôt que la santé mentale moyenne comme les autres types d'entité, ce qui signifie que seule la cible doit être à 50% de santé mentale ou moins pour qu'elle tente de chasser. En conséquence, la Banshee peut sembler commencer à chasser à partir d'une santé mentale moyenne aussi haute que 87%, ou aussi basse que 12%, sur le Moniteur de Santé mentale, en fonction de la santé mentale actuelle de la cible et du nombre d'autres joueurs.\n\nLorsqu'une Banshee chasse, elle suivra principalement les règles de chasse standards, mais elle est incapable de détecter, et ignorera tous les joueurs autres que sa cible de chasse. Elle ne tentera pas de poursuivre d'autres joueurs et est incapable de les tuer, même si elle rentre en contact direct avec un joueur non cible, passant plutôt à travers eux. La Banshee réagira aux Encens allumés par les autres joueurs à portée, mais cela ne permettra pas de compléter l'objectif optionnel \"Repousser l'entité avec un Bâton d'encens pendant qu'elle chasse quelqu'un\" sauf si la Banshee poursuit aussi sa cible lorsque cela se produit.\n\nSi la cible de chasse est en dehors du lieu, la Banshee utilisera toujours la santé mentale de sa cible pour décider de chasser. Cependant, si elle chasse, elle chassera comme n'importe quelle autre entité, poursuivant tout joueur opportun.",
+      "misc": "La Banshee ne peut être qu'une entité féminine et utilisera un modèle d'entité féminin."
+    },
+    "dayan": {
+      "name": "Dayan",
+      "description": "La Dayan naît de l'âme de quelqu'un qui a subi une immense cruauté de son vivant. Maintenant, dans la mort, elle reste hypervigilante envers quiconque \"danse\" trop près.",
+      "hunt": "Lorsqu'un joueur se trouve à moins de 10 mètres de la Dayan, qu'il soit au même étage ou non, l'entité aura un seuil de santé mentale de chasse et une vitesse de chasse modifiés en fonction d'autres facteurs :\n- Si le joueur le plus proche est immobile, le seuil est diminué à 45% de santé mentale.\n- Si le joueur le plus proche se déplace, le seuil est augmenté à 65% de santé mentale.\n\nS'il n'y a aucun joueur à moins de 10 mètres de la Dayan, elle aura le seuil standard de 50% et suivra les vitesses d'entité standards avec une particularité : si la Dayan a une ligne de mire avec un joueur à moins de 10 mètres, l'augmentation de vitesse à partir d'une ligne de mire continue s'ajoute en arrière-plan, et ne sera appliquée qu'une fois qu'elle ne sera plus à proximité d'aucun joueur.",
+      "misc": "La Dayan ne peut être qu'une entité féminine et utilisera un modèle d'entité féminin."
+    },
+    "demon": {
+      "name": "Démon",
+      "description": "Les démons sont les entités les plus agressives que nous ayons rencontré. Ils semblent attaquer sans aucune raison et semblent adorer chasser.",
+      "ability": "Le Démon a une compétence qui lui permet de démarrer automatiquement une chasse, quelle que soit la santé mentale moyenne actuelle. Il n'y a pas de comportement ou de condition particulière (comme exiger une ligne de mire avec un joueur) qui affecte si elle s'active ou non ; s'il décide d'utiliser sa compétence, il chassera. Cette chasse peut être bloquée par des méthodes de prévention normales.\n\nParce que la chasse sur compétence du Démon est régie par la \"phase de compétence\", ces chasses se produisent beaucoup moins fréquemment que les chasses dérivées du fait d'être en dessous de son seuil de santé mentale. De plus, comme il ne s'agit pas d'une \"véritable\" tentative de chasse, le Démon peut tenter d'utiliser sa compétence lorsqu'il est incapable de chasser (pendant la phase de préparation en difficulté Amateur et Intermédiaire, lorsqu'il est affecté par de l'Encens, ou lorsqu'une chasse vient de se terminer et est sur cooldown). Cependant, il échouera et il n'y aura pas de chasse.",
+      "hunt": "Le Démon a un seuil normal de santé mentale de chasse de 70%, au lieu des 50% standards. Cela n'affecte pas et est indépendant de sa compétence de chasse, bien que la chasse ne diffère en rien.\n\nLes Démons ont un cooldown minimum de 20 secondes entre les chasses, au lieu des 25 secondes habituelles.\n\nUtiliser un Encens sur un Démon n'empêchera les chasses que pendant 60 secondes, par opposition aux 90 secondes standards.\n\nEn tant que faiblesse, la portée efficace d'un Crucifix est 50% plus grande que la portée standard :\n- 4,5 mètres au lieu de 3 pour le Rang I\n- 6 mètres au lieu de 4 pour le Rang II\n- 7,5 mètres au lieu de 5 pour le Rang III"
+    },
+    "deogen": {
+      "name": "Deogen",
+      "description": "Parfois entourés d'un brouillard sans fin, les Deogen ont échappé aux chasseurs de fantômes pendant des années.\nLes rapports indiquent que ces entités arrivent à trouver les proies les plus insaisissables avant des les traquer jusqu'à l'épuisement.",
+      "hunt": "Le seuil de santé mentale de chasse du Deogen est de 40%, au lieu des 50% habituels.\n\nPendant une chasse, le Deogen a toujours une ligne de mire avec tous les joueurs sur la carte ; en d'autres termes, il n'utilise pas le mécanisme \"d'errance\". Lorsque la chasse démarre, le Deogen choisira le joueur le plus proche (par distance en ligne droite) vers lequel se diriger. Il se concentrera sur ce joueur pendant 10 secondes avant de pouvoir vérifier et re-choisir la cible la plus proche toutes les 5 à 10 secondes tout au long de la chasse. On peut aussi utiliser de l'Encens pour étourdir temporairement le Deogen et le forcer à changer sa cible lorsque l'effet de l'Encens s'épuise.\n\nLorsque le Deogen poursuit un joueur, sa vitesse est basée sur sa distance de cheminement au joueur cible et a trois seuils : au-dessus de 6 mètres, entre 6 et 2,5 mètres et en dessous de 2,5 mètres.\n- > 6 m : 3 m/s\n- Entre 2,5 et 6 m : Gradient de vitesse supposé entre 0,4 et 3 m/s\n- < 2,5 m : 0,4 m/s\n\nSi on utilise un Encens sur le Deogen ou s'il ne poursuit aucun joueur, sa vitesse restera à sa vitesse actuelle, ou 1,6 m/s si sa vitesse actuelle est supérieure à 3 m/s. Sinon, le Deogen ne modifie pas sa vitesse en fonction de la ligne de mire lorsqu'il poursuit un joueur.\n\nPendant une chasse, le Deogen clignote et est en moyenne invisible moins longtemps et visible plus longtemps que la plupart des autres entités."
+    },
+    "gallu": {
+      "name": "Gallu",
+      "description": "Autre forme de démon, le Gallu rappelle que la mort nous attend tous. Utiliser de l'équipement de protection provoque le fantôme jusqu'à ce qu'il ne soit plus efficace.",
+      "activity": "Le Gallu ne peut pas perturber les tas de Sel lorsqu'il est dans son état enragé.",
+      "ability": "Le Gallu a trois états dans lesquels il peut basculer : \"normal\", \"enragé\", \"affaibli\". Par défaut, il démarre dans l'état normal, où il se comporte comme une entité standard. Il passera de l'état normal à l'état enragé ou de l'état affaibli à l'état normal :\n- instantanément après avoir brûlé un Crucifix\n- instantanément après la fin de l'effet d'aveuglement de l'Encens pendant une chasse\n- après une durée égale au dernier effet d'aveuglement d'un Encens après avoir été affecté par de l'Encens en dehors d'une chasse\n\t- instantanément si aucun Encens n'a été utilisé lors des chasses précédentes\n\t- 4 secondes si le Gallu a été aveuglé pour la dernière fois alors qu'il était dans un état enragé\n\t- 5 secondes si le Gallu a été aveuglé pour la dernière fois alors qu'il était dans un état normal\n\t- 6 secondes si le Gallu a été aveuglé pour la dernière fois alors qu'il était dans un état affaibli\n- 2 secondes après avoir marché dans du Sel si son état actuel est \"normal\"\n- 3 secondes après avoir marché dans du Sel si son état actuel est \"affaibli\"\n\nLes changements d'état ne peuvent pas être mis en file d'attente. Par exemple, un Gallu affaibli qui marche dans un second tas de Sel 1 seconde après avoir marché dans le premier ne le passera pas à l'état enragé 1 seconde après être passé à l'état normal.",
+      "hunt": "Si une chasse se termine alors que le Gallu est dans son état enragé, il passera instantanément à l'état affaibli.\n\nLa liste suivante répertorie le comportement du Gallu en fonction de son état actuel :\n- Seuil de santé mentale de chasse : 50% (normal), 60% (enragé), 40% (affaibli)\n- Portée du Crucifix : Normale (normal), -2 mètres (enragé), +1 mètre (affaibli)\n- Effet d'aveuglement de l'Encens : 5 secondes (normal), 4 secondes (enragé), 6 secondes (affaibli)"
+    },
+    "goryo": {
+      "name": "Goryo",
+      "description": "Seul regarder à travers une caméra permet de voir les Goryo passer dans le champ d'un projecteur D.O.T.S.",
+      "activity": "Lorsqu'il effectue une errance, le Goryo ne peut effectuer que des errances courtes, plutôt que soit des errances courtes, soit des errances longues.\n\nLe Goryo ne s'éloignera pas de sa pièce favorite aussi souvent que les autres entités et ne peut pas changer sa pièce favorite dans n'importe quelle difficulté. Cela ne peut être outrepassé que via le \"vœu de santé mentale\" lors de l'utilisation de la Patte de singe.\n\nLe Goryo n'entrera dans un état D.O.T.S. que si aucun joueur n'est dans la même pièce que l'entité. De plus, sa silhouette D.O.T.S. n'est visible qu'à travers une Caméra vidéo, et ne peut pas être vue à l'œil nu. Un Goryo se manifestera toujours normalement pendant les événements paranormaux et les chasses.\n\nLe Goryo entrera dans l'état D.O.T.S. plus fréquemment que les autres entités."
+    },
+    "hantu": {
+      "name": "Hantu",
+      "description": "Les Hantu sont des entités rares qui profitent des climats les plus froids. Le froid semble les rendre agressifs et puissants.",
+      "activity": "Le Hantu ne peut pas allumer le disjoncteur, et est deux fois plus susceptible de l'éteindre.",
+      "hunt": "Pendant une chasse, la vitesse du Hantu est affectée par la température de la pièce qu'il traverse.\n\nContrairement à la plupart des autres entités, le Hantu n'a pas d'accélération en ligne de mire pendant les chasses.\n\nPendant une chasse, le Hantu émettra un souffle glacial près de sa tête dans n'importe quelle pièce tant que le disjoncteur est éteint. Les joueurs décédés ne peuvent pas voir ce souffle. Comme il ne s'agit pas d'une \"Preuve\" réelle, il peut apparaître sur n'importe quelle difficulté."
+    },
+    "jinn": {
+      "name": "Djinn",
+      "description": "Les Djinns sont des entités territoriales qui attaquent lorsqu'elles sont menacées. Ils sont également connus pour pouvoir se déplacer à une vitesse significative.",
+      "activity": "Le Djinn ne peut pas éteindre directement le disjoncteur. Cependant, il peut toujours éteindre indirectement le disjoncteur en allumant trop de lumières et en le surchargeant.",
+      "ability": "Lorsqu'il est à proximité d'un joueur et que le disjoncteur est allumé, le Djinn utilisera occasionnellement une compétence qui baisse de 25% la santé mentale d'un joueur dans la même pièce ou à moins de 3 mètres de lui. Le joueur qui perdra de la santé mentale est le premier dans la liste (établie par l'ordre dans lequel les joueurs ont rejoint le lobby) parmi les joueurs à portée. Une mesure EMF 2 ou 5 sera alors générée au disjoncteur.",
+      "hunt": "Pendant une chasse, si les trois critères suivants sont remplis :\n- Le disjoncteur est allumé\n- Le Djinn a une ligne de mire avec un joueur qu'il cible\n- Le Djinn est à plus de 3 mètres de ce joueur\n\nAlors sa vitesse sera fixée tant que les critères seront remplis. Sinon, il obéira aux vitesses d'entité standards avec une particularité : lorsqu'il se déplace à la vitesse fixe, l'augmentation de vitesse à partir d'une ligne de mire continue s'ajoute en arrière-plan, et ne sera appliquée qu'une fois qu'un critère ne sera plus rempli."
+    },
+    "mare": {
+      "name": "Cauchemar",
+      "description": "Les Cauchemars sont la source de tous les mauvais rêves, ce qui les rend plus puissant dans l'obscurité.",
+      "activity": "Les Cauchemars ne peuvent pas interagir avec les lumières pour les allumer, et ils sont plus susceptibles de choisir d'éteindre les lumières comme interaction. Ils ne peuvent pas non plus effectuer l'interaction de clignotement des lumières (celle qui laisse spécifiquement une mesure EMF à un interrupteur de lumière par opposition au clignotement de lumière \"atmosphérique\").\n\nLe Cauchemar n'a aucune affinité avec les écrans d'ordinateur, les téléviseurs, les lumières activées par le mouvement de Bleasdale Farmhouse, et le disjoncteur, et peut les allumer ou les éteindre comme la plupart des autres entités. Le Cauchemar n'a pas non plus d'affinité avec les sources de feu et peut toujours les allumer.\n\nLe Cauchemar a plus de chances d'effectuer des événements paranormaux brisant la lumière que d'autres types, car cela désactivera les lumières, ce qui facilitera la chasse.\n\nLorsque les lumières sont allumées dans sa pièce actuelle, le Cauchemar est plus susceptible d'effectuer des errances longues.\n\nContrairement à la plupart des autres entités, le Cauchemar est capable d'effectuer des errances longues alors que sa pièce actuelle n'est pas la pièce favorite.",
+      "ability": "Si un joueur allume une lumière (excluant les téléviseurs et les ordinateurs) qui se trouve à moins de 4 mètres d'un Cauchemar, il a 1 chance sur 7 d'éteindre la lumière presque instantanément, avec un délai maximum de 1 seconde. Chaque lumière a un cooldown par joueur de 10 secondes après avoir été allumée ou éteinte, et le Cauchemar ne peut pas effectuer sa compétence sur une lumière qui a un cooldown actif. Le Cauchemar peut utiliser cette compétence même si le disjoncteur est éteint ou cassé, mais pas si la lumière est brisée. La compétence fonctionne aussi pendant un événement paranormal.",
+      "hunt": "Un Cauchemar a un seuil de santé mentale de chasse modifié en fonction de l'éclairage de la pièce dans laquelle il se trouve actuellement. Si les lumières sont éteintes, le seuil de santé mentale de chasse est augmenté à 60%, et si les lumières sont allumées, le seuil est diminué à 40%. Cela s'applique même si le disjoncteur est éteint ou cassé, mais pas si les lumières de la pièce sont détruites. Les autres sources de lumière, telles que les Équipements apportés et les Lumières à feu, n'affectent pas ce seuil."
+    },
+    "moroi": {
+      "name": "Moroï",
+      "description": "Les Moroï ont émergé du monde des morts afin de siphonner l'énergie des vivants. Ils maudissent leurs victimes et celles-ci ne peuvent guérir qu'avec des antidotes ou en déménageant très loin.",
+      "ability": "Le Moroï a une compétence pour \"maudire\" une cible des manières suivantes :\n- En obtenant avec succès une réponse de la Spirit Box ; cela maudira la personne qui a \"provoqué\" la réponse, soit en posant des questions, soit en déclenchant le failsafe.\n- En entendant des sons paranormaux à travers le Microphone parabolique.\n- En enregistrant avec succès n'importe quel son avec l'Enregistreur de Son.\n\nLorsqu'un joueur est maudit, sa perte de santé mentale passive est doublée et se trouver dans une zone éclairée n'empêchera plus la perte de santé mentale (i.e. le joueur est considéré comme étant constamment dans l'obscurité). Quitter le lieu d'enquête suspendra toujours la perte de santé mentale, et les Lumières à feu atténueront toujours la perte de santé mentale. La consommation de Médicaments de Santé mentale retire la malédiction pour ce joueur. Les joueurs qui ont été maudits auparavant dans le contrat peuvent être maudits à nouveau. Plusieurs joueurs peuvent être maudits en même temps, mais les malédictions ne se cumulent pas sur un joueur seul.",
+      "hunt": "La vitesse du Moroï dépend de la santé mentale moyenne, et changera pendant une chasse en fonction de la santé mentale moyenne actuelle.\n\nLors de l'utilisation d'un Encens pendant une chasse, la durée pendant laquelle le Moroï ne peut ni voir ni tuer des joueurs est de 7,5 secondes au lieu de 5."
+    },
+    "myling": {
+      "name": "Myling",
+      "description": "Les Myling sont des entités très actives et bruyantes. La rumeur prétend, cependant, qu'ils deviennent silencieux quand ils chassent leur proie.",
+      "activity": "Le Myling produit un son paranormal (gémissement/rire/discussion/chuchotement) sur un Microphone parabolique ou un Enregistreur de Son toutes les 64 à 127 secondes, au lieu de toutes les 80 à 127 secondes pour les autres entités.",
+      "hunt": "Lors de la chasse, les bruits de pas et les vocalisations d'un Myling ne seront audibles pour les joueurs que dans un rayon de 12 mètres – légèrement supérieur à la portée requise pour les interférences électroniques – au lieu des 20 mètres habituels. Le volume des bruits de pas est légèrement étouffé près de la limite, mais devient rapidement perceptible à l'approche."
+    },
+    "obake": {
+      "name": "Obake",
+      "description": "Les Obake sont de terrifiants métamorphes, capables de prendre de nombreuses formes. On les a vus prendre des formes humanoïdes pour attirer leurs proies.",
+      "activity": "Chaque fois que l'Obake interagit avec une surface valide, il a 75% de chances de laisser des Empreintes digitales, au lieu des 100% habituels. Après avoir marché dans du Sel, il a aussi 75% de chances à chaque pas, au lieu de 100%, de laisser une Empreinte de pas, ne créant aucun bruit de pas lorsque la chance échoue. En multijoueur, les Empreintes de pas manquantes ne sont pas synchronisées entre les joueurs, ce qui peut entraîner un nombre différent d'Empreintes de pas et de bruits de pas pour chaque joueur.\n\nLors de la création d'Empreintes de main ou d'Empreintes digitales, il y a une chance sur six (~16,7%) pour que l'Obake crée un motif unique d'Empreinte de main/d'Empreinte digitale :\n- Une Empreinte de main à six doigts au lieu des cinq doigts habituels\n- Deux Empreintes digitales au lieu d'une sur les interrupteurs de lumières, les lampes, et les télécommandes de téléviseur\n- Cinq Empreintes digitales au lieu de quatre sur les claviers et les portes de cellule de Prison\n\nLorsqu'il effectue un événement paranormal de fausse chasse ou un événement de Boîte à musique, l'Obake est la seule entité qui manquera parfois un bruit de pas. Cela est très probablement un bug.",
+      "ability": "L'Obake déclenche occasionnellement une compétence pour réduire de moitié le temps restant pour toutes les Empreintes digitales existantes sur la carte. Par exemple, deux Empreintes digitales sur la carte avec 40 secondes et 70 secondes restantes avant de disparaître seront réduites à 20 et 35 secondes restantes respectivement. Cette compétence peut être déclenchée plusieurs fois en succession rapide, ce qui permet à une instance d'Empreintes digitales de durer quelques secondes avant de disparaître.",
+      "hunt": "Pendant une chasse, l'Obake se transformera occasionnellement en un modèle d'entité différent du même sexe pendant un clignotement. Les joueurs décédés ne peuvent pas voir cette transformation.\n\nUne transformation se produira toujours sur les 12e, 27e, 39e, 54e, 62e, 80e, 105e, 120e, et 132e clignotements (en commençant par le premier clignotement) d'une chasse.\n- Cela signifie que la première transformation se produira environ 7 - 9 secondes après la fin de la période de grâce.\n- Cela signifie aussi que l'Obake ne se transformera pas du tout si la chasse se termine prématurément (après que l'entité ait tué un joueur ou lorsque tous les joueurs quittent le lieu d'enquête), car il n'aura pas le temps d'atteindre le 12e clignotement.\n\nLors de la transformation, l'Obake a un ordre de modèles qu'il utilisera. La première transformation du contrat utilisera toujours le premier modèle d'entité de la liste suivante. La deuxième transformation utilisera alors le deuxième modèle, la troisième le troisième modèle, et ainsi de suite avec la liste bouclant sur elle-même. Lorsque l'Obake atteint son propre modèle dans la liste, il se transformera en lui-même avec une réinitialisation de posture plus ou moins visible.\n\nLa transformation et la réduction de la durée des Empreintes digitales compteront comme une capacité dans les statistiques après la partie."
+    },
+    "obambo": {
+      "name": "Obambo",
+      "description": "L'Obambo est le fantôme de quelqu'un qui n'a jamais été correctement mis au repos. Changeant et sur la défensive, il oscille entre des états de calme et d'agressivité.",
+      "activity": "L'Obambo possède deux états : \"calme\" et \"agressif\". Il démarre toujours dans l'état calme au début d'un contrat avant de changer sur l'autre état 1 minute après qu'une porte de sortie est ouverte pour la première fois, puis toutes les 2 minutes. Le changement d'état peut se produire pendant une chasse.\n\nEn fonction de son état, l'Obambo aura soit une activité très forte, soit une activité faible, respectivement lorsqu'il est calme et agressif.",
+      "hunt": "L'Obambo a un seuil de santé mentale de chasse de 10% lorsqu'il est dans son état calme, et de 65% dans son état agressif.\n\nLa vitesse de l'Obambo dépends de son état actuel.\n\nLa durée de la chasse sera 20% plus courte si l'Obambo démarre la chasse dans l'état agressif. Cela s'appliquera même si l'entité passe à l'état calme en pleine chasse. Vous devriez vous attendre à une durée de chasse de {{huntDuration}} secondes."
+    },
+    "oni": {
+      "name": "Oni",
+      "description": "Les Onis adorent effrayer le plus possible leur victime avant d'attaquer. Ils sont souvent observés sous leur forme physique en train de garder le lieu de leur décès.",
+      "activity": "L'Oni est plus actif, interagissant plus souvent avec des objets, lorsqu'il y a au moins un joueur dans la même pièce que lui.\n\nLorsqu'il effectue un événement paranormal, l'Oni :\n- Ne peut pas effectuer l'événement de forme de brume.\n- Préférera apparaître sous sa forme complète lors d'un événement de manifestation par opposition à une forme d'ombre ou translucide.\n- Aura le double de la perte de santé mentale des autres entités lors de la collision avec le joueur cible dans un événement paranormal (donc 20% au lieu de 10%).",
+      "hunt": "Pendant une chasse, l'Oni clignote et est en moyenne invisible moins longtemps et visible plus longtemps que la plupart des autres entités."
+    },
+    "onryo": {
+      "name": "Onryo",
+      "description": "Les Onryo sont souvent décrits comme des \"esprits furieux\". En quête de vengeance, il vole les âmes des corps de victimes mourantes. Ces entités sont connues pour avoir peur de quelconque forme de feu et feront tout pour s'en tenir éloignées.",
+      "activity": "L'Onryo ne peut allumer aucune source de feu (cheminées, feux de camp, et bougies) naturellement, mais peut être forcé de le faire avec une Poupée vaudou.\n\nLa fréquence de soufflage des flammes de l'Onryo augmente avec le nombre de joueurs morts :\n- Lorsque aucun joueur n'est mort, il a 66,67% de probabilité de souffler la flamme (96,3% pour la Lumière à feu Rang II) et un cooldown de 20 - 80 secondes pour tenter de souffler la flemme après l'allumage.\n- Lorsque un joueur est mort, il a 75% de probabilité de souffler la flamme (98,43% pour la Lumière à feu Rang II) et un cooldown de 20 - 60 secondes pour tenter de souffler la flemme après l'allumage.\n- Lorsque deux joueurs sont mort, il a 80% de probabilité de souffler la flamme (99,2% pour la Lumière à feu Rang II) et un cooldown de 20 - 40 secondes pour tenter de souffler la flemme après l'allumage.\n- Lorsque trois joueurs sont mort, il a 83,33% de probabilité de souffler la flamme (99,54% pour la Lumière à feu Rang II) et un cooldown de 20 secondes pour tenter de souffler la flemme après l'allumage.\n\nLe cooldown avant que l'Onryo puisse tenter de souffler la flamme après l'allumage ne concerne pas le premier allumage.",
+      "ability": "L'Onryo vérifie un compteur de flammes soufflées à chaque fois qu'il sort de l'état de repos. Si le compteur est supérieur ou égal à 3, et à condition qu'il n'y ait actuellement aucun cooldown de chasse et aucun effet de nettoyage d'Encens, l'Onryo utilisera sa compétence, ce qui réinitialise le compteur de souffles à 0 avant d'initier une chasse indépendamment de la santé mentale moyenne actuelle. Cette chasse peut être bloquée par la phase de préparation toujours active, un Crucifix, ou une autre flamme.\n- Une flamme empêchant une chasse ou soufflée pendant une chasse augmentera toujours le compteur de 1.\n- Si le compteur atteint 3 pendant une chasse ou un effet de nettoyage d'Encens, il se réinitialisera instantanément à 0 et annulera la compétence de l'Onryo.",
+      "hunt": "L'Onryo a un seuil de santé mentale de chasse de 60% par défaut. Lorsqu'il est près d'une flamme, ce seuil est diminué à 40%.\n\nSi l'Onryo tente une chasse à moins de 4 mètres de n'importe quel type de flamme (e.g. Lumière à feu, Allumeur, feu de camp, etc.), il soufflera la flamme à la place, et la chasse échouera. Cela ne redémarre pas le minuteur du cooldown de chasse, contrairement à un Crucifix. Si un Crucifix et une flamme sont à portée, la flamme aura la priorité sur le Crucifix pour empêcher la chasse.\n- Les tentatives de chasse de l'Onryo outrepassent aussi les cooldowns individuels d'une flamme, ce qui le rend capable de souffler une Lumière à feu dans les 30 secondes suivant son premier allumage, ou dans les 20 secondes suivant ses allumages suivants. Notez que le cooldown actuel d'une Lumière à feu Rang III est suspendu si elle est éteinte par le joueur ou une tentative de chasse d'un Onryo."
+    },
+    "phantom": {
+      "name": "Fantôme",
+      "description": "Les Fantômes sont des entités capables de posséder les vivants et leur induire de la peur. Ils sont le plus souvent invoqués via une planche Ouija.",
+      "activity": "Lors de la capture d'une photo/vidéo d'un Fantôme, qu'il soit sous sa forme complète, sa forme translucide, sa forme ombre, ou dans son état D.O.T.S., l'entité disparaîtra physiquement (mais restera dans son état précédent, par exemple un événement paranormal) une fois la capture réussie, et le média résultant ne contiendra aucune entité visible ni aucune interférence.\n- Si la photo/vidéo a été prise pendant un événement paranormal, l'équipement électronique cessera aussi de dysfonctionner et les battements de cœur du joueur cesseront de jouer.\n- Si la photo/vidéo a été prise pendant une chasse, l'entité disparaîtra brièvement avant de continuer à apparaître et disparaître physiquement.\n\nSe trouver à moins de 10 mètres du Fantôme tout en ayant une pseudo-ligne de mire (où les battements de cœur jouent) réduit la santé mentale du joueur de 0,5%/s. Cela ne s'applique que pendant les événements paranormaux et les chasses, et est distinct de la perte de santé mentale passive. Cela ne s'applique pas pendant les événements paranormaux si le Fantôme a été rendu invisible en prenant une photo.",
+      "ability": "Le Fantôme a une compétence où il choisira un joueur aléatoire et se déplacera vers un endroit à moins de 5 mètres de sa position (par opposition à une errance normale). Cela créera une mesure EMF niveau 2 à l'emplacement où l'errance s'est terminée, au niveau de la tête du joueur ciblé lorsqu'il n'est pas accroupi. Ce comportement est quelque peu similaire à celui de la Banshee et du Spectre ; contrairement aux Banshees, les Fantômes ne sélectionnent pas un joueur à cibler jusqu'à ce qu'il décède ou quitte la partie, et ne le font pas aussi souvent ; et contrairement aux Spectres, le Fantôme marche physiquement vers ce point plutôt que de se téléporter, et déclenchera les Détecteurs de mouvement et perturbera le Sel sur le chemin.",
+      "hunt": "Pendant une chasse, le Fantôme clignote et est en moyenne visible moins longtemps et invisible plus longtemps que la plupart des autres entités."
+    },
+    "poltergeist": {
+      "name": "Poltergeist",
+      "description": "L'une des entités les plus célèbres, le Poltergeist. Ils sont connus pour manipuler les objets autour de leurs victimes afin de les effrayer.",
+      "activity": "En général, le Poltergeist est plus susceptible de jeter des objets.\n\nLa puissance de jet du Poltergeist est de 2 à 6 horizontalement et de 3 à 6 verticalement, tandis qu'elle est respectivement de 1 à 3 et de 1 à 5 pour les autres entités.",
+      "ability": "Le Poltergeist utilisera occasionnellement une compétence qui lui permet de jeter plusieurs objets à proximité en même temps, créant une mesure EMF niveau 2 (les objets jetés eux-mêmes génèrent un EMF 3). Cela réduira la santé mentale de tous les joueurs à proximité en ligne de mire avec l'emplacement EMF 2 de 2% par objet jeté. Le Poltergeist peut utiliser cette compétence même lorsque les lumières de sa pièce actuelle sont allumées.\n\nS'il n'y a pas d'objets près d'un Poltergeist, il est incapable d'utiliser sa compétence. Cela n'influence pas son comportement envers le lancement d'une chasse.",
+      "hunt": "Le Poltergeist jettera toujours un objet toutes les 0,5 secondes, au lieu de n'avoir que 50% de chances de le faire."
+    },
+    "raiju": {
+      "name": "Raiju",
+      "description": "Les Raiju sont des démons qui profitent des courants électriques. Bien que généralement calme, ils peuvent devenir agités quand ils sont submergés de puissance.",
+      "activity": "Lorsqu'un Raiju se manifeste pendant un événement paranormal ou une chasse, il interférera avec les appareils électroniques qui se trouvent jusqu'à 15 mètres de lui au même étage, au lieu des 10 mètres habituels. Cela s'applique aussi au chat global.",
+      "hunt": "Lorsque le Raiju se trouve à {{distance}} mètres d'au moins un appareil électronique actif au même étage (qui peut aussi être situé en dehors du lieu d'enquête), son seuil de santé mentale de chasse est augmenté à 65%, et il se déplacera à une vitesse fixe pendant les chasses.\n\nSinon, il aura le seuil standard de 50% et suivra les vitesses d'entité standards avec une particularité : si le Raiju a une ligne de mire avec un joueur pendant qu'il est à proximité d'un appareil électronique actif, l'augmentation de vitesse à partir d'une ligne de mire continue s'ajoute en arrière-plan, et ne sera appliquée qu'une fois qu'il ne sera plus à proximité d'appareils électroniques.\n\nTous les effets énumérés ci-dessus s'appliquent à la plupart des appareils électroniques, qu'ils soient placés, tenus en main, ou jetés au sol.\n\nLes éléments suivants ne comptent pas pour l'augmentation de vitesse ou le seuil de santé mentale de chasse :\n\n- Chat global\n- Caméras vidéo et Appareils photo qui sont jetés au sol\n- Détecteurs de mouvement, Capteurs sonores, et Projecteurs D.O.T.S. qui sont jetés au sol ou tenus (excluant le D.O.T.S. R1, qui doit aussi être éteint)\n- Objets dans l'inventaire (à l'exception des Lampes de poche qui sont allumées)\n- Tout autre équipement électrique non apporté du camion (lumières du bâtiment, disjoncteur, caméras de surveillance, ventilateurs, etc.).",
+      "misc": "Les battements de cœur du joueur peuvent être entendus à moins de 15 mètres du Raiju, au lieu de moins de 10 mètres comme pour les autres entités, ce qui rend les battements de cœur beaucoup plus forts avec le Raiju par rapport aux autres entités. Il s'agit probablement d'un bug."
+    },
+    "revenant": {
+      "name": "Revenant",
+      "description": "Les Revenants sont des entités violentes qui attaqueront sans distinction. Leur vitesse de déplacement peut être trompeuse puisqu'ils sont lents au repos mais incroyablement rapides lorsqu'ils chassent.",
+      "hunt": "Les Revenants ont un changement de vitesse très notable entre les modes errance et poursuite. Lorsqu'un Revenant erre, il se déplacera très lentement. Cependant, dès qu'il détecte un joueur (que ce soit visuellement ou par la parole/les appareils électroniques), il commencera à se déplacer extrêmement vite (près de deux fois la vitesse de base de la plupart des autres entités) et maintiendra cette vitesse jusqu'à ce qu'il atteigne l'endroit où il a détecté pour la dernière fois un joueur. Si et lors du retour en mode errance, la vitesse du Revenant diminuera lentement sur ~2,7 secondes pour revenir à sa valeur initiale.\n\nContrairement à la plupart des autres entités, le Revenant n'accélérera pas avec une ligne de mire continue."
+    },
+    "shade": {
+      "name": "Ombre",
+      "description": "Les Ombres sont des entités timides. Il semble que les Ombres cesseront toute activité si plusieurs personnes sont à proximité.",
+      "activity": "En moyenne, l'Ombre est moins susceptible d'effectuer des interactions que d'autres entités.\n\nL'Ombre est moins susceptible d'effectuer des événements paranormaux à forte santé mentale. À 100% de santé mentale moyenne, elle a 0% de chances de réussir un événement. Le taux de réussite augmente de 2% par pourcentage de santé mentale moyenne perdu ; à une santé mentale moyenne de 50%, une tentative d'événement paranormal réussira toujours.\n\nLorsqu'elle effectue un événement paranormal, l'Ombre a plus de chances d'apparaître comme une ombre. Si l'entité est amenée à apparaître en utilisant un Cercle d'invocation, une Boîte à musique, ou une Patte de singe, elle a 50% de chances d'apparaître sous la forme d'une ombre noire plutôt que sous sa forme complète pendant la phase d'événement paranormal. Elle reviendra sous une forme entièrement visible lorsque la chasse démarrera.",
+      "ability": "Si au moins une personne se trouve dans la même pièce qu'une Ombre, elle sera incapable d'effectuer des interactions (incluant le disjoncteur et lorsque les joueurs essaient de forcer une interaction à travers la Poupée vaudou), des événements paranormaux, ou d'initier des chasses, quelle que soit la santé mentale moyenne. Elle peut toujours effectuer ces actions si elle arrive à errer dans une pièce sans joueurs. Étant donné que les interactions se produisent dans une portée, l'Ombre peut toujours \"atteindre\" la pièce du joueur depuis une autre pièce pour interagir avec des objets.",
+      "hunt": "L'Ombre ne peut chasser qu'en dessous d'une santé mentale moyenne de 35%, ce qui est plus faible que pour la plupart des autres entités."
+    },
+    "spirit": {
+      "name": "Esprit",
+      "description": "Les Esprits sont des entités très banales. Ils sont puissants mais passifs et attaquent seulement lorsqu'ils y sont obligés. Ils défendent le lieu de leur décès coûte que coûte, tuant quiconque abuserait de leur hospitalité.",
+      "activity": "Lorsqu'un Encens est utilisé près d'un Esprit, il ne sera pas capable d'initier une chasse pendant 180 secondes au lieu de 90 secondes avec la plupart des autres entités. Comme les autres entités, cela n'empêchera pas les chasses maudites. Ce délai s'appliquera aussi si on a utilisé un Encens sur l'Esprit pendant une chasse."
+    },
+    "thaye": {
+      "name": "Thayé",
+      "description": "Les Thayé sont connus pour vieillir rapidement, même dans l'au-delà. D'après ce que nous avons appris, ils semblent se déteriorer plus rapidement en présence des vivants.",
+      "ability": "Le Thayé a un paramètre interne \"d'âge\" qui affecte son activité générale. Le Thayé tentera de vieillir 1 minute après qu'une porte de sortie est ouverte pour la première fois ; si au moins un joueur se trouve dans la même pièce que l'entité ou à moins de 3 mètres d'elle,[note 1] le Thayé ajoutera 1 à son âge et tentera à nouveau de vieillir après 1 à 2 minutes, sinon il tentera à nouveau de vieillir après 30 secondes. Si le Thayé utilise avec succès cette compétence pendant une chasse, l'augmentation d'âge ne sera effective qu'après la chasse.\n\nLe taux d'interactions/d'événements paranormaux à l'âge 0 est de 200% et diminuera de 15% par chaque âge ajouté. Enfin à l'âge 10 et supérieur, son taux sera de 50%.\n\nPour chaque âge ajouté, \"l'âge humain\" du Thayé tel que fourni par la Planche ouija augmente de 1 à 4. Contrairement à l'activité paranormale, il n'y a pas de limite (raisonnablement atteignable) sur \"l'âge humain\" du Thayé. \"L'âge humain\" de départ du Thayé peut toujours se situer entre 10 et 90, comme toutes les autres entités.\n\nUne fois que le Thayé a utilisé sa compétence 9 fois, il ne sera plus capable d'effectuer des événements paranormaux à moins d'y être forcé à travers l'utilisation d'Objets maudits.",
+      "hunt": "La vitesse en chasse du Thayé est déterminé par son âge.\n\nLe seuil de santé mentale pour commencer une chasse à l'âge 0 est de 75% et diminue de 6% par chaque âge ajouté. Une fois à l'âge 10 et supérieur, le seuil de senté mentale pour une chasse sera de 15%.\n\nContrairement à la plupart des autres entités, le Thayé n'accélère pas avec la ligne de mire d'un joueur."
+    },
+    "mimic": {
+      "name": "Le Mimic",
+      "description": "Les Mimic sont des entités insaisissables et mystérieuses qui imitent les traits et comportements des autres, y compris d'autres entités.",
+      "ability": "Le Mimic est capable d'imiter n'importe quel type d'entité, et hériter de toutes ses caractéristiques et compétences :\n- Taux et préférences d'interaction et d'événements paranormaux\n- Seuils de chasse\n- Vitesses de déplacement en chasse\n- Diverses formes de compétences spéciales (e.g. jet multiple du Poltergeist, compétence de chasse du Démon)\n\nLorsqu'il imite un type d'entité, Le Mimic ne copiera pas ses types de Preuve, et ne fournira pas nécessairement son type de Preuve garanti sur des difficultés à Preuves réduites telles que Démence, mais peut copier des caractéristiques liées aux Preuves. Par exemple, il est capable de copier les Empreintes de main à six doigts de l'Obake ou la respiration du Deogen, car Le Mimic a Ultraviolet et Spirit Box comme Preuve, mais il ne peut pas copier le trait du Goryo d'apparaître uniquement sur une Caméra vidéo lors de l'interaction avec un Projecteur D.O.T.S., car Le Mimic n'a pas Projecteur D.O.T.S. comme l'un de ses types de Preuve.\n\nLe Mimic démarrera toujours dans l'état \"neutre\" (dans lequel il s'imite essentiellement) au début d'un contrat. Lorsque tel est le cas, il agira comme une entité \"par défaut\" et n'aura aucune compétence spéciale. Il tentera de changer 1 minute après qu'une porte de sortie a été ouverte pour la première fois, puis toutes les 30 secondes à 2 minutes, mais ne peut pas changer pendant les chasses et les événements paranormaux.\n\nLe Mimic ne peut pas imiter la Banshee ou la Dayan s'il est lui-même masculin (i.e. utilisant un modèle d'entité masculin, des vocalisations masculines, et un nom masculin).\n\nLe Mimic, lorsqu'il imite certains types d'entité spécifiques, aura certains comportements spécifiques, répertoriés ci-dessous :\n- Si Le Mimic imite une Banshee, initialement, il n'a pas de cible. Une fois la première chasse non maudite tentée, une cible est choisie aléatoirement.\n- Si Le Mimic imite un Moroï et maudit le joueur à travers la Spirit Box, le Microphone parabolique, ou l'Enregistreur de Son, la malédiction restera même si Le Mimic change de type d'entité.\n- Si Le Mimic imite un Obambo, un état aléatoire sera sélectionné.\n- Si Le Mimic imite un Thayé, un âge fixe entre 0 et 10 est sélectionné aléatoirement, et il imitera une autre entité en utilisant son propre minuteur au lieu du minuteur de vieillissement du Thayé.\n\nSi Le Mimic est affecté par de l'Encens, il ne pourra pas chasser pendant la durée associée à l'entité qu'il imitait à ce moment-là, même s'il imite une autre entité avant sa fin.\n\nLe Mimic fournit la \"Preuve\" des Orbes fantomatiques en plus de ses trois types de Preuves principaux, qui apparaissent aussi dans les difficultés à Preuves réduites, incluant zéro Preuve. Ces Orbes fantomatiques, ainsi que les autres types de Preuve s'ils ne sont pas cachés par la difficulté, existeront toujours quel que soit le type d'entité que Le Mimic choisit d'imiter, et se comporteront exactement de la même manière que ceux produits par d'autres types d'entité et ne léviteront que dans la pièce hantée."
+    },
+    "twins": {
+      "name": "Les Jumeaux",
+      "description": "Ces entités ont été observées en train d'imiter les actions l'une de l'autre. Elles alternent leurs attaques pour déstabiliser leur proie.",
+      "ability": "Les Jumeaux est simplement une seule entité. Cela signifie qu'il n'y a pas de \"jumeau leurre\" pour :\n- Déclencher les Détecteurs de mouvement ou marcher dans du Sel\n- Produire les Preuves de Températures glaciales (ou même affecter les températures pour commencer) ou de Spirit Box\n- Effectuer des événements paranormaux ou des chasses en même temps\n\nLorsque Les Jumeaux essaie d'interagir, l'une des situations suivantes se produit :\n- 50% de chances d'effectuer une interaction dans la portée normale (jusqu'à {{distance}} mètres).\n- 30% de chances d'effectuer une interaction dans une portée plus grande (jusqu'à 4 fois la portée normale).\n- 20% de chances d'effectuer sa compétence, qui produit deux interactions, une dans chaque portée, dans un laps de temps de 1 ou 2 secondes.\n\nToutes ces interactions suivent la probabilité standard de 1/3 (33%) de produire un EMF niveau 5 au lieu de 2 ou 3, quel que soit la portée utilisée pour effectuer l'interaction.",
+      "hunt": "Comme Les Jumeaux n'est qu'une seule entité, deux chasses ne peuvent pas avoir lieu simultanément, et il suivra le cooldown standard de 25 secondes entre les chasses.\n\nLorsque Les Jumeaux tente d'initier une chasse, il effectuera d'abord une vérification de Crucifix à son emplacement actuel avant de choisir d'avoir une vitesse de base lente ou rapide, chacune ayant 50% de chances. S'il choisit d'être lent, la chasse commencera à son emplacement actuel ; s'il choisit d'être rapide, il se téléportera près de la zone où il a interagi pour la dernière fois avec la grande portée et chassera depuis cet endroit. Quel que soit l'endroit d'où Les Jumeaux chasse, il suivra les règles de chasse standards.\n\nSi une chasse maudite est déclenchée, Les Jumeaux chassera toujours depuis l'emplacement actuel, mais il a toujours 50% de chances de sélectionner l'une ou l'autre vitesse de base."
+    },
+    "wraith": {
+      "name": "Spectre",
+      "description": "Les Spectres font partie des entités les plus dangereuses que vous pouvez rencontrer. C'est également la seule connue à pouvoir voler et parfois passer à travers les murs.",
+      "activity": "Le Spectre ne marchera jamais dans un tas de Sel, et ne le perturbera donc jamais. Cela inclut le Sel Rang III pendant les chasses, le rendant inefficace contre lui.",
+      "ability": "Quand le Spectre ne chasse pas, il a une chance de se téléporter vers un joueur aléatoire, générant une mesure EMF niveau 2 à l'endroit où il s'est téléporté, au niveau des pieds du joueur ciblé, avec 33% de chances que cela soit une mesure EMF niveau 5 à la place. Le Spectre reprendra son comportement normal après la téléportation."
+    },
+    "yokai": {
+      "name": "Yokai",
+      "description": "Les Yokai sont des entités banales attirées par les voix humaines. Ils hantent très souvent des maisons familiales.",
+      "activity": "L'utilisation du chat vocal à proximité du Yokai à n'importe quelle santé mentale augmentera son taux d'activité.\n\nLorsqu'un événement de Boîte à musique est déclenché, la chasse maudite initiée par l'entité atteignant la Boîte se déclenche si la Boîte se trouve à moins de 0,5 mètre de la tête du Yokai au lieu de 1 mètre pour toutes les autres entités. Cela signifie que la chasse maudite ne se déclenchera pas instantanément si le Yokai atteint un joueur accroupi tenant la Boîte.",
+      "hunt": "Lorsqu'au moins un joueur utilise le chat vocal dans la même pièce que le Yokai, son seuil de santé mentale de chasse est temporairement augmenté à 80%. Sinon, il a le seuil standard de 50%.\n\nPendant les chasses, un Yokai ne peut entendre les joueurs ou détecter les appareils électroniques actifs en main qu'à moins de 2,5 mètres de lui. Sa ligne de mire n'est pas affectée."
+    },
+    "yurei": {
+      "name": "Yurei",
+      "description": "Les Yurei sont des entités qui sont revenues dans le monde physique dans une optique de vengeance ou par pure haine.",
+      "activity": "Lorsqu'un Encens est utilisé sur le Yurei, en plus d'empêcher les chasses et d'augmenter temporairement l'activité, il retournera dans sa pièce favorite et y sera piégé pendant 90 secondes, l'empêchant de se déplacer dans le lieu. Il peut toujours quitter cette pièce en effectuant un événement paranormal, mais il y reviendra une fois l'événement terminé. Si le Yurei est affecté par un Encens pendant une chasse, il ne sera piégé dans sa pièce favorite qu'une fois la chasse terminée pour le temps restant de l'effet de nettoyage.\n\nEn dehors de sa compétence, le Yurei n'a pas de chance accrue d'interagir avec les portes.\n\nLorsqu'il interagit avec une porte, le Yurei ne peut pas la bouger légèrement et ne peut que soit la fermer complètement, soit l'ouvrir complètement. Cela ne s'applique pas aux chasses.",
+      "ability": "Lorsqu'il choisit d'utiliser sa compétence, le Yurei vérifiera d'abord si sa pièce actuelle a une porte ouverte. Les portes qui comptent pour cette compétence sont principalement les portes de pièce, ainsi que les portes de sortie, les portes de grande tente sur les campings, les portes d'armoire dans Dining Room et les portes de cheminée dans Living Room/Games Room sur Point Hope, et les portes de machine à laver et les portes de la Morgue sur Sunny Meadows. Les portes de cachette, cependant, ne comptent pas.\n\nSi la vérification est réussie, ce qui suit est provoqué :\n- Tous les joueurs à moins de 7,5 mètres de l'entité verront leur santé mentale diminuée de 15%. Les joueurs en dehors du lieu d'enquête ne seront pas affectés par la perte de santé mentale.\n- L'entité sélectionnera aléatoirement une porte ouverte dans la pièce et la fermera complètement en douceur (par opposition à un claquement violent) sans aucun son de grincement. Cela produit à son tour une interaction EMF 2 sur cette porte.\n\t- Les portes de tente ne se fermeront pas complètement."
+    }
+  }
+}
