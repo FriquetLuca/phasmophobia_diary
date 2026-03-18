@@ -17,6 +17,9 @@ import EvidenceButton from './components/EvidenceButton';
 import DropdownSelect from './components/Dropdown';
 import filterGhostEvidences from './filters/filterGhostEvidences';
 import Slider from './components/Slider';
+import LanguageSwitcher from './components/LanguageSwitcher';
+import type { SpeedTrait } from './components/SpeedFilter';
+import SpeedFilter from './components/SpeedFilter';
 type GenderFilter = 'any' | 'male' | 'female';
 
 export default function App() {
@@ -34,6 +37,7 @@ export default function App() {
   const [currentSanity, setCurrentSanity] = useState<number>(0);
   const [selectedMap, setSelectedMap] = useState<string>('6 Tanglewood Drive');
   const [huntSetting, setHuntSetting] = useState<HuntDurationSetting>('medium');
+  const [ghostSpeedTraits, setGhostSpeedTraits] = useState<SpeedTrait[]>([]);
 
   const toggleEvidence = (evidence: string) => {
     setEvidenceFilters((prev) => {
@@ -70,6 +74,9 @@ export default function App() {
   return (
     <main className="min-h-screen bg-zinc-950 py-10 px-4 text-zinc-100">
       <div className="max-w-4xl mx-auto border border-zinc-700 bg-zinc-900 shadow-2xl min-h-[85vh] flex flex-col rounded-lg overflow-hidden">
+        <div className="absolute top-4 right-4 z-20">
+          <LanguageSwitcher />
+        </div>
         <header className="bg-zinc-800/50 p-6 border-b border-zinc-700">
           <h1 className="text-4xl october_crow text-center uppercase tracking-[0.2em] text-white drop-shadow-[0_0_8px_rgba(185,28,28,0.4)]">
             {t('title')}
@@ -125,6 +132,18 @@ export default function App() {
                           value: 'female',
                         },
                       ]}
+                    />
+                    <SpeedFilter
+                      activeTraits={ghostSpeedTraits}
+                      toggleTrait={(trait) => {
+                        if (ghostSpeedTraits.includes(trait)) {
+                          setGhostSpeedTraits(
+                            ghostSpeedTraits.filter((t) => t !== trait)
+                          );
+                        } else {
+                          setGhostSpeedTraits([...ghostSpeedTraits, trait]);
+                        }
+                      }}
                     />
                   </div>
                 );

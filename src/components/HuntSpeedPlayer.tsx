@@ -14,7 +14,7 @@ export default function HuntSpeedPlayer({
   stop,
 }: HuntSpeedPlayerProps) {
   return (
-    <div className="flex items-stretch border border-zinc-800 bg-zinc-950/40 group overflow-hidden rounded-sm mb-2 last:mb-0">
+    <div className="flex items-stretch border border-zinc-800 bg-zinc-950/40 group overflow-hidden rounded-sm last:mb-0">
       <div className="flex-1 flex justify-between items-center px-4 py-3 border-r border-zinc-800">
         <div className="flex flex-col">
           <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-500 group-hover:text-zinc-300 transition-colors">

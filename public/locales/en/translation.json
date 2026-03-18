@@ -8,6 +8,14 @@
     "ability": "Abilities",
     "misc": "Miscellaneous"
   },
+  "filters": {
+    "speed": {
+      "title": "Chasing speed",
+      "standard": "Normal",
+      "slow": "Slow",
+      "fast": "Fast"
+    }
+  },
   "tabs": {
     "evidence": "Evidences",
     "hunt": "Hunt & Traits",

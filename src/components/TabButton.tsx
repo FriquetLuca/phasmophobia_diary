@@ -18,7 +18,7 @@ export default function TabButton({
   return (
     <button
       onClick={() => setActiveTab(tab)}
-      className={`pb-3 pt-1 px-8 uppercase font-bold text-xs tracking-[0.2em] transition-all duration-300 relative outline-none group ${
+      className={`pb-3 pt-2 px-8 uppercase font-bold text-xs tracking-[0.2em] transition-all duration-300 relative outline-none group ${
         isActive ? 'text-zinc-100' : 'text-zinc-500 hover:text-zinc-300'
       }`}
     >

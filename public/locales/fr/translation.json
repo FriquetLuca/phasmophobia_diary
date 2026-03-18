@@ -8,6 +8,14 @@
     "ability": "Compétences",
     "misc": "Divers"
   },
+  "filters": {
+    "speed": {
+      "title": "Vitesse en chasse",
+      "standard": "Normal",
+      "slow": "Lent",
+      "fast": "Rapide"
+    }
+  },
   "tabs": {
     "evidence": "Preuves",
     "hunt": "Chasse & Traits",
