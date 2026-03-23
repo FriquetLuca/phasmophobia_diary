@@ -26,6 +26,7 @@ import Slider from './components/Slider';
 import LanguageSwitcher from './components/LanguageSwitcher';
 import MultiOptionsSelector from './components/MultiOptionsSelector';
 import filterOnOffActions from './filters/filterOnOffActions';
+import Button from './components/Button';
 type GenderFilter = 'any' | 'male' | 'female';
 
 export default function App() {
@@ -52,6 +53,7 @@ export default function App() {
   const [disturbSaltInteractions, setDisturbSaltInteractions] = useState<
     OnOffAction[]
   >(['unknown']);
+  const [bloodMoon, setBloodMoon] = useState<boolean>(false);
 
   const toggleEvidence = (evidence: string) => {
     setEvidenceFilters((prev) => {
@@ -326,6 +328,38 @@ export default function App() {
                         },
                       ]}
                     />
+                    <MultiOptionsSelector
+                      label={t('settings.weather.title')}
+                      options={['blood_moon', 'other']}
+                      selectedOptions={bloodMoon ? ['blood_moon'] : ['other']}
+                      toggleOption={(weather) =>
+                        setBloodMoon(weather === 'blood_moon')
+                      }
+                      optionLabel={(weather) =>
+                        t(`settings.weather.${weather}`)
+                      }
+                    />
+                    <Button
+                      label={t('settings.reset')}
+                      onClick={() => {
+                        setEvidenceFilters(
+                          Object.fromEntries(
+                            evidences.map((e) => [e, 'neutral'])
+                          )
+                        );
+                        setEvidenceCount(3);
+                        setGlobalSpeedMult(100);
+                        setGenderFilter('any');
+                        setCurrentSanity(0);
+                        setSelectedMap('6 Tanglewood Drive');
+                        setHuntSetting('medium');
+                        setGhostSpeedTraits([]);
+                        setGhostModelVisibility('unknown');
+                        setFuseBoxInteractions(['unknown']);
+                        setDisturbSaltInteractions(['unknown']);
+                        setBloodMoon(false);
+                      }}
+                    />
                   </div>
                 );
             }
@@ -356,7 +390,11 @@ export default function App() {
             huntSpeeds: selectedGhost.huntSpeeds.map((s) => ({
               label: s.label,
               speed:
-                Math.floor(s.speed * (globalSpeedMult / 100) * 10000) / 10000,
+                Math.floor(
+                  s.speed *
+                    ((globalSpeedMult + (bloodMoon ? 15 : 0)) / 100) *
+                    10000
+                ) / 10000,
             })),
           }}
           map={selectedMap}

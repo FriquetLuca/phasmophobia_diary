@@ -46,7 +46,7 @@ You can use the diary [here](https://friquetluca.github.io/phasmophobia_diary/).
 1. **Clone the repository:**
 
    ```bash
-   git clone [https://github.com/FriquetLuca/phasmophobia_diary.git](https://github.com/FriquetLuca/phasmophobia_diary.git)
+   git clone https://github.com/FriquetLuca/phasmophobia_diary.git
    ```
 
 2. **Install dependencies:**

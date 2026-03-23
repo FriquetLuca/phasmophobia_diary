@@ -59,7 +59,13 @@
     "hunt_duration": "Hunt duration",
     "hunt_duration_low": "Faible",
     "hunt_duration_medium": "Moyenne",
-    "hunt_duration_high": "Élevée"
+    "hunt_duration_high": "Élevée",
+    "weather": {
+      "title": "Weather",
+      "blood_moon": "Blood Moon",
+      "other": "Normal"
+    },
+    "reset": "Reset"
   },
   "unique_sounds": {
     "banshee_scream": "When a Parabolic Microphone or a Sound Recorder is used, the Banshee has a 33% chance of making 1 of its 20 unique screams instead of a regular paranormal sound.\n\n",
