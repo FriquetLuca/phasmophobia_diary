@@ -19,7 +19,7 @@ export function useFootsteps() {
 
         // We create a temporary context just to decode the data
         const tempCtx = new (
-          window.AudioContext || (window as any).webkitAudioContext
+          window.AudioContext || window.webkitAudioContext
         )();
         const decodedData = await tempCtx.decodeAudioData(arrayBuffer);
         audioBuffer.current = decodedData;
@@ -63,9 +63,7 @@ export function useFootsteps() {
     stop();
 
     // Initialize AudioContext ONLY after user gesture
-    audioCtx.current = new (
-      window.AudioContext || (window as any).webkitAudioContext
-    )();
+    audioCtx.current = new (window.AudioContext || window.webkitAudioContext)();
 
     // Browsers often start context as 'suspended'
     if (audioCtx.current.state === 'suspended') {
