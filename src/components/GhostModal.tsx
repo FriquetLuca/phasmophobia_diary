@@ -31,7 +31,7 @@ export default function GhostModal({
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-2xl bg-zinc-900 shadow-[0_0_50px_rgba(0,0,0,0.8)] border border-zinc-700 flex flex-col max-h-[90vh] rounded-sm overflow-hidden"
+        className="relative w-full max-w-4xl bg-zinc-900 shadow-[0_0_50px_rgba(0,0,0,0.8)] border border-zinc-700 flex flex-col max-h-[90vh] rounded-sm overflow-hidden"
         onClick={(e) => e.stopPropagation()} // Prevents closing when clicking inside
       >
         <div className="h-1 w-full bg-linear-to-r from-red-900 via-red-600 to-red-900" />

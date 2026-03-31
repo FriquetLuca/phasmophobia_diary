@@ -9,7 +9,7 @@ export default function GhostModalCategory({
     <div className="relative group overflow-hidden">
       <div className="bg-zinc-950/60 border border-zinc-800 p-4 rounded-sm transition-all duration-300 group-hover:border-zinc-700 group-hover:bg-zinc-900/80">
         <div className="text-base font-mono leading-relaxed text-zinc-300 whitespace-pre-wrap wrap-break-word">
-          <div className="selection:bg-red-900/50 selection:text-red-100 cmu_serif">
+          <div className="selection:bg-red-900/50 selection:text-red-100 cmu_serif overflow-auto">
             {children}
           </div>
         </div>

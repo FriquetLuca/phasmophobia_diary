@@ -521,7 +521,7 @@ export const ghosts: Ghost[] = [
       },
     ],
     huntSanity: 50,
-    hasAbilitiesSpecific: true,
+    hasActivitySpecific: true,
     hasHuntAbility: true,
     huntSpeedTraits: ['standard'],
     huntModelVisibility: 'normal',
