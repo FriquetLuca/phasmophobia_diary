@@ -7,6 +7,7 @@ import HuntSpeedPlayer from './HuntSpeedPlayer';
 import GhostModalTitle from './modal/GhostModalTitle';
 import GhostModalContent from './modal/GhostModalContent';
 import GhostModalCategory from './modal/GhostModalCategory';
+import { MkImp } from 'mkimp_react';
 
 interface GhostModalProps {
   ghost: Ghost;
@@ -46,7 +47,7 @@ export default function GhostModal({
           >
             {ghost.hasActivitySpecific && (
               <GhostModalCategory>
-                {t(`ghosts.${ghost.name}.activity`)}
+                <MkImp mdContent={t(`ghosts.${ghost.name}.activity`)} />
               </GhostModalCategory>
             )}
           </DisplayCategory>
@@ -57,11 +58,13 @@ export default function GhostModal({
           >
             {ghost.hasAbilitiesSpecific && (
               <GhostModalCategory>
-                {t(`ghosts.${ghost.name}.ability`, {
-                  distance: ghost.huntAbilityDistance
-                    ? ghost.huntAbilityDistance(map as MapSize)
-                    : 0,
-                })}
+                <MkImp
+                  mdContent={t(`ghosts.${ghost.name}.ability`, {
+                    distance: ghost.huntAbilityDistance
+                      ? ghost.huntAbilityDistance(map as MapSize)
+                      : 0,
+                  })}
+                />
               </GhostModalCategory>
             )}
           </DisplayCategory>
@@ -90,12 +93,14 @@ export default function GhostModal({
           >
             {ghost.hasHuntAbility && (
               <GhostModalCategory>
-                {t(`ghosts.${ghost.name}.hunt`, {
-                  distance: ghost.huntAbilityDistance
-                    ? ghost.huntAbilityDistance(map as MapSize)
-                    : 0,
-                  huntDuration: huntDuration * (ghost.huntDuration ?? 1.0),
-                })}
+                <MkImp
+                  mdContent={t(`ghosts.${ghost.name}.hunt`, {
+                    distance: ghost.huntAbilityDistance
+                      ? ghost.huntAbilityDistance(map as MapSize)
+                      : 0,
+                    huntDuration: huntDuration * (ghost.huntDuration ?? 1.0),
+                  })}
+                />
               </GhostModalCategory>
             )}
           </DisplayCategory>
@@ -106,7 +111,7 @@ export default function GhostModal({
           >
             {ghost.hasMiscInfos && (
               <GhostModalCategory>
-                {t(`ghosts.${ghost.name}.misc`)}
+                <MkImp mdContent={t(`ghosts.${ghost.name}.misc`)} />
               </GhostModalCategory>
             )}
           </DisplayCategory>
