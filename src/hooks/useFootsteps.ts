@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from 'react';
+import { urlPrefix } from '../urlPrefix';
 
 export function useFootsteps() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -11,8 +12,7 @@ export function useFootsteps() {
   useEffect(() => {
     const loadSound = async () => {
       try {
-        // Ensure the path is correct (public/audio/ghost_step.mp3)
-        const response = await fetch('/audio/ghost_step.mp3');
+        const response = await fetch(urlPrefix('/audio/ghost_step.mp3'));
         if (!response.ok) throw new Error('Audio file not found');
 
         const arrayBuffer = await response.arrayBuffer();
