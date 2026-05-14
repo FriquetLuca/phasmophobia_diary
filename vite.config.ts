@@ -9,14 +9,7 @@ export default defineConfig(({ command }) => {
       __APP_MODE__: JSON.stringify(command), // 'serve' or 'build'
     },
     base: command === 'build' ? '/phasmophobia_diary/' : '/',
-    plugins: [
-      react({
-        babel: {
-          plugins: [['babel-plugin-react-compiler']],
-        },
-      }),
-      tailwindcss(),
-    ],
+    plugins: [react(), tailwindcss()],
     server: {
       cors: true, // enable CORS for all origins
     },
