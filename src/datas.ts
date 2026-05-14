@@ -119,6 +119,50 @@ export function onOffActionsToggle(
 
 export const ghosts: Ghost[] = [
   {
+    name: 'aswang',
+    evidences: ['dots', 'orb', 'book'],
+    huntSpeeds: [
+      {
+        label: 'base_speed',
+        speed: 1.53,
+      },
+      {
+        label: 'los_top_speed',
+        speed: 2.53,
+      },
+    ],
+    huntSanity: 50,
+    hasHuntAbility: true,
+    huntSpeedTraits: ['slow'],
+    huntModelVisibility: 'normal',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on'],
+  },
+  {
+    name: 'kormos',
+    evidences: ['orb', 'spirit', 'uv'],
+    huntSpeeds: [
+      {
+        label: 'base_speed',
+        speed: 1.7,
+      },
+      {
+        label: 'close_moving_player',
+        speed: 2.21,
+      },
+      {
+        label: 'los_top_speed',
+        speed: 3.65,
+      },
+    ],
+    huntSanity: 70,
+    hasHuntAbility: true,
+    huntSpeedTraits: ['variable', 'fast', 'standard'],
+    huntModelVisibility: 'normal',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on'],
+  },
+  {
     name: 'banshee',
     evidences: ['uv', 'orb', 'dots'],
     gender: 'female',
