@@ -12,7 +12,9 @@ export default defineConfig(({ command }) => {
     base: command === 'build' ? '/phasmophobia_diary/' : '/',
     plugins: [
       react(),
-      babel({ presets: [reactCompilerPreset()] }),
+      babel({
+        presets: [reactCompilerPreset()],
+      }),
       tailwindcss(),
     ],
     server: {
