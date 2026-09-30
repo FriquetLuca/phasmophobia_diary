@@ -1,11 +1,5 @@
 export type Evidence =
-  | 'dots'
-  | 'orb'
-  | 'spirit'
-  | 'book'
-  | 'emf'
-  | 'freezing'
-  | 'uv';
+  'dots' | 'orb' | 'spirit' | 'book' | 'emf' | 'freezing' | 'uv';
 export const evidences: Evidence[] = [
   'emf',
   'dots',
@@ -51,11 +45,7 @@ export const getHuntDuration = (
   return HUNT_TIMES[setting][size];
 };
 export type ModelVisibility =
-  | 'normal'
-  | 'lessVisible'
-  | 'moreVisible'
-  | 'any'
-  | 'unknown';
+  'normal' | 'lessVisible' | 'moreVisible' | 'any' | 'unknown';
 export type SpeedTrait = 'fast' | 'slow' | 'standard' | 'variable';
 export type Gender = 'female' | 'male';
 export type OnOffAction = 'unknown' | 'on' | 'off';
@@ -157,7 +147,30 @@ export const ghosts: Ghost[] = [
     ],
     huntSanity: 70,
     hasHuntAbility: true,
+    hasActivitySpecific: true,
     huntSpeedTraits: ['variable', 'fast', 'standard'],
+    huntModelVisibility: 'normal',
+    breakerInteract: ['on', 'off'],
+    saltInteract: ['on'],
+  },
+  {
+    name: 'deildegast',
+    evidences: ['emf', 'book', 'dots'],
+    huntSpeeds: [
+      {
+        label: 'slowest_speed',
+        speed: 0.4,
+      },
+      {
+        label: 'top_speed',
+        speed: 3,
+      },
+    ],
+    huntSanity: 50,
+    hasActivitySpecific: true,
+    hasHuntAbility: true,
+    hasMiscInfos: true,
+    huntSpeedTraits: ['slow', 'standard', 'fast'],
     huntModelVisibility: 'normal',
     breakerInteract: ['on', 'off'],
     saltInteract: ['on'],
