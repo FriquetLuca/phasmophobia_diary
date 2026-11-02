@@ -110,7 +110,7 @@ export function onOffActionsToggle(
 export const ghosts: Ghost[] = [
   {
     name: 'aswang',
-    evidences: ['dots', 'orb', 'book'],
+    evidences: ['dots', 'freezing', 'book'],
     huntSpeeds: [
       {
         label: 'base_speed',
